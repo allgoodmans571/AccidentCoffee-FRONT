@@ -15,7 +15,7 @@ function App() {
   return (
     <Context.Provider value={{ showRegPanel }}>
       <div className="App">
-        {registration ? <StartScreen /> : <Registration />}
+        {!registration ? <StartScreen /> : <Registration />}
       </div>
     </Context.Provider>
   );
