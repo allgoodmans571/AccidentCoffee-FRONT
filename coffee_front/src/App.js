@@ -3,20 +3,19 @@ import React from "react";
 import Context from "./context";
 import StartScreen from "./Screens/StartScreen";
 import Registration from "./Screens/Registration";
+import PersonalData from "./Screens/PersonalData";
 
 function App() {
-  const [registration, setReqstate] = React.useState(false);
+  const [statePage, setStatePage] = React.useState(0);
+  const components = [<StartScreen />, <Registration />, <PersonalData />];
 
-  function showRegPanel() {
-    setReqstate(!registration);
-    console.log(registration);
+  function showActivePanel(i) {
+    setStatePage(i);
   }
 
   return (
-    <Context.Provider value={{ showRegPanel }}>
-      <div className="App">
-        {!registration ? <StartScreen /> : <Registration />}
-      </div>
+    <Context.Provider value={{ showActivePanel }}>
+      <div className="App">{components[statePage]}</div>
     </Context.Provider>
   );
 }

@@ -80,13 +80,18 @@ code {
   justify-content: center;
 }
 
-#form {
+#reqForm {
   background-color: rgb(255, 255, 255);
-  opacity: 1;
-  margin: 9rem auto auto auto;
+  text-align: center;
+  margin-top: 4rem;
   padding-top: 1rem;
   width: 35rem;
-  height: 37rem;
+  height: 60%;
+}
+
+#reqForm label p {
+  text-align: left;
+  margin-left: 4rem;
 }
 
 .input_fields {
@@ -99,5 +104,40 @@ code {
 }
 
 .reqButton {
-  margin-top: 5rem;
+  margin-top: 2rem;
+}
+
+#dataForm {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  width: 35rem;
+  height: 85%;
+}
+
+#dataForm label p {
+  text-align: left;
+  margin-left: 4rem;
+}
+
+#dropdown {
+  width: 80%;
+  padding: 12px;
+  color: grey;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+#list {
+  margin-left: 3rem;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 40% 40% 40%;
+  width: 80%;
+}
+
+.lable_checkbox {
+  padding: 0.5em 0 0 0.5em;
 }

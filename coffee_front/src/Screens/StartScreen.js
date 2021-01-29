@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Context from "../context";
 
 function StartScreen() {
-  const { showRegPanel } = useContext(Context);
+  const { showActivePanel } = useContext(Context);
 
   return (
     <div className="conteainer">
@@ -23,9 +23,9 @@ function StartScreen() {
         <button
           className="startButton"
           type="submit"
-          onClick={() => showRegPanel()}
+          onClick={() => showActivePanel(1)}
         >
-          Start
+          Начать
         </button>
         <div className="description">
           <p style={{ paddingTop: "5rem" }}>
