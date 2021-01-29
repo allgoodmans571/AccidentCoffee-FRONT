@@ -9,12 +9,12 @@ function App() {
   const [statePage, setStatePage] = React.useState(0);
   const components = [<StartScreen />, <Registration />, <PersonalData />];
 
-  function showActivePanel(i) {
+  function setActivePanel(i) {
     setStatePage(i);
   }
 
   return (
-    <Context.Provider value={{ showActivePanel }}>
+    <Context.Provider value={{ setActivePanel }}>
       <div className="App">{components[statePage]}</div>
     </Context.Provider>
   );

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Context from "../context";
 
 function PersonalData() {
-  const { showActivePanel } = useContext(Context);
+  const { setActivePanel } = useContext(Context);
 
   return (
     <div>
@@ -197,8 +197,8 @@ function PersonalData() {
               <input
                 className="input_fields"
                 type="text"
-                id="login"
-                name="login"
+                id="telegramID"
+                name="telegramID"
                 placeholder="Введите ваш ник..."
                 required
               />
@@ -208,7 +208,7 @@ function PersonalData() {
                 className="input_fields"
                 type="submit"
                 form="survey-form"
-                onClick={() => showActivePanel(3)}
+                onClick={() => setActivePanel(3)}
               >
                 Отправить
               </button>

@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Context from "../context";
 
 function Registration() {
-  const { showActivePanel } = useContext(Context);
+  const { setActivePanel } = useContext(Context);
 
   return (
     <div className="backgroundReqForm">
@@ -58,7 +58,7 @@ function Registration() {
               className="input_fields"
               type="submit"
               form="survey-form"
-              onClick={() => showActivePanel(2)}
+              onClick={() => setActivePanel(2)}
             >
               Зарегистрироваться
             </button>

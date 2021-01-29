@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Context from "../context";
 
 function StartScreen() {
-  const { showActivePanel } = useContext(Context);
+  const { setActivePanel } = useContext(Context);
 
   return (
     <div className="conteainer">
@@ -23,7 +23,7 @@ function StartScreen() {
         <button
           className="startButton"
           type="submit"
-          onClick={() => showActivePanel(1)}
+          onClick={() => setActivePanel(1)}
         >
           Начать
         </button>
