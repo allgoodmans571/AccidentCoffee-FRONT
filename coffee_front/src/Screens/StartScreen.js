@@ -29,10 +29,22 @@ function StartScreen() {
         </button>
         <div className="description">
           <p style={{ paddingTop: "5rem" }}>
-            Placeholder, placeholder, , placeholder, placeholder, placeholder,
-            placeholder, placeholder, placeholder, placeholder, placeholder,
-            placeholder, placeholder, placeholder
+            ITinder - это сайт знакомств для нашей команды.
           </p>
+          <p>
+            Здесь ты можешь получше узнать компанию через людей, найти эксперта,
+            единомышленника, бадди или просто приятно провести время с
+            интересным собеседником
+          </p>
+          <p>Как это работает?</p>
+          <li
+            style={{
+              display: "flex",
+              justifyContent: "space-between"
+            }}
+          >
+            <ul></ul>
+          </li>
         </div>
       </div>
     </div>

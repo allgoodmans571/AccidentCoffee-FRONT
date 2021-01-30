@@ -13,7 +13,7 @@ function PersonalData() {
             <label>
               <p>Жизненная позиция</p>
               <select id="dropdown" required>
-                <option disabled selected value>
+                <option disabled defaultValue value>
                   Выберите жизненную позицию..
                 </option>
                 <option value="Maximum">Беру максимум от возможности</option>
@@ -26,7 +26,7 @@ function PersonalData() {
             <label>
               <p>Командный статус</p>
               <select id="dropdown" required>
-                <option disabled selected value>
+                <option disabled defaultValue value>
                   Выберите командный статус..
                 </option>
                 <option value="Motivator">
@@ -45,7 +45,7 @@ function PersonalData() {
             <label>
               <p>Место работы</p>
               <select id="dropdown" required>
-                <option disabled selected value>
+                <option disabled defaultValue value>
                   Выберите место работы..
                 </option>
                 <option value="Office">Офис</option>
@@ -58,7 +58,7 @@ function PersonalData() {
             <label>
               <p>В отношениях с проектом</p>
               <select id="dropdown" required>
-                <option disabled selected value>
+                <option disabled defaultValue value>
                   Выберите отношения с проектом..
                 </option>
                 <option value="0-1">0-1 месяца</option>
@@ -71,7 +71,7 @@ function PersonalData() {
             <p>Выбери теги</p>
             <div id="list">
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
                     cass="input_checkbox"
                     name="prefer"
@@ -82,9 +82,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Family"
                     type="checkbox"
@@ -93,9 +93,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Relationship"
                     type="checkbox"
@@ -104,9 +104,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Society"
                     type="checkbox"
@@ -115,9 +115,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Psychical_deviations"
                     type="checkbox"
@@ -126,9 +126,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"
@@ -137,9 +137,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"
@@ -148,9 +148,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"
@@ -159,9 +159,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"
@@ -170,9 +170,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"
@@ -181,9 +181,9 @@ function PersonalData() {
                 </label>
               </div>
               <div id="list_element">
-                <label class="lable_checkbox">
+                <label className="lable_checkbox">
                   <input
-                    class="input_checkbox"
+                    className="input_checkbox"
                     name="prefer"
                     value="Other"
                     type="checkbox"

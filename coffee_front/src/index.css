@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
 }
 
 code {
@@ -29,9 +30,9 @@ code {
 }
 
 .logo {
-  font-size: 45px;
   color: rgb(0, 0, 0);
   margin-top: 6rem;
+  font-size: 45px;
 }
 
 .taglineHadler {
@@ -61,10 +62,15 @@ code {
 
 .description {
   background: #ffffff 0% 0% no-repeat padding-box;
+  text-align: left;
   border: 1px solid #707070;
   width: 43rem;
   height: 25rem;
   margin: auto;
+}
+
+.description p {
+  margin: 2rem;
 }
 
 .backgroundReqForm {
@@ -83,10 +89,10 @@ code {
 #reqForm {
   background-color: rgb(255, 255, 255);
   text-align: center;
-  margin-top: 4rem;
-  padding-top: 1rem;
+  margin: 4rem;
+  padding: 1rem 0 3rem 0;
   width: 35rem;
-  height: 60%;
+  height: auto;
 }
 
 #reqForm label p {
@@ -110,10 +116,10 @@ code {
 #dataForm {
   background-color: rgb(255, 255, 255);
   text-align: center;
-  margin-top: 4rem;
-  padding-top: 1rem;
+  margin-top: 2rem;
+  padding: 1rem 0 2rem 0;
   width: 35rem;
-  height: 85%;
+  height: auto;
 }
 
 #dataForm label p {
@@ -140,4 +146,59 @@ code {
 
 .lable_checkbox {
   padding: 0.5em 0 0 0.5em;
+}
+
+.profile {
+  border: 2px solid #ccc;
+  display: grid;
+  grid-template-columns: 25% 70%;
+  justify-content: center;
+  align-items: center;
+  width: 70rem;
+  height: auto;
+  margin: 7.5rem auto auto auto;
+}
+
+.personalData {
+  margin-bottom: 10rem;
+  display: grid;
+  grid-gap: 4rem;
+}
+
+.personalChoose {
+  border: 2px solid #ccc;
+  width: 70%;
+  height: auto;
+  margin: auto;
+  text-align: left;
+}
+
+.personalTags {
+  border: 2px solid #ccc;
+  width: 80%;
+  height: auto;
+  margin: auto auto -2rem auto;
+  font-size: 24px;
+  text-align: center;
+}
+
+.personalData ol li {
+  margin-bottom: 1rem;
+}
+
+.personalInfo {
+  text-align: left;
+}
+
+.personalInfo p {
+  width: 93%;
+  border: 2px solid #ccc;
+  padding: 10px;
+}
+
+.profilePhoto {
+  margin-top: 1rem;
+  border: 2px solid #ccc;
+  height: 100%;
+  max-width: 100%;
 }

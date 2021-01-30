@@ -4,10 +4,11 @@ import Context from "./context";
 import StartScreen from "./Screens/StartScreen";
 import Registration from "./Screens/Registration";
 import PersonalData from "./Screens/PersonalData";
+import Profile from "./Screens/Profile";
 
 function App() {
   const [statePage, setStatePage] = React.useState(0);
-  const components = [<StartScreen />, <Registration />, <PersonalData />];
+  const components = [<StartScreen />, <Registration />, <PersonalData />, <Profile/>];
 
   function setActivePanel(i) {
     setStatePage(i);
