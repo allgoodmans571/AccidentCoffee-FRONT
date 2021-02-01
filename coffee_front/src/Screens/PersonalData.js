@@ -13,7 +13,7 @@ function PersonalData() {
             <label>
               <p>Жизненная позиция</p>
               <select id="dropdown" required>
-                <option disabled defaultValue value>
+                <option defaultValue>
                   Выберите жизненную позицию..
                 </option>
                 <option value="Maximum">Беру максимум от возможности</option>
@@ -26,7 +26,7 @@ function PersonalData() {
             <label>
               <p>Командный статус</p>
               <select id="dropdown" required>
-                <option disabled defaultValue value>
+                <option defaultValue>
                   Выберите командный статус..
                 </option>
                 <option value="Motivator">
@@ -45,7 +45,7 @@ function PersonalData() {
             <label>
               <p>Место работы</p>
               <select id="dropdown" required>
-                <option disabled defaultValue value>
+                <option defaultValue>
                   Выберите место работы..
                 </option>
                 <option value="Office">Офис</option>
@@ -58,7 +58,7 @@ function PersonalData() {
             <label>
               <p>В отношениях с проектом</p>
               <select id="dropdown" required>
-                <option disabled defaultValue value>
+                <option defaultValue>
                   Выберите отношения с проектом..
                 </option>
                 <option value="0-1">0-1 месяца</option>

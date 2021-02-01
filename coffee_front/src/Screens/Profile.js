@@ -13,10 +13,10 @@ function Profile() {
 
   useEffect(() => {
     setInfo({
-      lifePos: "беру максимум от возможностей",
-      comStatus: "генерато ридей",
-      workPlace: "и там, и там",
-      projectTime: "0-1 месяца",
+      lifePos: "Беру максимум от возможностей",
+      comStatus: "Генератор идей",
+      workPlace: "И там, и там",
+      projectTime: "0-1 месяца",  
       tags: ["Эко", "Музыка", "Вечеринки", "Сериалы", "Животные"],
     });
   }, []);
@@ -32,9 +32,7 @@ function Profile() {
           />
           <p style={{ fontSize: "25px" }}>Анна Любимова</p>
           <p>
-            Менеджер по корпоративной
-            <br />
-            культуре
+            Менеджер по корпоративной культуре
           </p>
           <p>
             Telegramm: ALyubimova
@@ -46,11 +44,11 @@ function Profile() {
       <div className="personalData">
         {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
         <div className="personalTags">
-          <p style={{ color: '#56c1ff'}}>
+          <p style={{ color: '#56c1ff'}} >
             {info.tags.map((tag) => {
               return (
                 //TODO кошмар переделать
-                <strong> &nbsp; &nbsp; {tag} &nbsp; &nbsp;</strong>
+                <strong key={tag}> &nbsp; &nbsp; {tag} &nbsp; &nbsp;</strong>
               );
             })}
           </p>
@@ -73,6 +71,8 @@ function Profile() {
         </div>
         <button
           style={{
+            backgroundColor: 'white',
+            fontSize: '40px',
             width: "40%",
             padding: "25px",
             margin: "auto",
@@ -82,7 +82,7 @@ function Profile() {
           }}
           onClick={() => console.log("sss")}
         >
-          Начать поиск
+          Найти коллегу
         </button>
       </div>
     </div>

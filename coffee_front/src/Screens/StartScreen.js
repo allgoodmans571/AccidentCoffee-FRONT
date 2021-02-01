@@ -10,47 +10,48 @@ function StartScreen() {
         <div className="logoHadler">
           <div className="logo">
             <image href=""></image>
-            <h1>Logo</h1>
+            <h1 style={{ fontSize: "120px", margin: 0, padding: 0 }}>
+              ITinder
+            </h1>
+            <p style={{ fontSize: "35px", margin: 0, padding: 0 }}>
+              Знакомься. Общайся. Развивайнетворкинг
+            </p>
           </div>
         </div>
-        <div className="taglineHadler">
-          <div className="tagline">
-            <h1>Tagline</h1>
-          </div>
-        </div>
+        <div className="imageList">{/*TODO место для картинок */}</div>
       </div>
       <div className="content">
-        <button
-          style={{
-            box: "border-box",
-            border: "2px solid #ccc",
-            borderRadius: "0.25rem",
-          }}
-          className="startButton"
-          type="submit"
-          onClick={() => setActivePanel(1)}
-        >
-          Начать
-        </button>
         <div className="description">
-          <p style={{ fontSize: "25px" }}>
+          <p style={{ fontSize: "32px" }}>
             ITinder - это сайт знакомств для нашей команды.
           </p>
-          <p style={{ fontSize: "25px" }}>
+          <p style={{ fontSize: "21px" }}>
             Здесь ты можешь получше узнать компанию через людей, найти эксперта,
             единомышленника, бадди или просто приятно провести время с
-            интересным собеседником
+            интересным собеседником.
           </p>
-          <p>Как это работает?</p>
-          <ul style={{ listStyle: "none", margin: "2rem", padding: 0 }}>
-            <li>1 шаг. Регистрируешься</li>
-            <li>2 шаг. Заполняешь профиль - отвечаешьна 5 вопросов </li>
-            <li>3 шаг. Ждешь в ответ профиль коллеги с похожими интересами</li>
-            <li>
-              4 шаг. Вы списываетесь и выбираете удобное время и формат для
-              встречи
-            </li>
-          </ul>
+          <p style={{marginBottom: "-1rem" }}>Как это работает?</p>
+          <div style={{ display: "flex"}}>
+            <ul style={{ listStyle: "none", margin: "2rem", padding: 0 }}>
+              <li>1 шаг. Регистрируешься</li>
+              <li>2 шаг. Заполняешь профиль - отвечаешь на 5 вопросов </li>
+              <li>
+                3 шаг. Ждешь в ответ профиль коллеги с похожими интересами
+              </li>
+              <li>
+                4 шаг. Вы списываетесь и выбираете удобное время и формат для
+                встречи
+              </li>
+            </ul>
+            <button
+              style={{}}
+              className="startButton"
+              type="submit"
+              onClick={() => setActivePanel(1)}
+            >
+              Создать профиль
+            </button>
+          </div>
           <p>Если остались вопросы - пиши *рассылка*</p>
         </div>
       </div>
