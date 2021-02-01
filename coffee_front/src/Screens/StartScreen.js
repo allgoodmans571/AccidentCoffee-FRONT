@@ -21,6 +21,11 @@ function StartScreen() {
       </div>
       <div className="content">
         <button
+          style={{
+            box: "border-box",
+            border: "2px solid #ccc",
+            borderRadius: "0.25rem",
+          }}
           className="startButton"
           type="submit"
           onClick={() => setActivePanel(1)}
@@ -28,23 +33,25 @@ function StartScreen() {
           Начать
         </button>
         <div className="description">
-          <p style={{ paddingTop: "5rem" }}>
+          <p style={{ fontSize: "25px" }}>
             ITinder - это сайт знакомств для нашей команды.
           </p>
-          <p>
+          <p style={{ fontSize: "25px" }}>
             Здесь ты можешь получше узнать компанию через людей, найти эксперта,
             единомышленника, бадди или просто приятно провести время с
             интересным собеседником
           </p>
           <p>Как это работает?</p>
-          <li
-            style={{
-              display: "flex",
-              justifyContent: "space-between"
-            }}
-          >
-            <ul></ul>
-          </li>
+          <ul style={{ listStyle: "none", margin: "2rem", padding: 0 }}>
+            <li>1 шаг. Регистрируешься</li>
+            <li>2 шаг. Заполняешь профиль - отвечаешьна 5 вопросов </li>
+            <li>3 шаг. Ждешь в ответ профиль коллеги с похожими интересами</li>
+            <li>
+              4 шаг. Вы списываетесь и выбираете удобное время и формат для
+              встречи
+            </li>
+          </ul>
+          <p>Если остались вопросы - пиши *рассылка*</p>
         </div>
       </div>
     </div>

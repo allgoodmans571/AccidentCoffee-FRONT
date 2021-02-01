@@ -64,13 +64,17 @@ code {
   background: #ffffff 0% 0% no-repeat padding-box;
   text-align: left;
   border: 1px solid #707070;
-  width: 43rem;
-  height: 25rem;
-  margin: auto;
+  width: 64rem;
+  height: 80%;
+  margin: auto 0 auto 0;
 }
 
 .description p {
   margin: 2rem;
+}
+
+.description ul li {
+  margin: 1rem 0 0 0;
 }
 
 .backgroundReqForm {
@@ -154,23 +158,30 @@ code {
   grid-template-columns: 25% 70%;
   justify-content: center;
   align-items: center;
-  width: 70rem;
+  width: 80%;
   height: auto;
-  margin: 7.5rem auto auto auto;
+  margin: 5rem auto;
 }
 
 .personalData {
-  margin-bottom: 10rem;
+  margin: 4rem 0 4rem 0;
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: 5rem;
 }
 
 .personalChoose {
   border: 2px solid #ccc;
-  width: 70%;
+  width: 80%;
   height: auto;
   margin: auto;
   text-align: left;
+}
+
+.personalChoose ol {
+  font-size: 20px;
+  margin: 2rem; 
+  padding: 0;
+  list-style: none;
 }
 
 .personalTags {
@@ -178,7 +189,7 @@ code {
   width: 80%;
   height: auto;
   margin: auto auto -2rem auto;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
 }
 
@@ -187,6 +198,7 @@ code {
 }
 
 .personalInfo {
+  margin: 4rem 0 4rem 0;
   text-align: left;
 }
 

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import Context from "../context";
+import React, { useEffect } from "react";
+// import Context from "../context";
 
 function Profile() {
-  const { setActivePanel } = useContext(Context);
+  // const { setActivePanel } = useContext(Context);
   const [info, setInfo] = React.useState({
     lifePos: "",
     comStatus: "",
@@ -28,8 +28,9 @@ function Profile() {
           <img
             className="profilePhoto"
             src="https://www.vozdushnyeshary-nsk.ru/wp-content/uploads/2019/03/kodycay-figura-zeleznyi-celovekgelievye-sary-600%D1%85600-600x600.jpg"
+            alt="Фото коллеги №2"
           />
-          <p>Анна Любимова</p>
+          <p style={{ fontSize: "25px" }}>Анна Любимова</p>
           <p>
             Менеджер по корпоративной
             <br />
@@ -43,36 +44,44 @@ function Profile() {
         </div>
       </div>
       <div className="personalData">
-        <h1>Личный профиль</h1>
+        {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
         <div className="personalTags">
-          <p>
-            <strong>
-              {info.tags.map((tag) => {
-                return tag + "  ";
-              })}
-            </strong>
+          <p style={{ color: '#56c1ff'}}>
+            {info.tags.map((tag) => {
+              return (
+                //TODO кошмар переделать
+                <strong> &nbsp; &nbsp; {tag} &nbsp; &nbsp;</strong>
+              );
+            })}
           </p>
         </div>
         <div className="personalChoose">
           <ol>
-            <li>Жизненная позиция: {info.lifePos}</li>
-            <li>Командный статус: {info.comStatus}</li>
-            <li>Место работы: {info.workPlace}</li>
-            <li>В отношениях с проектом: {info.projectTime}</li>
+            <li>
+              <strong>Жизненная позиция:</strong> {info.lifePos}
+            </li>
+            <li>
+              <strong>Командный статус:</strong> {info.comStatus}
+            </li>
+            <li>
+              <strong>Место работы:</strong> {info.workPlace}
+            </li>
+            <li>
+              <strong>В отношениях с проектом:</strong> {info.projectTime}
+            </li>
           </ol>
         </div>
         <button
           style={{
-            width: "80%",
-            padding: "12px",
-            marginBottom: "-4rem",
+            width: "40%",
+            padding: "25px",
             margin: "auto",
             box: "border-box",
             border: "2px solid #ccc",
             borderRadius: "0.25rem",
           }}
           onClick={() => console.log("sss")}
-          >
+        >
           Начать поиск
         </button>
       </div>
