@@ -12,8 +12,8 @@ function ScroollbarItem({ linkItem, nameItem, ageItem }) {
           margin: "2rem 2rem 0 0",
           borderRadius: "1rem",
           border: 'none',
-          height: "310px",
-          width: "240px",
+          height: "300px",
+          width: "250px",
         //   background: `url(${image}) no-repeat scroll 0 0 transparent`,
           textAlign: "left",
         }}
