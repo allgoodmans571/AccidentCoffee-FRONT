@@ -1,26 +1,24 @@
 import React from "react";
 
-function ScroollbarItem({ linkItem, nameItem, ageItem }) {
+function ScroollbarItem({ linkItem, nameItem, positionItem }) {
   let image = linkItem;
   let name = nameItem;
-  let age = ageItem;
+  let position = positionItem;
 
   return (
     <div>
       <button
+        className="btn_open_profile_startPanel"
         style={{
-          margin: "2rem 2rem 0 0",
-          borderRadius: "1rem",
-          border: 'none',
-          height: "300px",
-          width: "250px",
-        //   background: `url(${image}) no-repeat scroll 0 0 transparent`,
-          textAlign: "left",
+          backgroundImage: `url(${image}`,
         }}
       >
-        Имя: {name}
-        <br />
-        Возраст: {age}
+        <div className="itemInfo">
+          <p style={{fontSize: '25px', marginBottom: '-0.5rem'}}>
+            <strong>{name}</strong>
+          </p>
+          <p>{position}</p>
+        </div>
       </button>
     </div>
   );

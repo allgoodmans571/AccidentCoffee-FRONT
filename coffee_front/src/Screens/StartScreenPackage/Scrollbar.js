@@ -4,9 +4,9 @@ import ScroollbarItem from "./ScrollbarItem";
 function Scroollbar() {
   const [dataItem] = React.useState({
     linkImage:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficons8.ru%2Ficon%2F12438%2F%25D0%25BF%25D0%25BE%25D0%25BB%25D1%258C%25D0%25B7%25D0%25BE%25D0%25B2%25D0%25B0%25D1%2582%25D0%25B5%25D0%25BB%25D1%258C-%25D0%25B1%25D0%25B5%25D0%25B7-%25D0%25BF%25D0%25BE%25D0%25BB%25D0%25BE%25D0%25B2%25D1%258B%25D1%2585-%25D0%25BF%25D1%2580%25D0%25B8%25D0%25B7%25D0%25BD%25D0%25B0%25D0%25BA%25D0%25BE%25D0%25B2&psig=AOvVaw1rjMJiI5CEtQk3sgWpmfS1&ust=1612429548955000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLiJ1aauze4CFQAAAAAdAAAAABAJ",
+      "https://institute.asiakz.com/files/default/avatar.png",
     name: "Vika",
-    age: "18 ^^",
+    position: "Графический дизайнер",
   });
 
   let arr = [
@@ -47,7 +47,7 @@ function Scroollbar() {
             <ScroollbarItem
               linkItem={item.linkImage}
               nameItem={item.name}
-              ageItem={item.age}
+              positionItem={item.position}
             />
           );
         })}
@@ -58,7 +58,7 @@ function Scroollbar() {
             <ScroollbarItem
               linkItem={item.linkImage}
               nameItem={item.name}
-              ageItem={item.age}
+              positionItem={item.position}
             />
           );
         })}
@@ -70,7 +70,7 @@ function Scroollbar() {
               // key={""}
               linkItem={item.linkImage}
               nameItem={item.name}
-              ageItem={item.age}
+              positionItem={item.position}
             />
           );
         })}
@@ -81,7 +81,7 @@ function Scroollbar() {
             <ScroollbarItem
               linkItem={item.linkImage}
               nameItem={item.name}
-              ageItem={item.age}
+              positionItem={item.position}
             />
           );
         })}

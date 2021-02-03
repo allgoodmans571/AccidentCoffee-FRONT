@@ -15,7 +15,7 @@ function StartScreen() {
         <div className="logo">
           <img
             style={{ height: "36px", width: "36px", paddingRight: "1rem" }}
-            src="https://d1icd6shlvmxi6.cloudfront.net/gsc/CA794E/bd/0d/4a/bd0d4a7342664cd0a848d844e9424fe5/images/itinder/u58.png?token=bd489fe7dc138dcbcf622d5599ec2917cb3b753d23f266e2e99bae2eab29558d"
+            src="https://d1icd6shlvmxi6.cloudfront.net/gsc/CA794E/3d/db/df/3ddbdfa3fb6c4834b9c82d4e6835cbf7/images/itinder/u204.png?token=afde4c978eab558f011e1d20f1dc98d523aa77f47e404f12a8ca239f04e45094"
           />
           <img
             style={{

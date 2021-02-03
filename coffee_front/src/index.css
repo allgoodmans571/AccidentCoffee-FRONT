@@ -29,9 +29,6 @@ code {
   /* position: absolute;
   width: 50%;
   height: 1000px; */
-
-  
-  background-color: #facd91;
 }
 
 .scrollBar {
@@ -62,23 +59,46 @@ code {
 
 .scrollBarLine_1 {
   position: relative;
-  left: -8rem;
+  left: -11rem;
   animation: moveDown 160s infinite linear;
 }
 .scrollBarLine_2 {
   position: relative;
-  left: -8rem;
+  left: -12rem;
   animation: moveUp 150s infinite linear;
 }
 .scrollBarLine_3 {
   position: relative;
-  left: -8rem;
+  left: -13rem;
   animation: moveDown 190s infinite linear;
 }
 .scrollBarLine_4 {
   position: relative;
-  left: -8rem;
+  left: -14rem;
   animation: moveUp 210s infinite linear;
+}
+
+.btn_open_profile_startPanel {
+  margin: 2rem 2rem 0 0;
+  border-radius: 1rem;
+  border: none;
+  height: 320px;
+  width: 270px;
+  background-repeat: no-repeat;
+  background-size: 320px auto;
+  background-position: center;
+  box-shadow: inset 0px 0px 100px 0px rgba(141, 141, 141, 0.6);
+  text-align: left;
+}
+
+.btn_open_profile_startPanel:hover {
+  box-shadow: inset 0px 0px 200px 0px rgba(141, 141, 141,0.2);
+}
+
+.itemInfo {
+  color: white;
+  font-size: 15px;
+  margin: 15rem 1rem;
 }
 
 .logo {
@@ -95,7 +115,7 @@ code {
 }
 
 .startButton {
-  background-color: #facd91;
+  background-color: #ec808d;
   color: #333333;
   grid-row: auto;
   font-size: 20px;
