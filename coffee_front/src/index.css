@@ -21,27 +21,34 @@ code {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 52% 48%;
+  grid-template-columns: 51% 49%;
   grid-template-rows: 100%;
 }
 
 .imageList {
+  /* width: auto; */
   /* position: absolute;
   width: 50%;
   height: 1000px; */
 }
 
 .scrollBar {
+  position: relative;
   display: flex;
   width: auto;
   height: auto;
   justify-content: flex-end;
-  position: absolute;
+}
+
+.scroollbarItem {
+  margin: -1rem -1rem 0 0;
 }
 
 @keyframes moveDown {
   0% {
-    transform: translateY(-90%);
+    -moz-transform: translateY(-85%);
+    -o-transform: translateY(-85%);
+    -webkit-transform: translateY(-85%);
   }
   100% {
     bottom: 0px;
@@ -53,28 +60,22 @@ code {
     top: 0px;
   }
   100% {
-    transform: translateY(-90%);
+    -moz-transform: translateY(-85%);
+    -o-transform: translateY(-85%);
+    -webkit-transform: translateY(-85%);
   }
 }
 
 .scrollBarLine_1 {
-  position: relative;
-  left: -11rem;
   animation: moveDown 160s infinite linear;
 }
 .scrollBarLine_2 {
-  position: relative;
-  left: -12rem;
   animation: moveUp 150s infinite linear;
 }
 .scrollBarLine_3 {
-  position: relative;
-  left: -13rem;
   animation: moveDown 190s infinite linear;
 }
 .scrollBarLine_4 {
-  position: relative;
-  left: -14rem;
   animation: moveUp 210s infinite linear;
 }
 
@@ -82,8 +83,8 @@ code {
   margin: 2rem 2rem 0 0;
   border-radius: 1rem;
   border: none;
-  height: 320px;
-  width: 270px;
+  height: 290px;
+  width: 250px;
   background-repeat: no-repeat;
   background-size: 320px auto;
   background-position: center;
@@ -92,13 +93,13 @@ code {
 }
 
 .btn_open_profile_startPanel:hover {
-  box-shadow: inset 0px 0px 200px 0px rgba(141, 141, 141,0.2);
+  box-shadow: inset 0px 0px 200px 0px rgba(141, 141, 141, 0.2);
 }
 
 .itemInfo {
   color: white;
   font-size: 15px;
-  margin: 15rem 1rem;
+  margin: 13rem 1rem;
 }
 
 .logo {
@@ -114,19 +115,44 @@ code {
   text-align: left;
 }
 
+@keyframes hoverButton {
+  0% {
+    background-color: #d9001b;
+  }
+  100% {
+    background-color: #ec808d;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    background-color: #ec808d;
+  }
+  100% {
+    background-color: #d9001b;
+  }
+}
+
 .startButton {
   background-color: #ec808d;
-  color: #333333;
+  animation: hoverButton 500ms;
+  animation-fill-mode: forwards;
+  color: #ffffff;
   grid-row: auto;
-  font-size: 20px;
+  font-size: 18px;
   border: 0px solid #ccc;
   border-radius: 6em;
-  width: 18rem;
-  height: 4rem;
+  width: 16rem;
+  height: 3.5rem;
   margin: auto;
 }
 
-.content {
+.startButton:hover {
+  animation: buttonHover 500ms;
+  animation-fill-mode: forwards;
+}
+
+.startButton:a .content {
   /* display: grid;
   grid-template-columns: 40% 70%;
   grid-template-rows: 100%;
