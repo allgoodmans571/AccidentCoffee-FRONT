@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Context from "./context";
-import StartScreen from "./Screens/StartScreen";
+import StartScreen from "./Screens/StartScreenPackage/StartScreen";
 import Registration from "./Screens/Registration";
 import PersonalData from "./Screens/PersonalData";
 import Profile from "./Screens/Profile";

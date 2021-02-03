@@ -42,7 +42,7 @@ function Registration() {
               required
             />
           </label>
-          <label htmlFor="passwordConfirmation">
+          <label htmlFor="  passwordConfirmation">
             <p>Подтверждение пароля</p>
             <input
               className="input_fields"
