@@ -1,30 +1,24 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Context from "../context/context";
+import PersonalDataContext from "../context/personalDataContext";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
+  const { setActivePanel } = useContext(Context);
+  const { init } = useContext(PersonalDataContext);
+
   async function handleSubmit() {
-    let name =
+    let userName =
       document.querySelector("#firstName").value +
       " " +
       document.querySelector("#lastName").value;
-    let position = document.querySelector("#position").value;
-    let email = document.querySelector("#corpEmail").value;
-    let telegram = document.querySelector("#telegram").value;
-    let data = { name, position, email, telegram };
-    console.log(data);
+    let userPosition = document.querySelector("#position").value;
+    let userEmail = document.querySelector("#corpEmail").value;
+    let userTelegram = document.querySelector("#telegram").value;
 
-    let response = await fetch("http://localhost:8080/registration", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(data),
-    });
+    init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
   }
-
-  const { setActivePanel } = useContext(Context);
 
   return (
     <div
@@ -113,6 +107,7 @@ function Registration() {
               onClick={(event) => {
                 event.preventDefault();
                 handleSubmit();
+                // setData(data);
                 setActivePanel(2);
               }}
             >

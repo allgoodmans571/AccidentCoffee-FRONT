@@ -245,6 +245,9 @@ code {
 }
 
 .input_fields {
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+  /* appearance: none; */
   border: 2px solid rgb(242,242,242);
   background-color: rgb(255, 255, 255);
   color: rgb(151, 151, 151);

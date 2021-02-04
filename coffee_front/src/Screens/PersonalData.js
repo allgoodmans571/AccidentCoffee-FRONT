@@ -1,15 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Context from "../context/context";
+import PersonalDataContext from "../context/personalDataContext";
+import ReqisterDataContext from "../context/reqisterDataContext";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
   const { setActivePanel } = useContext(Context);
+  const { add } = useContext(PersonalDataContext);
 
-  function handleSubmit() {
-    
+  async function handleSubmitData() {
+    let userLifePos = document.querySelector("#lifePos").value;
+    let userTeamStatus = document.querySelector("#teamStatus").value;
+    let userWordPlace = document.querySelector("#wordPlace").value;
+    let userProjectTime = document.querySelector("#projectTime").value;
+    let userTags = document.querySelector("#tags").value;
+    userTags = userTags.split(", ");
+
+    add(
+      `${userLifePos}`,
+      `${userTeamStatus}`,
+      `${userWordPlace}`,
+      `${userProjectTime}`,
+      userTags
+    );
+
+    // setUserData(data);
+    // send();
   }
 
+  // async function send() {
+  //   // console.log(data);
+  //   let response = fetch("http://68.183.12.32:8080/registration", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify(data),
+  //   });
+  // }
 
   return (
     <div
@@ -47,6 +76,7 @@ function PersonalData() {
             <select
               style={{ width: "16rem" }}
               className="input_fields"
+              id="lifePos"
               required
             >
               <option defaultValue>Выбрать</option>
@@ -67,6 +97,7 @@ function PersonalData() {
             <select
               style={{ width: "16rem" }}
               className="input_fields"
+              id="teamStatus"
               required
             >
               <option defaultValue>Выбрать</option>
@@ -90,6 +121,7 @@ function PersonalData() {
             <select
               style={{ width: "16rem" }}
               className="input_fields"
+              id="wordPlace"
               required
             >
               <option defaultValue>Выбрать</option>
@@ -107,6 +139,7 @@ function PersonalData() {
             <select
               style={{ width: "16rem" }}
               className="input_fields"
+              id="projectTime"
               required
             >
               <option defaultValue>Выбрать</option>
@@ -129,135 +162,12 @@ function PersonalData() {
               style={{ width: "23rem" }}
               className="input_fields_text"
               type="test"
-              id="telegram"
-              name="telegram"
+              id="tags"
+              name="tags"
               placeholder="Теги"
               required
             />
           </label>
-          {/* <div id="list">
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    cass="input_checkbox"
-                    name="prefer"
-                    value="Educational_institution"
-                    type="checkbox"
-                  />
-                  Спорт
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Family"
-                    type="checkbox"
-                  />
-                  Готовка
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Relationship"
-                    type="checkbox"
-                  />
-                  Музыка
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Society"
-                    type="checkbox"
-                  />
-                  Фильмы
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Psychical_deviations"
-                    type="checkbox"
-                  />
-                  Сериалы
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  Языки
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  ЗОЖ
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  ЭКО
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  ИТ
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  Киберспорт
-                </label>
-              </div>
-              <div id="list_element">
-                <label className="lable_checkbox">
-                  <input
-                    className="input_checkbox"
-                    name="prefer"
-                    value="Other"
-                    type="checkbox"
-                  />
-                  Вечеринки
-                </label>
-              </div>
-            </div> */}
           <div
             className="selectInput"
             style={{
@@ -276,7 +186,11 @@ function PersonalData() {
               className="startButton"
               type="submit"
               form="survey-form"
-              onClick={() => setActivePanel(3)}
+              onClick={(event) => {
+                event.preventDefault();
+                handleSubmitData();
+                // setActivePanel(3);
+              }}
             >
               Начать общаться
             </button>
