@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import "./ModalItem.css";
 import ModalContext from "../context/modelContext";
+import Context from "../context/context";
 
 function ModalItem() {
-  const { hanldeModal, modal } = useContext(ModalContext);
+  const { hanldeModal, modal } = useContext(Context);
 
   return (
-    <ModalContext.Provider value={{ hanldeModal }}>
+    <Context.Provider value={{ hanldeModal }}>
       {modal.isOpen && (
         <div className="modal">
           <div className="modal-body">
@@ -15,7 +16,7 @@ function ModalItem() {
           </div>
         </div>
       )}
-    </ModalContext.Provider>
+    </Context.Provider>
   );
 }
 

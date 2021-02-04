@@ -87,18 +87,12 @@ function App() {
   }
 
   return (
-    <Context.Provider value={{ setActivePanel }}>
-      <ModalContext.Provider value={{ hanldeModal, modal }}>
-        <PersonalDataContext.Provider
-          value={{
-            init,
-            add,
-            send,
-          }}
-        >
-          <div className="App">{components[statePage]}</div>
-        </PersonalDataContext.Provider>
-      </ModalContext.Provider>
+    <Context.Provider
+      value={{ setActivePanel, hanldeModal, modal, init, add, send, dataState }}
+    >
+      {/* <ModalContext.Provider value={{ hanldeModal, modal }}> */}
+      <div className="App">{components[statePage]}</div>
+      {/* </ModalContext.Provider> */}
     </Context.Provider>
   );
 }

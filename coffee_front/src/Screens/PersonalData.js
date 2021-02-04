@@ -6,10 +6,23 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
-  const { setActivePanel } = useContext(Context);
-  const { add, send } = useContext(PersonalDataContext);
+  const {
+    setActivePanel,
+    hanldeModal,
+    modal,
+    init,
+    add,
+    send,
+    dataState,
+  } = useContext(Context);
+  // const { add, send } = useContext(PersonalDataContext);
+  const [render, setRender] = useState(0);
 
-  async function handleSubmitData() {
+  function ForceUpdate() {
+    return () => setRender((render) => render + 1); // update the state to force render
+  }
+
+  function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
     let userTeamStatus = document.querySelector("#teamStatus").value;
     let userWordPlace = document.querySelector("#wordPlace").value;
@@ -26,7 +39,16 @@ function PersonalData() {
     );
 
     // setUserData(data);
-    send();
+    // send();
+
+    // console.log(dataState);
+    // let response = fetch("http://68.183.12.32:8080/registration", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json;charset=utf-8",
+    //   },
+    //   body: JSON.stringify(dataState),
+    // });
   }
 
   // async function send() {
@@ -189,6 +211,8 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 handleSubmitData();
+                ForceUpdate();
+                send();
                 // setActivePanel(3);
               }}
             >

@@ -5,8 +5,10 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
-  const { setActivePanel } = useContext(Context);
-  const { init } = useContext(PersonalDataContext);
+  const { setActivePanel, hanldeModal, modal, init, add, send } = useContext(
+    Context
+  );
+  // const { init } = useContext(PersonalDataContext);
 
   async function handleSubmit() {
     let userName =
@@ -19,7 +21,6 @@ function Registration() {
 
     init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
   }
-
   return (
     <div
       style={{

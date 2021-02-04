@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import ModalContext from "../../context/modelContext";
+import Context from "../../context/context";
 
 function ScroollbarItem({ linkItem, nameItem, positionItem }) {
-  const { hanldeModal } = useContext(ModalContext);
+  const { hanldeModal } = useContext(Context);
 
   let image = linkItem;
   let name = nameItem;
