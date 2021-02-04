@@ -7,7 +7,7 @@ import logo from "../images/logo.svg";
 
 function PersonalData() {
   const { setActivePanel } = useContext(Context);
-  const { add } = useContext(PersonalDataContext);
+  const { add, send } = useContext(PersonalDataContext);
 
   async function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
@@ -26,7 +26,7 @@ function PersonalData() {
     );
 
     // setUserData(data);
-    // send();
+    send();
   }
 
   // async function send() {

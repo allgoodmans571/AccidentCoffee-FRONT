@@ -20,6 +20,17 @@ function App() {
     <Profile />,
   ];
 
+  async function send() {
+    console.log(dataState);
+    let response = await fetch("http://68.183.12.32:8080/registration", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(dataState),
+    });
+  }
+
   const reducer = (state, action) => {
     switch (action.type) {
       case "init":
@@ -82,6 +93,7 @@ function App() {
           value={{
             init,
             add,
+            send,
           }}
         >
           <div className="App">{components[statePage]}</div>
