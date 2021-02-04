@@ -126,7 +126,7 @@ function PersonalData() {
               type="test"
               id="telegram"
               name="telegram"
-              placeholder="Telegram"
+              placeholder="Теги"
               required
             />
           </label>
