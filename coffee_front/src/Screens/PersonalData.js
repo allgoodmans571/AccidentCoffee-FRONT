@@ -6,6 +6,11 @@ import logo from "../images/logo.svg";
 function PersonalData() {
   const { setActivePanel } = useContext(Context);
 
+  function handleSubmit() {
+    
+  }
+
+
   return (
     <div
       style={{

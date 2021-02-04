@@ -4,6 +4,26 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
+  async function handleSubmit() {
+    let name =
+      document.querySelector("#firstName").value +
+      " " +
+      document.querySelector("#lastName").value;
+    let position = document.querySelector("#position").value;
+    let email = document.querySelector("#corpEmail").value;
+    let telegram = document.querySelector("#telegram").value;
+    let data = { name, position, email, telegram };
+    console.log(data);
+
+    let response = await fetch("http://localhost:8080/registration", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
   const { setActivePanel } = useContext(Context);
 
   return (
@@ -37,7 +57,7 @@ function Registration() {
           </h1>
           <label htmlFor="firstName">
             <input
-              className="input_fields_text  "
+              className="input_fields_text"
               type="text"
               id="firstName"
               name="firstName"
@@ -90,7 +110,11 @@ function Registration() {
               className="startButton"
               type="submit"
               form="survey-form"
-              onClick={() => setActivePanel(2)}
+              onClick={(event) => {
+                event.preventDefault();
+                handleSubmit();
+                setActivePanel(2);
+              }}
             >
               Следующий шаг
             </button>
