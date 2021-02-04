@@ -1,66 +1,98 @@
 import React, { useContext } from "react";
 import Context from "../context/context";
+import icon from "../images/icon.png";
+import logo from "../images/logo.svg";
 
 function Registration() {
   const { setActivePanel } = useContext(Context);
 
   return (
-    <div className="backgroundReqForm">
+    <div
+      style={{
+        marginTop: "6rem",
+        display: "flex",
+        justifyContent: "center",
+      }}
+    >
       <form id="survey-form">
         <div id="reqForm">
-          <h1>Регистрация</h1>
-          <label htmlFor="login">
-            <p>Логин</p>
+          <div>
+            <img
+              style={{ height: "36px", width: "36px", paddingRight: "1rem" }}
+              src={icon}
+              alt="icon"
+            />
+            <img
+              style={{
+                borderWidth: "0px",
+                height: "23px",
+                width: "97px",
+              }}
+              src={logo}
+              alt="logo"
+            />
+          </div>
+          <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>
+            Регистрация
+          </h1>
+          <label htmlFor="firstName">
             <input
-              className="input_fields"
+              className="input_fields_text  "
               type="text"
-              id="login"
-              name="login"
-              placeholder="Введите логин..."
+              id="firstName"
+              name="firstName"
+              placeholder="Имя"
               required
             />
           </label>
-          <label htmlFor="email">
-            <p>Почта</p>
+          <label htmlFor="lastName">
             <input
-              className="input_fields"
+              className="input_fields_text"
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Фамилия"
+              required
+            />
+          </label>
+          <label htmlFor="position">
+            <input
+              className="input_fields_text"
+              type="text"
+              id="position"
+              name="position"
+              placeholder="Должность"
+              required
+            />
+          </label>
+          <label htmlFor="corpEmail">
+            <input
+              className="input_fields_text"
               type="email"
-              id="email"
-              name="email"
-              placeholder="Введите рабочую почту..."
+              id="corpEmail"
+              name="corpEmail"
+              placeholder="Рабочая почта"
               required
             />
           </label>
-          <label htmlFor="password">
-            <p>Пароль</p>
+          <label htmlFor="telegram">
             <input
-              className="input_fields"
-              type="text"
-              id="password"
-              name="password"
-              placeholder="Введите пароль..."
+              className="input_fields_text"
+              type="test"
+              id="telegram"
+              name="telegram"
+              placeholder="Telegram"
               required
             />
           </label>
-          <label htmlFor="  passwordConfirmation">
-            <p>Подтверждение пароля</p>
-            <input
-              className="input_fields"
-              type="text"
-              id="passwordConfirmation"
-              name="passwordConfirmation"
-              placeholder="Введите пароль..."
-              required
-            />
-          </label>
-          <div className="reqButton">
+          <div style={{ marginTop: "3rem" }}>
             <button
-              className="input_fields"
+              className="startButton"
               type="submit"
               form="survey-form"
               onClick={() => setActivePanel(2)}
             >
-              Зарегистрироваться
+              Следующий шаг
             </button>
           </div>
         </div>
