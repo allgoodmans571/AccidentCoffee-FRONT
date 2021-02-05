@@ -1,52 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import ScroollbarItem from "./ScrollbarItem";
+import Context from "../../context/context";
 
 function Scroollbar() {
-  const [dataItem] = React.useState({
-    linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-    name: "Vika",
-    position: "Графический дизайнер",
-    id: 1,
-  });
+  const { arr } = useContext(Context);
+  let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
 
-  let arr = [
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-  ];
+  console.log(arr);
+
+  function showItems() {}
 
   return (
     <div className="scrollBar">
       <div className="scrollBarLine_1">
         {arr.map((item) => {
-          item.id++;
           return (
             <ScroollbarItem
-              linkItem={item.linkImage}
+              linkItem={linkImage}
               nameItem={item.name}
               positionItem={item.position}
               key={item.id}
@@ -56,10 +26,9 @@ function Scroollbar() {
       </div>
       <div className="scrollBarLine_2">
         {arr.map((item) => {
-          item.id++;
           return (
             <ScroollbarItem
-              linkItem={item.linkImage}
+              linkItem={linkImage}
               nameItem={item.name}
               positionItem={item.position}
               key={item.id}
@@ -69,11 +38,9 @@ function Scroollbar() {
       </div>
       <div className="scrollBarLine_3">
         {arr.map((item) => {
-          item.id++;
           return (
             <ScroollbarItem
-              // key={""}
-              linkItem={item.linkImage}
+              linkItem={linkImage}
               nameItem={item.name}
               positionItem={item.position}
               key={item.id}
@@ -83,10 +50,9 @@ function Scroollbar() {
       </div>
       <div className="scrollBarLine_4">
         {arr.map((item) => {
-          item.id++;
           return (
             <ScroollbarItem
-              linkItem={item.linkImage}
+              linkItem={linkImage}
               nameItem={item.name}
               positionItem={item.position}
               key={item.id}

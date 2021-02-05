@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import Context from "../../context/context";
 import ModalItem from "../../Modal/ModalItem";
 import Scroollbar from "./Scrollbar";

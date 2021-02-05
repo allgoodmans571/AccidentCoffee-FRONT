@@ -1,11 +1,10 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import Context from "../context/context";
-import PersonalDataContext from "../context/personalDataContext";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
-  const { setActivePanel, hanldeModal, modal, init, add, send } = useContext(
+  const { setActivePanel, init } = useContext(
     Context
   );
   // const { init } = useContext(PersonalDataContext);

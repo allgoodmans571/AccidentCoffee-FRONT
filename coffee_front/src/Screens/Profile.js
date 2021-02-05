@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-// import Context from "../context";
 
 function Profile() {
-  // const { setActivePanel } = useContext(Context);
   const [info, setInfo] = React.useState({
     lifePos: "",
     comStatus: "",
@@ -16,7 +14,7 @@ function Profile() {
       lifePos: "Беру максимум от возможностей",
       comStatus: "Генератор идей",
       workPlace: "И там, и там",
-      projectTime: "0-1 месяца",  
+      projectTime: "0-1 месяца",
       tags: ["Эко", "Музыка", "Вечеринки", "Сериалы", "Животные"],
     });
   }, []);
@@ -31,9 +29,7 @@ function Profile() {
             alt="Фото коллеги №2"
           />
           <p style={{ fontSize: "25px" }}>Анна Любимова</p>
-          <p>
-            Менеджер по корпоративной культуре
-          </p>
+          <p>Менеджер по корпоративной культуре</p>
           <p>
             Telegramm: ALyubimova
             <br />
@@ -44,7 +40,7 @@ function Profile() {
       <div className="personalData">
         {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
         <div className="personalTags">
-          <p style={{ color: '#56c1ff'}} >
+          <p style={{ color: "#56c1ff" }}>
             {info.tags.map((tag) => {
               return (
                 //TODO кошмар переделать
@@ -71,8 +67,8 @@ function Profile() {
         </div>
         <button
           style={{
-            backgroundColor: 'white',
-            fontSize: '40px',
+            backgroundColor: "white",
+            fontSize: "40px",
             width: "40%",
             padding: "25px",
             margin: "auto",

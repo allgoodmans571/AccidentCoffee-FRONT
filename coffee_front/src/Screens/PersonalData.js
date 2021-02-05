@@ -1,22 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Context from "../context/context";
-import PersonalDataContext from "../context/personalDataContext";
-import ReqisterDataContext from "../context/reqisterDataContext";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
-  const {
-    setActivePanel,
-    hanldeModal,
-    modal,
-    init,
-    add,
-    send,
-    dataState,
-  } = useContext(Context);
-  // const { add, send } = useContext(PersonalDataContext);
-  const [render, setRender] = useState(0);
+  const { setActivePanel, add, send } = useContext(Context);
+  const [ render, setRender ] = useState(0);
 
   function ForceUpdate() {
     return () => setRender((render) => render + 1); // update the state to force render
@@ -37,30 +26,7 @@ function PersonalData() {
       `${userProjectTime}`,
       userTags
     );
-
-    // setUserData(data);
-    // send();
-
-    // console.log(dataState);
-    // let response = fetch("http://68.183.12.32:8080/registration", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json;charset=utf-8",
-    //   },
-    //   body: JSON.stringify(dataState),
-    // });
   }
-
-  // async function send() {
-  //   // console.log(data);
-  //   let response = fetch("http://68.183.12.32:8080/registration", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json;charset=utf-8",
-  //     },
-  //     body: JSON.stringify(data),
-  //   });
-  // }
 
   return (
     <div
@@ -200,7 +166,7 @@ function PersonalData() {
             <button
               className="req_Back_Button"
               type="submit"
-              onClick={() => setActivePanel(1)}
+              onClick={() => setActivePanel(0)}
             >
               Предыдущий шаг
             </button>
@@ -213,7 +179,7 @@ function PersonalData() {
                 handleSubmitData();
                 ForceUpdate();
                 send();
-                // setActivePanel(3);
+                setActivePanel(3);
               }}
             >
               Начать общаться

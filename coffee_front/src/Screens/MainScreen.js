@@ -1,46 +1,15 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import ModalItem from "../Modal/ModalItem";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
+import Context from "../context/context";
 
 function MainScreen() {
-  const [dataItem] = React.useState({
-    linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-    name: "Vika",
-    position: "Графический дизайнер",
-    id: 1,
-  });
+  const { arr } = useContext(Context);
+  let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
 
-  let arr = [
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-    dataItem,
-  ];
+  console.log(arr);
 
   return (
     <div>
@@ -94,7 +63,7 @@ function MainScreen() {
                     alignItems: "center",
                   }}
                 >
-                  Метч!
+                  Мэтч!
                 </a>
               </div>
               <div className="profileButton">
@@ -105,10 +74,11 @@ function MainScreen() {
         </div>
       </div>
       <div className="mainBlock">
+        <div></div>
         <div className="tags">
           <p
             style={{
-              fontSize: "22px",
+              fontSize: "20px",
             }}
           >
             По интересам:
@@ -146,10 +116,9 @@ function MainScreen() {
         </div>
         <div className="itemsBar">
           {arr.map((item) => {
-            item.id++;
             return (
               <ScroollbarItem
-                linkItem={item.linkImage}
+                linkItem={linkImage}
                 nameItem={item.name}
                 positionItem={item.position}
                 key={item.id}
@@ -158,7 +127,7 @@ function MainScreen() {
           })}
         </div>
       </div>
-        <ModalItem />
+      <ModalItem />
     </div>
   );
 }

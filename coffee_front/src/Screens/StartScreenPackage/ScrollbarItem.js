@@ -16,7 +16,7 @@ function ScroollbarItem({ linkItem, nameItem, positionItem }) {
         onClick={() => hanldeModal(true)}
       >
         <div className="itemInfo">
-          <p style={{ fontSize: "25px", marginBottom: "-0.5rem" }}>
+          <p style={{ fontSize: "21px", marginBottom: "-0.5rem" }}>
             <strong>{name}</strong>
           </p>
           <p>{position}</p>

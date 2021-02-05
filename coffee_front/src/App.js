@@ -1,15 +1,40 @@
 import "./App.css";
-import React, { useState, useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import Context from "./context/context";
 import StartScreen from "./Screens/StartScreenPackage/StartScreen";
 import Registration from "./Screens/Registration";
 import PersonalData from "./Screens/PersonalData";
 import MainScreen from "./Screens/MainScreen";
-import Profile from "./Screens/Profile";
-import ModalContext from "./context/modelContext";
-import PersonalDataContext from "./context/personalDataContext";
+// import Profile from "./Screens/Profile";
 
 function App() {
+  const [arr, setArr] = useState([]);
+
+  const [dataItem] = React.useState({
+    linkImage: "https://institute.asiakz.com/files/default/avatar.png",
+    name: "Vika",
+    position: "Графический дизайнер",
+    id: 1,
+  });
+
+  
+  useEffect(() => {
+    fetch("http://68.183.12.32:8080/getAllUsers")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setArr(data);
+      }
+      );
+  }, []);
+
+  // function setArr(newArr) {
+  //   arr = newArr;
+  //   console.log(arr.length);
+  // }
+  console.log(arr);
+
   const [statePage, setStatePage] = React.useState(0);
   const [modal, setModal] = React.useState({
     isOpen: false,
@@ -18,11 +43,48 @@ function App() {
     <StartScreen />,
     <Registration />,
     <PersonalData />,
-    <Profile />,
+    <MainScreen />,
   ];
 
+  // arr.push({
+  //   linkImage: "https://institute.asiakz.com/files/default/avatar.png",
+  //   name: "Vika",
+  //   position: "Графический дизайнер",
+  //   id: 1,
+  // });
+  // let arr = [
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  //   dataItem,
+  // ];
+
+  // arr.users.push({
+  //   linkImage: "https://institute.asiakz.com/files/default/avatar.png",
+  //   name: "Fedor",
+  //   position: "Графический дизайнер",
+  //   id: 2,
+  // });
+
+  function adder(userList) {
+    userList.map((user) => {
+      arr.users.push({
+        linkImage: "https://institute.asiakz.com/files/default/avatar.png",
+        name: user.name,
+        position: user.position,
+        id: user._id,
+      });
+    });
+  }
+
   async function send() {
-    console.log(dataState);
+    // console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -89,13 +151,21 @@ function App() {
 
   return (
     <Context.Provider
-      value={{ setActivePanel, hanldeModal, modal, init, add, send, dataState }}
+      value={{
+        setActivePanel,
+        hanldeModal,
+        modal,
+        init,
+        add,
+        send,
+        dataState,
+        arr,
+      }}
     >
-      {/* <ModalContext.Provider value={{ hanldeModal, modal }}> */}
-      <div className="App">
+      <div className="App">{components[statePage]}</div>
+      {/* <div className="App">
         <MainScreen />
-      </div>
-      {/* </ModalContext.Provider> */}
+      </div> */}
     </Context.Provider>
   );
 }

@@ -308,14 +308,15 @@ code {
 }
 
 .profile {
+  background: white;
   border: 2px solid #ccc;
   display: grid;
   grid-template-columns: 25% 70%;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 50%;
   height: auto;
-  margin: 4rem auto;
+  margin: auto;
 }
 
 .personalData {
@@ -333,7 +334,7 @@ code {
 }
 
 .personalChoose ol {
-  font-size: 25px;
+  font-size: 20px;
   margin: 2rem;
   padding: 0;
   list-style: none;
@@ -359,7 +360,7 @@ code {
 }
 
 .personalInfo p {
-  font-size: 20px;
+  font-size: 15px;
   border: 2px solid #ccc;
   padding: 10px;
 }
@@ -371,7 +372,6 @@ code {
   max-width: 99%;
 }
 
-
 .headerMain {
   z-index: 1;
   position: fixed;
@@ -380,9 +380,9 @@ code {
   right: 0;
   background-color: white;
   display: grid;
-  grid-template-columns: 20% 20% 49%;
+  grid-template-columns: 18% 20% 58%;
   align-items: center;
-  width: 95%;
+  width: 90%;
   height: 8rem;
   margin: auto;
 }
@@ -395,7 +395,7 @@ code {
 .matchProfileBar {
   text-align: right;
   display: grid;
-  grid-template-columns: 500% 1%;
+  grid-template-columns: 490% 1%;
 }
 
 .matchProfilePos {
@@ -417,23 +417,32 @@ code {
 }
 
 .mainBlock {
+  width: 95%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 100%;
+  position: absolute;
+  /* gap: 6rem;
+  margin: 0 20% 0 22%;
+  position: absolute; */
+  top: 7rem;
 }
 
 .tags {
   /* background-color: turquoise; */
   position: fixed;
-  top: 10rem;
-  left: 10rem;
+  /* top: 7rem; */
+  left: 9%;
   text-align: left;
 }
 .tag {
-  margin: 0.5rem 0 0 0;
+  margin: 15px 0 0 0;
 }
 .tag a {
   background-color: #fa71cd;
   color: white;
-  font-size: 20px;
-  padding: 0 10px 0 10px;
+  font-size: 16px;
+  padding: 0 10px 5px 10px;
   border-radius: 2em;
 }
 .tag a:hover {
@@ -442,9 +451,9 @@ code {
 
 .itemsBar {
   z-index: 0;
-  position: absolute;
-  top: 7rem;
-  right: 10rem;
+  /* position: absolute; */
+  /* top: 7rem;
+  right: 11rem; */
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
 }
