@@ -26,10 +26,6 @@ code {
 }
 
 .imageList {
-  /* width: auto; */
-  /* position: absolute;
-  width: 50%;
-  height: 1000px; */
 }
 
 .scrollBar {
@@ -79,7 +75,7 @@ code {
   animation: moveUp 210s infinite linear;
 }
 
-.btn_open_profile_startPanel {
+.btn_open_profile {
   margin: 2rem 2rem 0 0;
   border-radius: 1rem;
   border: none;
@@ -92,14 +88,14 @@ code {
   text-align: left;
 }
 
-.btn_open_profile_startPanel:hover {
+.btn_open_profile:hover {
   box-shadow: inset 0px 0px 200px 0px rgba(141, 141, 141, 0.2);
 }
 
 .itemInfo {
   color: white;
   font-size: 15px;
-  margin: 13rem 1rem;
+  margin: 13rem 0 1rem 0;
 }
 
 .logo {
@@ -117,23 +113,21 @@ code {
 
 @keyframes hoverButton {
   0% {
-    background-color: #d9001b;
+    background: linear-gradient(to right, #c571f5, #fa76cf);
   }
   100% {
-    background-color: #ec808d;
   }
 }
 
 @keyframes buttonHover {
   0% {
-    background-color: #ec808d;
   }
   100% {
-    background-color: #d9001b;
   }
 }
 
 .startButton {
+  background: linear-gradient(to right, #fa76cf, #c571f5);
   background-color: #ec808d;
   animation: hoverButton 500ms;
   animation-fill-mode: forwards;
@@ -148,6 +142,7 @@ code {
 }
 
 .startButton:hover {
+  background: linear-gradient(to right, #c571f5, #fa76cf);
   animation: buttonHover 500ms;
   animation-fill-mode: forwards;
 }
@@ -175,12 +170,12 @@ code {
 
 .req_Back_Button {
   background-color: #ffffff;
-  animation: reqHoverButton 500ms;
-  animation-fill-mode: forwards;
-  color: #ffffff;
+  /* animation: reqHoverButton 500ms;
+  animation-fill-mode: forwards; */
+  color: #fa76cf;
   grid-row: auto;
   font-size: 18px;
-  border: 2px solid #ec808d;
+  border: 2px solid#fa76cf;
   border-radius: 6em;
   width: 16rem;
   height: 3.5rem;
@@ -188,23 +183,17 @@ code {
 }
 
 .req_Back_Button:hover {
-  animation: reqButtonHover 500ms;
-  animation-fill-mode: forwards;
+  border: 2px solid#c571f5;
+  color: #c571f5;
+  /* animation: reqButtonHover 500ms;
+  animation-fill-mode: forwards; */
 }
 
 .content {
-  /* display: grid;
-  grid-template-columns: 40% 70%;
-  grid-template-rows: 100%;
-  margin: auto; */
-  /* width: 100%;
-  height: auto; */
 }
 
 .description {
   text-align: left;
-  /* width: 100%;
-  height: 80%; */
   margin: auto 0 auto 0;
 }
 
@@ -244,9 +233,6 @@ code {
 }
 
 .input_fields {
-  /* -webkit-appearance: none;
-  -moz-appearance: none; */
-  /* appearance: none; */
   border: 2px solid rgb(242, 242, 242);
   background-color: rgb(255, 255, 255);
   color: rgb(151, 151, 151);
@@ -299,7 +285,6 @@ code {
   display: grid;
   grid-template-columns: 45% 50%;
   grid-template-rows: 100%;
-  /* align-items: center; */
   grid-gap: 2rem;
 }
 
@@ -395,7 +380,7 @@ code {
 .matchProfileBar {
   text-align: right;
   display: grid;
-  grid-template-columns: 490% 1%;
+  grid-template-columns: 460% 1%;
 }
 
 .matchProfilePos {
@@ -406,12 +391,16 @@ code {
 }
 
 .profileButton {
+  background-image: url("https://institute.asiakz.com/files/default/avatar.png");
   width: 50px;
   height: 50px;
+  border-radius: 6em;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  background-position: center;
 }
 
 .profileButton img {
-  border-radius: 6em;
   width: 50px;
   height: 50px;
 }
@@ -422,27 +411,22 @@ code {
   grid-template-columns: 20% 80%;
   grid-template-rows: 100%;
   position: absolute;
-  /* gap: 6rem;
-  margin: 0 20% 0 22%;
-  position: absolute; */
   top: 7rem;
 }
 
 .tags {
-  /* background-color: turquoise; */
   position: fixed;
-  /* top: 7rem; */
   left: 9%;
   text-align: left;
 }
 .tag {
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
 }
 .tag a {
   background-color: #fa71cd;
   color: white;
   font-size: 16px;
-  padding: 0 10px 5px 10px;
+  padding: 2px 13px 5px 13px;
   border-radius: 2em;
 }
 .tag a:hover {
@@ -451,9 +435,7 @@ code {
 
 .itemsBar {
   z-index: 0;
-  /* position: absolute; */
-  /* top: 7rem;
-  right: 11rem; */
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 19% 19% 19% 19% 19%;
+  margin: 0 0 2rem 3rem;
 }

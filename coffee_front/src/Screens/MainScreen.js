@@ -6,7 +6,7 @@ import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
 import Context from "../context/context";
 
 function MainScreen() {
-  const { arr } = useContext(Context);
+  const { hanldeModal, dataState, arr } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
 
   console.log(arr);
@@ -25,6 +25,7 @@ function MainScreen() {
               borderWidth: "0px",
               height: "23px",
               width: "97px",
+              marginBottom: "5px",
             }}
             src={logo}
             alt="logo"
@@ -66,9 +67,24 @@ function MainScreen() {
                   Мэтч!
                 </a>
               </div>
-              <div className="profileButton">
-                <img src="https://institute.asiakz.com/files/default/avatar.png"></img>
-              </div>
+              <button
+                className="profileButton"
+                onClick={() => {
+                  hanldeModal(
+                    true,
+                    dataState.linkImage,
+                    dataState.name,
+                    dataState.position,
+                    dataState.email,
+                    dataState.telegram,
+                    dataState.lifePos,
+                    dataState.comStatus,
+                    dataState.workPlace,
+                    dataState.projectTime,
+                    dataState.tags
+                  );
+                }}
+              ></button>
             </div>
           </div>
         </div>
@@ -78,7 +94,7 @@ function MainScreen() {
         <div className="tags">
           <p
             style={{
-              fontSize: "20px",
+              fontSize: "17px",
             }}
           >
             По интересам:

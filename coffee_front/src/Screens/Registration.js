@@ -4,9 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
-  const { setActivePanel, init } = useContext(
-    Context
-  );
+  const { setActivePanel, init } = useContext(Context);
   // const { init } = useContext(PersonalDataContext);
 
   async function handleSubmit() {
@@ -32,7 +30,11 @@ function Registration() {
         <div id="reqForm">
           <div>
             <img
-              style={{ height: "36px", width: "36px", paddingRight: "1rem" }}
+              style={{
+                height: "36px",
+                width: "36px",
+                paddingRight: "1rem",
+              }}
               src={icon}
               alt="icon"
             />
@@ -41,6 +43,7 @@ function Registration() {
                 borderWidth: "0px",
                 height: "23px",
                 width: "97px",
+                marginBottom: "5px",
               }}
               src={logo}
               alt="logo"
@@ -111,7 +114,7 @@ function Registration() {
                 setActivePanel(2);
               }}
             >
-              Следующий шаг
+              <strong>Следующий шаг</strong>
             </button>
           </div>
         </div>

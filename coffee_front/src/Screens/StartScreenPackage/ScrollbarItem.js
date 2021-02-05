@@ -11,12 +11,17 @@ function ScroollbarItem({ linkItem, nameItem, positionItem }) {
   return (
     <div className="scroollbarItem">
       <button
-        className="btn_open_profile_startPanel"
+        className="btn_open_profile"
         style={{ backgroundImage: `url(${image}` }}
-        onClick={() => hanldeModal(true)}
+        onClick={() => hanldeModal(true, linkItem, nameItem, positionItem)}
       >
         <div className="itemInfo">
-          <p style={{ fontSize: "21px", marginBottom: "-0.5rem" }}>
+          <p
+            style={{
+              fontSize: "21px",
+              marginBottom: "-0.5rem",
+            }}
+          >
             <strong>{name}</strong>
           </p>
           <p>{position}</p>

@@ -10,14 +10,6 @@ import MainScreen from "./Screens/MainScreen";
 function App() {
   const [arr, setArr] = useState([]);
 
-  const [dataItem] = React.useState({
-    linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-    name: "Vika",
-    position: "Графический дизайнер",
-    id: 1,
-  });
-
-  
   useEffect(() => {
     fetch("http://68.183.12.32:8080/getAllUsers")
       .then((response) => {
@@ -25,52 +17,40 @@ function App() {
       })
       .then((data) => {
         setArr(data);
-      }
-      );
+      });
   }, []);
-
-  // function setArr(newArr) {
-  //   arr = newArr;
-  //   console.log(arr.length);
-  // }
-  console.log(arr);
 
   const [statePage, setStatePage] = React.useState(0);
   const [modal, setModal] = React.useState({
     isOpen: false,
+    image: "",
+    name: "",
+    position: "",
+    // email: "",
+    // telegram: "",
+    // lifePos: "",
+    // comStatus: "",
+    // workPlace: "",
+    // projectTime: "",
+    tags: [],
   });
+
+  function hanldeModal(operUser, imageUser, nameUser, positionUser) {
+    setModal({
+      isOpen: operUser,
+      image: imageUser,
+      name: nameUser,
+      position: positionUser,
+      tags: ["tag", "tag", "tag"],
+    });
+  }
+
   const components = [
     <StartScreen />,
     <Registration />,
     <PersonalData />,
     <MainScreen />,
   ];
-
-  // arr.push({
-  //   linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-  //   name: "Vika",
-  //   position: "Графический дизайнер",
-  //   id: 1,
-  // });
-  // let arr = [
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  //   dataItem,
-  // ];
-
-  // arr.users.push({
-  //   linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-  //   name: "Fedor",
-  //   position: "Графический дизайнер",
-  //   id: 2,
-  // });
 
   function adder(userList) {
     userList.map((user) => {
@@ -84,7 +64,6 @@ function App() {
   }
 
   async function send() {
-    // console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -145,10 +124,6 @@ function App() {
     setStatePage(i);
   }
 
-  function hanldeModal(value) {
-    setModal({ isOpen: value });
-  }
-
   return (
     <Context.Provider
       value={{
@@ -163,9 +138,6 @@ function App() {
       }}
     >
       <div className="App">{components[statePage]}</div>
-      {/* <div className="App">
-        <MainScreen />
-      </div> */}
     </Context.Provider>
   );
 }

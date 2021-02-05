@@ -6,10 +6,6 @@ function Scroollbar() {
   const { arr } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
 
-  console.log(arr);
-
-  function showItems() {}
-
   return (
     <div className="scrollBar">
       <div className="scrollBarLine_1">

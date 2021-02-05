@@ -3,19 +3,7 @@ import "./ModalItem.css";
 import Context from "../context/context";
 
 function ModalItem() {
-  const { hanldeModal, modal, arr } = useContext(Context);
-  const [info, setInfo] = React.useState({
-    image: "",
-    name: "",
-    position: "",
-    email: "",
-    telegram: "",
-    lifePos: "",
-    comStatus: "",
-    workPlace: "",
-    projectTime: "",
-    tags: [],
-  });
+  const { hanldeModal, modal } = useContext(Context);
 
   return (
     <div>
@@ -26,15 +14,15 @@ function ModalItem() {
               <div className="personalInfo">
                 <img
                   className="profilePhoto"
-                  src={info.image}
+                  src={modal.image}
                   alt="Фото коллеги №2"
                 />
-                <p style={{ fontSize: "15px" }}>{info.name}</p>
-                <p>{info.position}</p>
+                <p style={{ fontSize: "15px" }}>{modal.name}</p>
+                <p>{modal.position}</p>
                 <p>
-                  Telegramm: {info.telegram}
+                  {/* Telegramm: {info.telegram} */}
                   <br />
-                  Email: {info.email}
+                  {/* Email: {info.email} */}
                 </p>
               </div>
             </div>
@@ -42,7 +30,7 @@ function ModalItem() {
               {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
               <div className="personalTags">
                 <p style={{ color: "#56c1ff" }}>
-                  {info.tags.map((tag) => {
+                  {modal.tags.map((tag) => {
                     return (
                       //TODO кошмар переделать
                       <strong key={tag}>
@@ -56,16 +44,16 @@ function ModalItem() {
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Жизненная позиция:</strong> {info.lifePos}
+                    <strong>Жизненная позиция:</strong> info.lifePos
                   </li>
                   <li>
-                    <strong>Командный статус:</strong> {info.comStatus}
+                    <strong>Командный статус:</strong> info.comStatus
                   </li>
                   <li>
-                    <strong>Место работы:</strong> {info.workPlace}
+                    <strong>Место работы:</strong> info.workPlace
                   </li>
                   <li>
-                    <strong>В отношениях с проектом:</strong> {info.projectTime}
+                    <strong>В отношениях с проектом:</strong> info.projectTime
                   </li>
                 </ol>
               </div>
