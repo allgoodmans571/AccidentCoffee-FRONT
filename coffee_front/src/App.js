@@ -4,6 +4,7 @@ import Context from "./context/context";
 import StartScreen from "./Screens/StartScreenPackage/StartScreen";
 import Registration from "./Screens/Registration";
 import PersonalData from "./Screens/PersonalData";
+import MainScreen from "./Screens/MainScreen";
 import Profile from "./Screens/Profile";
 import ModalContext from "./context/modelContext";
 import PersonalDataContext from "./context/personalDataContext";
@@ -91,7 +92,9 @@ function App() {
       value={{ setActivePanel, hanldeModal, modal, init, add, send, dataState }}
     >
       {/* <ModalContext.Provider value={{ hanldeModal, modal }}> */}
-      <div className="App">{components[statePage]}</div>
+      <div className="App">
+        <MainScreen />
+      </div>
       {/* </ModalContext.Provider> */}
     </Context.Provider>
   );
