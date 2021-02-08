@@ -19,19 +19,13 @@ function PersonalData() {
     let userTags = document.querySelector("#tags").value;
     userTags = userTags.split(", ");
 
-    setTimeout(() => {
-      add(
-        `${userLifePos}`,
-        `${userTeamStatus}`,
-        `${userWordPlace}`,
-        `${userProjectTime}`,
-        userTags
-      );
-    }, 0);
-
-    setTimeout(() => {
-      send();
-    }, 0);
+    add(
+      `${userLifePos}`,
+      `${userTeamStatus}`,
+      `${userWordPlace}`,
+      `${userProjectTime}`,
+      userTags
+    );
   }
 
   return (
@@ -168,6 +162,7 @@ function PersonalData() {
               id="tags"
               name="tags"
               placeholder="Теги"
+              onChange={() => handleSubmitData()}
               required
             />
           </label>
@@ -191,9 +186,8 @@ function PersonalData() {
               form="survey-form"
               onClick={(event) => {
                 event.preventDefault();
-                handleSubmitData();
-                ForceUpdate();
-                setActivePanel(3);
+                send();
+                // setActivePanel(3);
               }}
             >
               <strong>Начать общаться</strong>

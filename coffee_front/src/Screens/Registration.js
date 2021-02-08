@@ -107,7 +107,7 @@ function Registration() {
               className="startButton"
               type="submit"
               form="survey-form"
-              on  Click={(event) => {
+              onClick={(event) => {
                 event.preventDefault();
                 handleSubmit();
                 // setData(data);
