@@ -108,6 +108,7 @@ code {
 .title {
   padding: 9rem;
   margin: auto;
+  max-width: 40rem;
   text-align: left;
 }
 
@@ -293,25 +294,26 @@ code {
 }
 
 .profile {
+  z-index: 3;
   background: white;
   border: 2px solid #ccc;
-  display: grid;
-  grid-template-columns: 25% 70%;
+  border-radius: 1rem;
+  /* display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 40% 30% 40%;
   justify-content: center;
-  align-items: center;
-  width: 50%;
+  align-items: center; */
+  width: 50rem;
   height: auto;
   margin: auto;
 }
 
 .personalData {
-  margin: 4rem 0 4rem 0;
-  display: grid;
-  grid-gap: 5rem;
+  margin: 0rem 6rem 2rem 3rem;
+  display: flex;
 }
 
 .personalChoose {
-  border: 2px solid #ccc;
   width: 80%;
   height: auto;
   margin: auto;
@@ -319,18 +321,17 @@ code {
 }
 
 .personalChoose ol {
-  font-size: 20px;
+  font-size: 17px;
   margin: 2rem;
-  padding: 0;
   list-style: none;
 }
 
 .personalTags {
   border: 2px solid #ccc;
-  width: 80%;
+  /* width: 80%;
   height: auto;
-  margin: auto auto -2rem auto;
-  font-size: 25px;
+  margin: auto auto -2rem auto; */
+  font-size: 20px;
   text-align: center;
 }
 
@@ -339,22 +340,26 @@ code {
 }
 
 .personalInfo {
+  display: grid;
+  grid-template-columns: 30% 40%;
+  grid-gap: 8rem;
+  align-items: center;
   width: 100%;
-  margin: 4rem 0 4rem 0;
+  margin: 2rem 0 2rem 0;
   text-align: left;
 }
 
 .personalInfo p {
   font-size: 15px;
-  border: 2px solid #ccc;
-  padding: 10px;
 }
 
 .profilePhoto {
   margin-top: 1rem;
+  margin-left: 4rem;
   border: 2px solid #ccc;
+  border-radius: 13rem;
   height: 100%;
-  max-width: 99%;
+  max-width: 100%;
 }
 
 .headerMain {
@@ -365,29 +370,17 @@ code {
   right: 0;
   background-color: white;
   display: grid;
-  grid-template-columns: 18% 20% 58%;
+  grid-template-columns: 18% 78%;
   align-items: center;
   width: 90%;
   height: 8rem;
   margin: auto;
 }
 
-.navBar {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
-
 .matchProfileBar {
   text-align: right;
   display: grid;
-  grid-template-columns: 460% 1%;
-}
-
-.matchProfilePos {
-  display: grid;
-  grid-template-columns: 20% 1%;
-  align-items: center;
-  grid-gap: 1rem;
+  grid-template-columns: 98%;
 }
 
 .profileButton {

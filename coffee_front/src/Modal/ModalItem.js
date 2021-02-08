@@ -9,69 +9,76 @@ function ModalItem() {
     <div>
       {modal.isOpen && (
         <div className="modal">
+          <button
+            className="backgroundButton"
+            onClick={() => hanldeModal(false)}
+          />
           <div className="profile">
-            <div>
-              <div className="personalInfo">
+            <div className="personalInfo">
+              <div>
                 <img
                   className="profilePhoto"
                   src={modal.image}
                   alt="Фото коллеги №2"
                 />
-                <p style={{ fontSize: "15px" }}>{modal.name}</p>
-                <p>{modal.position}</p>
-                <p>
-                  {/* Telegramm: {info.telegram} */}
-                  <br />
-                  {/* Email: {info.email} */}
+                <button
+                  style={{
+                    position: 'relative',
+                    left: 0,
+                    bottom: 0,
+                    width: "40px",
+                    height: "40px",
+                    box: "border-box",
+                    border: "2px solid #ccc",
+                    borderRadius: "0.25rem",
+                  }}
+                  onClick={() => hanldeModal(false)}
+                ></button>
+              </div>
+              <div>
+                <p style={{ fontSize: "25px" }}>
+                  <strong>{modal.name}</strong>
                 </p>
+                <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
+                  {modal.position}
+                </p>
+                <p>Telegramm: info.telegram</p>
               </div>
             </div>
             <div className="personalData">
-              {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
+              <div className="personalChoose">
+                <ol>
+                  <li>
+                    <strong>Жизненная позиция:</strong> <p>info.lifePos</p>
+                  </li>
+                  <li>
+                    <strong>Командный статус:</strong> <p>info.comStatus</p>
+                  </li>
+                </ol>
+              </div>
+              <div className="personalChoose">
+                <ol>
+                  <li>
+                    <strong>Место работы:</strong> <p>info.workPlace</p>
+                  </li>
+                  <li>
+                    <strong>В отношениях с проектом:</strong>{" "}
+                    <p>info.projectTime</p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div className="tags">
               <div className="personalTags">
                 <p style={{ color: "#56c1ff" }}>
                   {modal.tags.map((tag) => {
                     return (
                       //TODO кошмар переделать
-                      <strong key={tag}>
-                        {" "}
-                        &nbsp; &nbsp; {tag} &nbsp; &nbsp;
-                      </strong>
+                      <strong key={tag}> {tag} &nbsp;</strong>
                     );
                   })}
                 </p>
               </div>
-              <div className="personalChoose">
-                <ol>
-                  <li>
-                    <strong>Жизненная позиция:</strong> info.lifePos
-                  </li>
-                  <li>
-                    <strong>Командный статус:</strong> info.comStatus
-                  </li>
-                  <li>
-                    <strong>Место работы:</strong> info.workPlace
-                  </li>
-                  <li>
-                    <strong>В отношениях с проектом:</strong> info.projectTime
-                  </li>
-                </ol>
-              </div>
-              <button
-                style={{
-                  backgroundColor: "white",
-                  fontSize: "15px",
-                  width: "40%",
-                  padding: "15px",
-                  margin: "auto",
-                  box: "border-box",
-                  border: "2px solid #ccc",
-                  borderRadius: "0.25rem",
-                }}
-                onClick={() => hanldeModal(false)}
-              >
-                Закрыть
-              </button>
             </div>
           </div>
         </div>

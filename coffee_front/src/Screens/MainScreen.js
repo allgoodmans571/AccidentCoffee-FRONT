@@ -31,42 +31,9 @@ function MainScreen() {
             alt="logo"
           />
         </div>
-        <div className="navBar">
-          <a
-            style={{
-              textDecoration: "none",
-              color: "black",
-            }}
-            href="#"
-          >
-            <strong>Все сотрудники</strong>
-          </a>
-          <a
-            style={{
-              textDecoration: "none",
-              color: "black",
-            }}
-            href="#"
-          >
-            Тебя лайкнули
-          </a>
-        </div>
         <div>
           <div className="matchProfileBar">
             <div className="matchProfilePos">
-              <div>
-                {/* <img src="https://d1icd6shlvmxi6.cloudfront.net/gsc/CA794E/1d/25/3c/1d253caeb3d44c40b6b3398654d52746/images/catalog/bell_u393.svg?token=40eed1adeb061c7a788567509288b01c20eecfe4d3e07343f4392cf842406f5f" /> */}
-                <a
-                  href="#"
-                  style={{
-                    textDecoration: "none",
-                    color: "black",
-                    alignItems: "center",
-                  }}
-                >
-                  Мэтч!
-                </a>
-              </div>
               <button
                 className="profileButton"
                 onClick={() => {

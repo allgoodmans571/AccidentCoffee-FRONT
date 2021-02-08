@@ -1,20 +1,32 @@
 .modal {
-  z-index: 2;
+  z-index: 3;
   position: fixed;
   top: 0;
   bottom: 0;  
-  right: 0;
+  right: 0; 
   left: 0;
-  background: rgb(0, 0, 0, 0.5);
+  /* background: rgb(0, 0, 0, 0.5); */
   display: flex;
   justify-content: center;
 }
 
 .modal-body {
+  z-index: 2;
   margin: auto;
   padding: 2rem;
   width: 400px;
   border-radius: 5px;
   background: white;
   height: 200px;
+}
+
+.backgroundButton {
+  z-index: 1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  border: 0px solid #ccc;
+  background: rgb(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
 }
