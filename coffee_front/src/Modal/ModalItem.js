@@ -21,11 +21,11 @@ function ModalItem() {
                   src={modal.image}
                   alt="Фото коллеги №2"
                 />
-                <button
+                {/* <button
                   style={{
                     position: 'relative',
-                    left: 0,
                     bottom: 0,
+                    left: 0,
                     width: "40px",
                     height: "40px",
                     box: "border-box",
@@ -33,9 +33,9 @@ function ModalItem() {
                     borderRadius: "0.25rem",
                   }}
                   onClick={() => hanldeModal(false)}
-                ></button>
+                /> */}
               </div>
-              <div>
+              <div style={{ marginBottom: "5rem" }}>
                 <p style={{ fontSize: "25px" }}>
                   <strong>{modal.name}</strong>
                 </p>
@@ -45,6 +45,7 @@ function ModalItem() {
                 <p>Telegramm: info.telegram</p>
               </div>
             </div>
+            <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalData">
               <div className="personalChoose">
                 <ol>
@@ -68,17 +69,18 @@ function ModalItem() {
                 </ol>
               </div>
             </div>
-            <div className="tags">
-              <div className="personalTags">
-                <p style={{ color: "#56c1ff" }}>
-                  {modal.tags.map((tag) => {
-                    return (
-                      //TODO кошмар переделать
-                      <strong key={tag}> {tag} &nbsp;</strong>
-                    );
-                  })}
-                </p>
-              </div>
+            <hr noshade="noshade" width="90%" color="#e4e4e4" />
+            <div className="personalTags">
+              <p style={{ fontWeight: "bold", fontSize: "17px" }}>
+                Интересы:
+                {modal.tags.map((tag) => {
+                  return (
+                    <strong style={{ fontWeight: "normal" }} key={tag}>
+                      {tag}
+                    </strong>
+                  );
+                })}
+              </p>
             </div>
           </div>
         </div>
