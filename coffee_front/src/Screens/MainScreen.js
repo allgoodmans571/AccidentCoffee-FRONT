@@ -45,7 +45,7 @@ function MainScreen() {
                     dataState.telegram,
                     dataState.lifePos,
                     dataState.comStatus,
-                    dataState.workPlace,
+                    dataState.wordPlace,
                     dataState.projectTime,
                     dataState.tags
                   );
@@ -104,6 +104,13 @@ function MainScreen() {
                 linkItem={item.linkImage ? item.linkImage : linkImage}
                 nameItem={item.name}
                 positionItem={item.position}
+                telegramItem={item.telegram}
+                lifePosItem={item.lifePos}
+                emailUser={item.email}
+                comStatusItem={item.teamStatus}
+                workPlaceItem={item.wordPlace}
+                projectTimeItem={item.projectTime}
+                tagsItem={item.tags}
                 key={countID}
               />
             );

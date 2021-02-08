@@ -16,6 +16,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         setArr(data);
       });
   }, []);
@@ -26,22 +27,53 @@ function App() {
     image: "",
     name: "",
     position: "",
-    // email: "",
-    // telegram: "",
-    // lifePos: "",
-    // comStatus: "",
-    // workPlace: "",
-    // projectTime: "",
+    email: "",
+    telegram: "",
+    lifePos: "",
+    comStatus: "",
+    workPlace: "",
+    projectTime: "",
     tags: [],
   });
 
-  function hanldeModal(operUser, imageUser, nameUser, positionUser) {
+  function hanldeModal(
+    operUser,
+    imageUser,
+    nameUser,
+    positionUser,
+    emailUser,
+    telegramUser,
+    lifePosUser,
+    comStatusUser,
+    workPlaceUser,
+    projectTimeUser,
+    tagsUser
+  ) {
+    console.log(
+      operUser,
+      imageUser,
+      nameUser,
+      positionUser,
+      emailUser,
+      telegramUser,
+      lifePosUser,
+      comStatusUser,
+      workPlaceUser,
+      projectTimeUser,
+      tagsUser
+    );
     setModal({
       isOpen: operUser,
       image: imageUser,
       name: nameUser,
       position: positionUser,
-      tags: ["tag", "tag", "tag"],
+      email: emailUser,
+      telegram: telegramUser,
+      lifePos: lifePosUser,
+      comStatus: comStatusUser,
+      workPlace: workPlaceUser,
+      projectTime: projectTimeUser,
+      tags: tagsUser,
     });
   }
 
@@ -64,7 +96,7 @@ function App() {
   }
 
   async function send() {
-    console.log(dataState);
+    // console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -87,7 +119,7 @@ function App() {
         return {
           ...state,
           lifePos: action.lifePos,
-          teamStatus: action.teamStatus,
+          comStatus: action.teamStatus,
           wordPlace: action.wordPlace,
           projectTime: action.projectTime,
           tags: action.tags,

@@ -1,7 +1,18 @@
 import React, { useContext } from "react";
 import Context from "../../context/context";
 
-function ScroollbarItem({ linkItem, nameItem, positionItem }) {
+function ScroollbarItem({
+  linkItem,
+  nameItem,
+  positionItem,
+  emailUser,
+  telegramItem,
+  lifePosItem,
+  comStatusItem,
+  workPlaceItem,
+  projectTimeItem,
+  tagsItem,
+}) {
   const { hanldeModal } = useContext(Context);
 
   let image = linkItem;
@@ -13,7 +24,21 @@ function ScroollbarItem({ linkItem, nameItem, positionItem }) {
       <button
         className="btn_open_profile"
         style={{ backgroundImage: `url(${image}` }}
-        onClick={() => hanldeModal(true, linkItem, nameItem, positionItem)}
+        onClick={() =>
+          hanldeModal(
+            true,
+            linkItem,
+            nameItem,
+            positionItem,
+            emailUser,
+            telegramItem,
+            lifePosItem,
+            comStatusItem,
+            workPlaceItem,
+            projectTimeItem,
+            tagsItem
+          )
+        }
       >
         <div className="itemInfo">
           <p

@@ -7,6 +7,7 @@ function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
 
   let countID = 0;
+  console.log(modal);
   return (
     <div>
       {modal.isOpen && (
@@ -49,7 +50,7 @@ function ModalItem() {
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
                   {modal.position ? modal.position : "position"}
                 </p>
-                <p>Telegramm: info.telegram</p>
+                <p>Telegramm: {modal.telegram}</p>
 
                 {/* todo поставить стрелку в угол */}
               </div>
@@ -59,23 +60,23 @@ function ModalItem() {
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Жизненная позиция:</strong> <p>info.lifePos</p>
+                    <strong>Жизненная позиция:</strong> <p>{modal.lifePos}</p>
                   </li>
                   <br />
                   <li>
-                    <strong>Командный статус:</strong> <p>info.comStatus</p>
+                    <strong>Командный статус:</strong> <p>{modal.comStatus}</p>
                   </li>
                 </ol>
               </div>
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Место работы:</strong> <p>info.workPlace</p>
+                    <strong>Место работы:</strong> <p>{modal.workPlace}</p>
                   </li>
                   <br />
                   <li>
                     <strong>В отношениях с проектом:</strong>{" "}
-                    <p>info.projectTime</p>
+                    <p>{modal.projectTime}</p>
                   </li>
                 </ol>
               </div>

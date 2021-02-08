@@ -187,7 +187,7 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 send();
-                // setActivePanel(3);
+                setActivePanel(3);
               }}
             >
               <strong>Начать общаться</strong>

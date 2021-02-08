@@ -17,6 +17,13 @@ function Scroollbar() {
               linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
+              emailUser={item.email}
+              telegramItem={item.telegram}
+              lifePosItem={item.lifePos}
+              comStatusItem={item.teamStatus}
+              workPlaceItem={item.wordPlace}
+              projectTimeItem={item.projectTime}
+              tagsItem={item.tags}
               key={countID}
             />
           );
@@ -30,6 +37,14 @@ function Scroollbar() {
               linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
+              emailUser={item.email}
+              telegramItem={item.telegram}
+              lifePosItem={item.lifePos}
+              emailUser={item.email}
+              comStatusItem={item.teamStatus}
+              workPlaceItem={item.wordPlace}
+              projectTimeItem={item.projectTime}
+              tagsItem={item.tags}
               key={countID}
             />
           );
@@ -43,6 +58,13 @@ function Scroollbar() {
               linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
+              emailUser={item.email}
+              telegramItem={item.telegram}
+              lifePosItem={item.lifePos}
+              comStatusItem={item.teamStatus}
+              workPlaceItem={item.wordPlace}
+              projectTimeItem={item.projectTime}
+              tagsItem={item.tags}
               key={countID}
             />
           );
@@ -56,6 +78,13 @@ function Scroollbar() {
               linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
+              emailUser={item.email}
+              telegramItem={item.telegram}
+              lifePosItem={item.lifePos}
+              comStatusItem={item.teamStatus}
+              workPlaceItem={item.wordPlace}
+              projectTimeItem={item.projectTime}
+              tagsItem={item.tags}
               key={countID}
             />
           );
