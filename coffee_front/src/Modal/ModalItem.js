@@ -35,8 +35,8 @@ function ModalItem() {
                   onClick={() => hanldeModal(false)}
                 /> */}
               </div>
-              <div style={{ marginBottom: "5rem" }}>
-                <p style={{ fontSize: "25px" }}>
+              <div style={{ marginBottom: "6rem" }}>
+                <p style={{ fontSize: "22px" }}>
                   <strong>{modal.name}</strong>
                 </p>
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
@@ -52,6 +52,7 @@ function ModalItem() {
                   <li>
                     <strong>Жизненная позиция:</strong> <p>info.lifePos</p>
                   </li>
+                  <br/>
                   <li>
                     <strong>Командный статус:</strong> <p>info.comStatus</p>
                   </li>
@@ -62,6 +63,7 @@ function ModalItem() {
                   <li>
                     <strong>Место работы:</strong> <p>info.workPlace</p>
                   </li>
+                  <br/>
                   <li>
                     <strong>В отношениях с проектом:</strong>{" "}
                     <p>info.projectTime</p>
