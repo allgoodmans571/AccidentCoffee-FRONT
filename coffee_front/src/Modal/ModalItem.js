@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
+import iconExit from "../images/iconExit.svg";
 
 function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
 
+  let countID = 0;
   return (
     <div>
       {modal.isOpen && (
@@ -16,33 +18,40 @@ function ModalItem() {
           <div className="profile">
             <div className="personalInfo">
               <div>
-                <img
-                  className="profilePhoto"
-                  src={modal.image}
-                  alt="Фото коллеги №2"
-                />
-                {/* <button
+                <button
                   style={{
-                    position: 'relative',
-                    bottom: 0,
-                    left: 0,
-                    width: "40px",
-                    height: "40px",
+                    margin: "0 46rem",
+                    width: "30px",
+                    height: "30px",
                     box: "border-box",
-                    border: "2px solid #ccc",
                     borderRadius: "0.25rem",
+                    color: "#808080",
+                    border: "none",
+                    outline: "none",
+                    backgroundImage: `url(${iconExit})`,
                   }}
                   onClick={() => hanldeModal(false)}
-                /> */}
+                />
+                <img
+                  className="profilePhoto"
+                  src={
+                    modal.linkImage
+                      ? modal.linkImage
+                      : "https://institute.asiakz.com/files/default/avatar.png"
+                  }
+                  alt="Фото коллеги №2"
+                />
               </div>
               <div style={{ marginBottom: "6rem" }}>
-                <p style={{ fontSize: "22px" }}>
-                  <strong>{modal.name}</strong>
+                <p style={{ fontSize: "22px", fontWeight: "bold" }}>
+                  {modal.name ? modal.name : "name"}
                 </p>
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
-                  {modal.position}
+                  {modal.position ? modal.position : "position"}
                 </p>
                 <p>Telegramm: info.telegram</p>
+
+                {/* todo поставить стрелку в угол */}
               </div>
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
@@ -52,7 +61,7 @@ function ModalItem() {
                   <li>
                     <strong>Жизненная позиция:</strong> <p>info.lifePos</p>
                   </li>
-                  <br/>
+                  <br />
                   <li>
                     <strong>Командный статус:</strong> <p>info.comStatus</p>
                   </li>
@@ -63,7 +72,7 @@ function ModalItem() {
                   <li>
                     <strong>Место работы:</strong> <p>info.workPlace</p>
                   </li>
-                  <br/>
+                  <br />
                   <li>
                     <strong>В отношениях с проектом:</strong>{" "}
                     <p>info.projectTime</p>
@@ -76,8 +85,9 @@ function ModalItem() {
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
                 {modal.tags.map((tag) => {
+                  countID++;
                   return (
-                    <strong style={{ fontWeight: "normal" }} key={tag}>
+                    <strong style={{ fontWeight: "normal" }} key={countID}>
                       {tag}
                     </strong>
                   );

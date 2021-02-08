@@ -5,7 +5,6 @@ import logo from "../images/logo.svg";
 
 function Registration() {
   const { setActivePanel, init } = useContext(Context);
-  // const { init } = useContext(PersonalDataContext);
 
   async function handleSubmit() {
     let userName =
@@ -18,6 +17,7 @@ function Registration() {
 
     init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
   }
+
   return (
     <div
       style={{
@@ -107,7 +107,7 @@ function Registration() {
               className="startButton"
               type="submit"
               form="survey-form"
-              onClick={(event) => {
+              on  Click={(event) => {
                 event.preventDefault();
                 handleSubmit();
                 // setData(data);

@@ -327,10 +327,9 @@ code {
 }
 
 .personalTags {
-  margin: 3rem;
   font-size: 20px;
   text-align: left;
-  margin: 2.5rem;
+  margin: 2.5rem 0 3rem 2.5rem;
 }
 
 .personalTags strong {
@@ -364,6 +363,7 @@ code {
 }
 
 .profilePhoto {
+  margin-top: -2rem;
   margin-left: 2rem;
   border: 2px solid #ccc;
   border-radius: 13rem;

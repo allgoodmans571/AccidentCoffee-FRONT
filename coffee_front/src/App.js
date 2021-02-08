@@ -64,6 +64,7 @@ function App() {
   }
 
   async function send() {
+    console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {

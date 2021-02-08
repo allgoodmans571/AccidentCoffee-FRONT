@@ -19,13 +19,19 @@ function PersonalData() {
     let userTags = document.querySelector("#tags").value;
     userTags = userTags.split(", ");
 
-    add(
-      `${userLifePos}`,
-      `${userTeamStatus}`,
-      `${userWordPlace}`,
-      `${userProjectTime}`,
-      userTags
-    );
+    setTimeout(() => {
+      add(
+        `${userLifePos}`,
+        `${userTeamStatus}`,
+        `${userWordPlace}`,
+        `${userProjectTime}`,
+        userTags
+      );
+    }, 0);
+
+    setTimeout(() => {
+      send();
+    }, 0);
   }
 
   return (
@@ -187,7 +193,6 @@ function PersonalData() {
                 event.preventDefault();
                 handleSubmitData();
                 ForceUpdate();
-                send();
                 setActivePanel(3);
               }}
             >

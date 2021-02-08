@@ -8,8 +8,7 @@ import Context from "../context/context";
 function MainScreen() {
   const { hanldeModal, dataState, arr } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
-
-  console.log(arr);
+  let countID = 0;
 
   return (
     <div>
@@ -99,12 +98,13 @@ function MainScreen() {
         </div>
         <div className="itemsBar">
           {arr.map((item) => {
+            countID++;
             return (
               <ScroollbarItem
-                linkItem={linkImage}
+                linkItem={item.linkImage ? item.linkImage : linkImage}
                 nameItem={item.name}
                 positionItem={item.position}
-                key={item.id}
+                key={countID}
               />
             );
           })}

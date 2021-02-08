@@ -6,52 +6,57 @@ function Scroollbar() {
   const { arr } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
 
+  let countID = 0;
   return (
     <div className="scrollBar">
       <div className="scrollBarLine_1">
         {arr.map((item) => {
+          countID++;
           return (
             <ScroollbarItem
-              linkItem={linkImage}
+              linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
-              key={item.id}
+              key={countID}
             />
           );
         })}
       </div>
       <div className="scrollBarLine_2">
         {arr.map((item) => {
+          countID++;
           return (
             <ScroollbarItem
-              linkItem={linkImage}
+              linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
-              key={item.id}
+              key={countID}
             />
           );
         })}
       </div>
       <div className="scrollBarLine_3">
         {arr.map((item) => {
+          countID++;
           return (
             <ScroollbarItem
-              linkItem={linkImage}
+              linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
-              key={item.id}
+              key={countID}
             />
           );
         })}
       </div>
       <div className="scrollBarLine_4">
         {arr.map((item) => {
+          countID++;
           return (
             <ScroollbarItem
-              linkItem={linkImage}
+              linkItem={item.linkImage ? item.linkImage : linkImage}
               nameItem={item.name}
               positionItem={item.position}
-              key={item.id}
+              key={countID}
             />
           );
         })}
