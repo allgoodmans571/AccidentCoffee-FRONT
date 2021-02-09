@@ -22,6 +22,50 @@ function App() {
       });
   }, []);
 
+  const [matchModal, setMatchModal] = React.useState({
+    isOpen: false,
+    image: "",
+    name: "",
+    position: "",
+    email: "",
+    telegram: "",
+    lifePos: "",
+    teamStatus: "",
+    workPlace: "",
+    projectTime: "",
+    tags: [],
+  });
+
+  function findMatch() {
+    let name = dataState.name;
+    let response = fetch("http://68.183.12.32:8080/getMatch", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({ name }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        init(
+          `${data.name}`,
+          `${data.position}`,
+          `${data.email}`,
+          `${data.telegram}`
+        );
+        add(
+          `${data.lifePos}`,
+          `${data.teamStatus}`,
+          `${data.wordPlace}`,
+          `${data.projectTime}`,
+          data.tags
+        );
+      });
+  }
+
   const [statePage, setStatePage] = React.useState(0);
   const [modal, setModal] = React.useState({
     isOpen: false,
@@ -37,6 +81,7 @@ function App() {
     tags: [],
   });
 
+  // TODO передавать объект, избавиться от такой кучи аргументов
   function hanldeModal(
     operUser,
     imageUser,
@@ -74,7 +119,7 @@ function App() {
   ];
 
   async function send() {
-    console.log(dataState);
+    console.log(dataState.name);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -154,6 +199,7 @@ function App() {
         arr,
         match,
         showMatch,
+        findMatch,
       }}
     >
       <div className="App">{components[statePage]}</div>

@@ -7,7 +7,9 @@ import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
 import Context from "../context/context";
 
 function MainScreen() {
-  const { hanldeModal, dataState, arr, showMatch } = useContext(Context);
+  const { arr, showMatch, findMatch } = useContext(
+    Context
+  );
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
   let countID = 0;
 
@@ -34,7 +36,7 @@ function MainScreen() {
         <div>
           <div className="matchProfileBar">
             <div className="matchProfilePos">
-              <button
+              {/* <button
                 className="profileButton"
                 onClick={() => {
                   hanldeModal(
@@ -51,7 +53,7 @@ function MainScreen() {
                     dataState.tags
                   );
                 }}
-              ></button>
+              ></button> */}
             </div>
           </div>
         </div>
@@ -104,7 +106,10 @@ function MainScreen() {
             }}
             className="startButton"
             type="submit"
-            onClick={() => showMatch()}
+            onClick={() => {
+              findMatch();
+              showMatch();
+            }}
           >
             Подобрать
           </button>

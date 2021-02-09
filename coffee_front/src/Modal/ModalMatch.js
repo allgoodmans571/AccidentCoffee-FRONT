@@ -4,7 +4,7 @@ import Context from "../context/context";
 import iconExit from "../images/iconExit.svg";
 
 function ModalMatch() {
-  const { hanldeModal, modal, match, showMatch } = useContext(Context);
+  const { findMatch, match, showMatch, dataState } = useContext(Context);
 
   let countID = 0;
   // console.log(modal);
@@ -28,8 +28,8 @@ function ModalMatch() {
                   style={{ marginTop: "0rem" }}
                   className="profilePhoto"
                   src={
-                    modal.linkImage
-                      ? modal.linkImage
+                    dataState.linkImage
+                      ? dataState.linkImage
                       : "https://institute.asiakz.com/files/default/avatar.png"
                   }
                   alt="Фото коллеги №2"
@@ -37,12 +37,12 @@ function ModalMatch() {
               </div>
               <div style={{ marginBottom: "6rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
-                  {modal.name ? modal.name : "name"}
+                  {dataState.name ? dataState.name : "name"}
                 </p>
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
-                  {modal.position ? modal.position : "position"}
+                  {dataState.position ? dataState.position : "position"}
                 </p>
-                {/* <p>Telegramm: {modal.telegram}</p> */}
+                {/* <p>Telegramm: {dataState.telegram}</p> */}
 
                 <button
                   className="startButton"
@@ -85,23 +85,25 @@ function ModalMatch() {
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Жизненная позиция:</strong> <p>{modal.lifePos}</p>
+                    <strong>Жизненная позиция:</strong>{" "}
+                    <p>{dataState.lifePos}</p>
                   </li>
                   <br />
                   <li>
-                    <strong>Командный статус:</strong> <p>{modal.teamStatus}</p>
+                    <strong>Командный статус:</strong>{" "}
+                    <p>{dataState.teamStatus}</p>
                   </li>
                 </ol>
               </div>
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Место работы:</strong> <p>{modal.workPlace}</p>
+                    <strong>Место работы:</strong> <p>{dataState.workPlace}</p>
                   </li>
                   <br />
                   <li>
                     <strong>В отношениях с проектом:</strong>{" "}
-                    <p>{modal.projectTime}</p>
+                    <p>{dataState.projectTime}</p>
                   </li>
                 </ol>
               </div>
@@ -115,8 +117,8 @@ function ModalMatch() {
             >
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
-                {modal.tags
-                  ? modal.tags.map((tag) => {
+                {dataState.tags
+                  ? dataState.tags.map((tag) => {
                       countID++;
                       return (
                         <strong style={{ fontWeight: "normal" }} key={countID}>
@@ -140,10 +142,10 @@ function ModalMatch() {
                 color: "#ffffff",
                 border: "none",
                 outline: "none",
-              }}
-              // onClick={() => showMatch()}
+              }}  
+              onClick={() => showMatch()}
             >
-              Продолжить поиск
+              Показать всех
             </button>
           </div>
         </div>
