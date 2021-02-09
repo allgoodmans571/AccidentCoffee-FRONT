@@ -46,9 +46,19 @@ function StartScreen() {
         <button
           className="startButton"
           type="submit"
-          onClick={() => setActivePanel(1)}
+          onClick={() => setActivePanel(2)}
         >
           <strong>Создать профиль</strong>
+        </button>
+        <button
+          style={{
+            marginLeft: "3rem",
+          }}
+          className="startButton"
+          type="submit"
+          onClick={() => setActivePanel(1)}
+        >
+          <strong>Войти</strong>
         </button>
       </div>
       <ModalItem />

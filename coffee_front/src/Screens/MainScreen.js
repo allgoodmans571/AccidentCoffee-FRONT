@@ -95,6 +95,18 @@ function MainScreen() {
           <div className="tag">
             <a>киберспорт</a>
           </div>
+          <button
+            style={{
+              margin: "3rem 0 0 0",
+              height: '2.5rem',
+              width: '12rem'
+            }}
+            className="startButton"
+            type="submit"
+            // onClick={() => setActivePanel(1)}
+          >
+            Подобрать
+          </button>
         </div>
         <div className="itemsBar">
           {arr.map((item) => {

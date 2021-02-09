@@ -5,6 +5,7 @@ import StartScreen from "./Screens/StartScreenPackage/StartScreen";
 import Registration from "./Screens/Registration";
 import PersonalData from "./Screens/PersonalData";
 import MainScreen from "./Screens/MainScreen";
+import EnterScreen from "./Screens/EnterScreen";
 // import Profile from "./Screens/Profile";
 
 function App() {
@@ -79,6 +80,7 @@ function App() {
 
   const components = [
     <StartScreen />,
+    <EnterScreen />,
     <Registration />,
     <PersonalData />,
     <MainScreen />,

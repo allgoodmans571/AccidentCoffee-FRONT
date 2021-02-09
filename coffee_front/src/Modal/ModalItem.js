@@ -7,7 +7,7 @@ function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
 
   let countID = 0;
-  console.log(modal);
+  // console.log(modal);
   return (
     <div>
       {modal.isOpen && (

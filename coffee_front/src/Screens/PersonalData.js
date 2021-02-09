@@ -66,6 +66,7 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="lifePos"
+              onChange={() => handleSubmitData()}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -93,6 +94,7 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="teamStatus"
+              onChange={() => handleSubmitData()}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -119,6 +121,7 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="wordPlace"
+              onChange={() => handleSubmitData()}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -137,6 +140,7 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="projectTime"
+              onChange={() => handleSubmitData()}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -176,7 +180,7 @@ function PersonalData() {
             <button
               className="req_Back_Button"
               type="submit"
-              onClick={() => setActivePanel(0)}
+              onClick={() => setActivePanel(2)}
             >
               <strong>Предыдущий шаг</strong>
             </button>
@@ -187,7 +191,7 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 send();
-                setActivePanel(3);
+                setActivePanel(4);
               }}
             >
               <strong>Начать общаться</strong>

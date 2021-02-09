@@ -3,19 +3,22 @@ import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
-function Registration() {
+function EnterScreen() {
   const { setActivePanel, init } = useContext(Context);
 
   async function handleSubmit() {
-    let userName =
+    let name =
       document.querySelector("#firstName").value +
       " " +
       document.querySelector("#lastName").value;
-    let userPosition = document.querySelector("#position").value;
-    let userEmail = document.querySelector("#corpEmail").value;
-    let userTelegram = document.querySelector("#telegram").value;
 
-    init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
+    let response = await fetch("http://68.183.12.32:8080/getMatch", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: { name: JSON.stringify(name) },
+    }).then(console.log(response));
   }
 
   return (
@@ -49,9 +52,7 @@ function Registration() {
               alt="logo"
             />
           </div>
-          <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>
-            Регистрация
-          </h1>
+          <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>Вход</h1>
           <label htmlFor="firstName">
             <input
               className="input_fields_text"
@@ -72,37 +73,21 @@ function Registration() {
               required
             />
           </label>
-          <label htmlFor="position">
-            <input
-              className="input_fields_text"
-              type="text"
-              id="position"
-              name="position"
-              placeholder="Должность"
-              required
-            />
-          </label>
-          <label htmlFor="corpEmail">
-            <input
-              className="input_fields_text"
-              type="email"
-              id="corpEmail"
-              name="corpEmail"
-              placeholder="Рабочая почта"
-              required
-            />
-          </label>
-          <label htmlFor="telegram">
-            <input
-              className="input_fields_text"
-              type="test"
-              id="telegram"
-              name="telegram"
-              placeholder="Telegram"
-              required
-            />
-          </label>
-          <div style={{ marginTop: "3rem" }}>
+
+          <div
+            className="selectInput"
+            style={{
+              marginTop: "3rem",
+              gridTemplateColumns: "43% 50%",
+            }}
+          >
+            <button
+              className="req_Back_Button"
+              type="submit"
+              onClick={() => setActivePanel(0)}
+            >
+              <strong>Назад</strong>
+            </button>
             <button
               className="startButton"
               type="submit"
@@ -110,17 +95,31 @@ function Registration() {
               onClick={(event) => {
                 event.preventDefault();
                 handleSubmit();
-                // setData(data);
-                setActivePanel(3);
+                setActivePanel(4);
               }}
             >
-              <strong>Следующий шаг</strong>
+              Продолжить
             </button>
           </div>
+
+          {/* <div style={{ marginTop: "3rem" }}>
+            <button
+              className="startButton"
+              type="submit"
+              form="survey-form"
+              onClick={(event) => {
+                event.preventDefault();
+                handleSubmit();
+                setActivePanel(4);
+              }}
+            >
+              <strong>Войти</strong>
+            </button>
+          </div> */}
         </div>
       </form>
     </div>
   );
 }
 
-export default Registration;
+export default EnterScreen;
