@@ -64,6 +64,7 @@ function App() {
           data.tags
         );
       });
+    setTimeout(() => showMatch(), 500);
   }
 
   const [statePage, setStatePage] = React.useState(0);
@@ -143,7 +144,7 @@ function App() {
           ...state,
           lifePos: action.lifePos,
           teamStatus: action.teamStatus,
-          wordPlace: action.wordPlace,
+          workPlace: action.workPlace,
           projectTime: action.projectTime,
           tags: action.tags,
         };
@@ -159,19 +160,19 @@ function App() {
     telegram: "",
     lifePos: "",
     teamStatus: "",
-    wordPlace: "",
+    workPlace: "",
     projectTime: "",
     tags: [],
   });
 
   const init = (name, position, email, telegram) =>
     dispatchData({ type: "init", name, position, email, telegram });
-  const add = (lifePos, teamStatus, wordPlace, projectTime, tags) =>
+  const add = (lifePos, teamStatus, workPlace, projectTime, tags) =>
     dispatchData({
       type: "add",
       lifePos,
       teamStatus,
-      wordPlace,
+      workPlace,
       projectTime,
       tags,
     });

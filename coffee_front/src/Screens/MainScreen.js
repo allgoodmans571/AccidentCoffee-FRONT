@@ -7,9 +7,7 @@ import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
 import Context from "../context/context";
 
 function MainScreen() {
-  const { arr, showMatch, findMatch } = useContext(
-    Context
-  );
+  const { arr, findMatch } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
   let countID = 0;
 
@@ -108,7 +106,6 @@ function MainScreen() {
             type="submit"
             onClick={() => {
               findMatch();
-              showMatch();
             }}
           >
             Подобрать
