@@ -14,13 +14,13 @@ function ModalMatch() {
         <div className="modal">
           <button className="backgroundButton" onClick={() => showMatch()} />
           <div className="profile">
-            <h2
+            <h1
               style={{
                 color: "#fa71cd",
               }}
             >
               Это мэтч!
-            </h2>
+            </h1>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalInfo">
               <div>
@@ -45,12 +45,14 @@ function ModalMatch() {
                 {/* <p>Telegramm: {modal.telegram}</p> */}
 
                 <button
+                  className="startButton"
                   style={{
                     width: "150px",
+                    fontSize: "12px",
                     height: "30px",
                     box: "border-box",
-                    borderRadius: "0.25rem",
-                    color: "#808080",
+                    borderRadius: "6rem",
+                    color: "#ffffff",
                     border: "none",
                     outline: "none",
                   }}
@@ -59,13 +61,15 @@ function ModalMatch() {
                   Написать в телеграм
                 </button>
                 <button
+                  className="startButton"
                   style={{
                     marginLeft: "1rem",
+                    fontSize: "12px",
                     width: "150px",
                     height: "30px",
                     box: "border-box",
-                    borderRadius: "0.25rem",
-                    color: "#808080",
+                    borderRadius: "6rem",
+                    color: "#ffffff",
                     border: "none",
                     outline: "none",
                   }}
@@ -111,26 +115,29 @@ function ModalMatch() {
             >
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
-                {modal.tags.map((tag) => {
-                  countID++;
-                  return (
-                    <strong style={{ fontWeight: "normal" }} key={countID}>
-                      {tag}
-                    </strong>
-                  );
-                })}
+                {modal.tags
+                  ? modal.tags.map((tag) => {
+                      countID++;
+                      return (
+                        <strong style={{ fontWeight: "normal" }} key={countID}>
+                          {tag}
+                        </strong>
+                      );
+                    })
+                  : ""}
               </p>
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <button
+              className="startButton"
               style={{
                 margin: "1.5rem 0 2rem 0",
                 width: "250px",
                 fontSize: "20px",
                 height: "50px",
                 box: "border-box",
-                borderRadius: "0.25rem",
-                color: "#808080",
+                borderRadius: "6rem",
+                color: "#ffffff",
                 border: "none",
                 outline: "none",
               }}
