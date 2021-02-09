@@ -31,7 +31,7 @@ function App() {
     email: "",
     telegram: "",
     lifePos: "",
-    comStatus: "",
+    teamStatus: "",
     workPlace: "",
     projectTime: "",
     tags: [],
@@ -45,24 +45,11 @@ function App() {
     emailUser,
     telegramUser,
     lifePosUser,
-    comStatusUser,
+    teamStatusUser,
     workPlaceUser,
     projectTimeUser,
     tagsUser
   ) {
-    console.log(
-      operUser,
-      imageUser,
-      nameUser,
-      positionUser,
-      emailUser,
-      telegramUser,
-      lifePosUser,
-      comStatusUser,
-      workPlaceUser,
-      projectTimeUser,
-      tagsUser
-    );
     setModal({
       isOpen: operUser,
       image: imageUser,
@@ -71,7 +58,7 @@ function App() {
       email: emailUser,
       telegram: telegramUser,
       lifePos: lifePosUser,
-      comStatus: comStatusUser,
+      teamStatus: teamStatusUser,
       workPlace: workPlaceUser,
       projectTime: projectTimeUser,
       tags: tagsUser,
@@ -86,19 +73,8 @@ function App() {
     <MainScreen />,
   ];
 
-  function adder(userList) {
-    userList.map((user) => {
-      arr.users.push({
-        linkImage: "https://institute.asiakz.com/files/default/avatar.png",
-        name: user.name,
-        position: user.position,
-        id: user._id,
-      });
-    });
-  }
-
   async function send() {
-    // console.log(dataState);
+    console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -121,7 +97,7 @@ function App() {
         return {
           ...state,
           lifePos: action.lifePos,
-          comStatus: action.teamStatus,
+          teamStatus: action.teamStatus,
           wordPlace: action.wordPlace,
           projectTime: action.projectTime,
           tags: action.tags,

@@ -4,7 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init } = useContext(Context);
+  const { setActivePanel, init, add } = useContext(Context);
 
   async function handleSubmit() {
     let name =
@@ -17,8 +17,27 @@ function EnterScreen() {
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: { name: JSON.stringify(name) },
-    }).then(console.log(response));
+      body: JSON.stringify({ name }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        init(
+          `${data.name}`,
+          `${data.position}`,
+          `${data.email}`,
+          `${data.telegram}`
+        );
+        add(
+          `${data.lifePos}`,
+          `${data.teamStatus}`,
+          `${data.wordPlace}`,
+          `${data.projectTime}`,
+          data.tags
+        );
+      });
   }
 
   return (

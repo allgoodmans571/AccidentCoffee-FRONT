@@ -44,7 +44,7 @@ function MainScreen() {
                     dataState.email,
                     dataState.telegram,
                     dataState.lifePos,
-                    dataState.comStatus,
+                    dataState.teamStatus,
                     dataState.wordPlace,
                     dataState.projectTime,
                     dataState.tags
@@ -119,7 +119,7 @@ function MainScreen() {
                 telegramItem={item.telegram}
                 lifePosItem={item.lifePos}
                 emailUser={item.email}
-                comStatusItem={item.teamStatus}
+                teamStatusItem={item.teamStatus}
                 workPlaceItem={item.wordPlace}
                 projectTimeItem={item.projectTime}
                 tagsItem={item.tags}

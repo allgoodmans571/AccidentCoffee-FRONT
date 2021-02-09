@@ -64,7 +64,7 @@ function ModalItem() {
                   </li>
                   <br />
                   <li>
-                    <strong>Командный статус:</strong> <p>{modal.comStatus}</p>
+                    <strong>Командный статус:</strong> <p>{modal.teamStatus}</p>
                   </li>
                 </ol>
               </div>

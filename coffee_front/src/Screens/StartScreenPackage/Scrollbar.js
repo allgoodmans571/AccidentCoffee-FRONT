@@ -20,7 +20,7 @@ function Scroollbar() {
               emailUser={item.email}
               telegramItem={item.telegram}
               lifePosItem={item.lifePos}
-              comStatusItem={item.teamStatus}
+              teamStatusItem={item.teamStatus}
               workPlaceItem={item.wordPlace}
               projectTimeItem={item.projectTime}
               tagsItem={item.tags}
@@ -41,7 +41,7 @@ function Scroollbar() {
               telegramItem={item.telegram}
               lifePosItem={item.lifePos}
               emailUser={item.email}
-              comStatusItem={item.teamStatus}
+              teamStatusItem={item.teamStatus}
               workPlaceItem={item.wordPlace}
               projectTimeItem={item.projectTime}
               tagsItem={item.tags}
@@ -61,7 +61,7 @@ function Scroollbar() {
               emailUser={item.email}
               telegramItem={item.telegram}
               lifePosItem={item.lifePos}
-              comStatusItem={item.teamStatus}
+              teamStatusItem={item.teamStatus}
               workPlaceItem={item.wordPlace}
               projectTimeItem={item.projectTime}
               tagsItem={item.tags}
@@ -81,7 +81,7 @@ function Scroollbar() {
               emailUser={item.email}
               telegramItem={item.telegram}
               lifePosItem={item.lifePos}
-              comStatusItem={item.teamStatus}
+              teamStatusItem={item.teamStatus}
               workPlaceItem={item.wordPlace}
               projectTimeItem={item.projectTime}
               tagsItem={item.tags}

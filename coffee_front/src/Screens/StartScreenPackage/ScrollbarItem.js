@@ -8,7 +8,7 @@ function ScroollbarItem({
   emailUser,
   telegramItem,
   lifePosItem,
-  comStatusItem,
+  teamStatusItem,
   workPlaceItem,
   projectTimeItem,
   tagsItem,
@@ -33,7 +33,7 @@ function ScroollbarItem({
             emailUser,
             telegramItem,
             lifePosItem,
-            comStatusItem,
+            teamStatusItem,
             workPlaceItem,
             projectTimeItem,
             tagsItem
