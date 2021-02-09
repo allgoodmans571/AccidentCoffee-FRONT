@@ -43,23 +43,29 @@ function StartScreen() {
           единомышленника, бадди или просто приятно провести время с интересным
           собеседником.
         </p>
-        <button
-          className="startButton"
-          type="submit"
-          onClick={() => setActivePanel(2)}
-        >
-          <strong>Создать профиль</strong>
-        </button>
-        <button
+        <div
           style={{
-            marginLeft: "3rem",
+            display: "flex",
           }}
-          className="startButton"
-          type="submit"
-          onClick={() => setActivePanel(1)}
         >
-          <strong>Войти</strong>
-        </button>
+          <button
+            className="startButton"
+            type="submit"
+            onClick={() => setActivePanel(2)}
+          >
+            <strong>Создать профиль</strong>
+          </button>
+          <button
+            style={{
+              marginLeft: "3rem",
+            }}
+            className="startButton"
+            type="submit"
+            onClick={() => setActivePanel(1)}
+          >
+            <strong>Войти</strong>
+          </button>
+        </div>
       </div>
       <ModalItem />
     </div>
