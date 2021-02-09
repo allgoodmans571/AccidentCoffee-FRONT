@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import ModalItem from "../Modal/ModalItem";
+import ModalMatch from "../Modal/ModalMatch";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
 import Context from "../context/context";
 
 function MainScreen() {
-  const { hanldeModal, dataState, arr } = useContext(Context);
+  const { hanldeModal, dataState, arr, showMatch } = useContext(Context);
   let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
   let countID = 0;
 
@@ -98,12 +99,12 @@ function MainScreen() {
           <button
             style={{
               margin: "3rem 0 0 0",
-              height: '2.5rem',
-              width: '12rem'
+              height: "2.5rem",
+              width: "12rem",
             }}
             className="startButton"
             type="submit"
-            // onClick={() => setActivePanel(1)}
+            onClick={() => showMatch()}
           >
             Подобрать
           </button>
@@ -130,6 +131,7 @@ function MainScreen() {
         </div>
       </div>
       <ModalItem />
+      <ModalMatch />
     </div>
   );
 }

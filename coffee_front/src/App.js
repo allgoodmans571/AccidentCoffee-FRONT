@@ -135,6 +135,12 @@ function App() {
     setStatePage(i);
   }
 
+  const [match, setMatch] = useState(false);
+
+  function showMatch() {
+    setMatch(!match);
+  }
+
   return (
     <Context.Provider
       value={{
@@ -146,6 +152,8 @@ function App() {
         send,
         dataState,
         arr,
+        match,
+        showMatch,
       }}
     >
       <div className="App">{components[statePage]}</div>

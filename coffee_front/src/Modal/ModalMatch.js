@@ -3,37 +3,29 @@ import "./ModalItem.css";
 import Context from "../context/context";
 import iconExit from "../images/iconExit.svg";
 
-function ModalItem() {
-  const { hanldeModal, modal } = useContext(Context);
+function ModalMatch() {
+  const { hanldeModal, modal, match, showMatch } = useContext(Context);
 
   let countID = 0;
   // console.log(modal);
   return (
     <div>
-      {modal.isOpen && (
+      {match && (
         <div className="modal">
-          <button
-            className="backgroundButton"
-            onClick={() => hanldeModal(false)}
-          />
+          <button className="backgroundButton" onClick={() => showMatch()} />
           <div className="profile">
+            <h2
+              style={{
+                color: "#fa71cd",
+              }}
+            >
+              Это мэтч!
+            </h2>
+            <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalInfo">
               <div>
-                <button
-                  style={{
-                    margin: "0 46rem",
-                    width: "30px",
-                    height: "30px",
-                    box: "border-box",
-                    borderRadius: "0.25rem",
-                    color: "#808080",
-                    border: "none",
-                    outline: "none",
-                    backgroundImage: `url(${iconExit})`,
-                  }}
-                  onClick={() => hanldeModal(false)}
-                />
                 <img
+                  style={{ marginTop: "0rem" }}
                   className="profilePhoto"
                   src={
                     modal.linkImage
@@ -52,6 +44,35 @@ function ModalItem() {
                 </p>
                 {/* <p>Telegramm: {modal.telegram}</p> */}
 
+                <button
+                  style={{
+                    width: "150px",
+                    height: "30px",
+                    box: "border-box",
+                    borderRadius: "0.25rem",
+                    color: "#808080",
+                    border: "none",
+                    outline: "none",
+                  }}
+                  // onClick={() => showMatch()}
+                >
+                  Написать в телеграм
+                </button>
+                <button
+                  style={{
+                    marginLeft: "1rem",
+                    width: "150px",
+                    height: "30px",
+                    box: "border-box",
+                    borderRadius: "0.25rem",
+                    color: "#808080",
+                    border: "none",
+                    outline: "none",
+                  }}
+                  // onClick={() => showMatch()}
+                >
+                  Написать на почту
+                </button>
                 {/* todo поставить стрелку в угол */}
               </div>
             </div>
@@ -84,7 +105,7 @@ function ModalItem() {
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div
               style={{
-                margin: "2.5rem 0 3rem 3.5rem",
+                margin: "2rem 0 2rem 3.5rem",
               }}
               className="personalTags"
             >
@@ -100,6 +121,23 @@ function ModalItem() {
                 })}
               </p>
             </div>
+            <hr noshade="noshade" width="90%" color="#e4e4e4" />
+            <button
+              style={{
+                margin: "1.5rem 0 2rem 0",
+                width: "250px",
+                fontSize: "20px",
+                height: "50px",
+                box: "border-box",
+                borderRadius: "0.25rem",
+                color: "#808080",
+                border: "none",
+                outline: "none",
+              }}
+              // onClick={() => showMatch()}
+            >
+              Продолжить поиск
+            </button>
           </div>
         </div>
       )}
@@ -107,4 +145,4 @@ function ModalItem() {
   );
 }
 
-export default ModalItem;
+export default ModalMatch;
