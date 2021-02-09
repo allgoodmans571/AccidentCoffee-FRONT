@@ -425,15 +425,17 @@ code {
   margin: 10px 0 0 0;
 }
 
-.tag a {
+.tag button {
   background-color: #fa71cd;
+  text-decoration: none;
   color: white;
   font-size: 16px;
   padding: 2px 13px 5px 13px;
   border-radius: 2em;
+  border: 0 solid #ccc;
 }
 
-.tag a:hover {
+.tag button:hover {
   background-color: #c471f5;
 }
 

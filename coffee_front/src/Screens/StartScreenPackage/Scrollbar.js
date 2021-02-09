@@ -40,7 +40,6 @@ function Scroollbar() {
               emailUser={item.email}
               telegramItem={item.telegram}
               lifePosItem={item.lifePos}
-              emailUser={item.email}
               teamStatusItem={item.teamStatus}
               workPlaceItem={item.wordPlace}
               projectTimeItem={item.projectTime}

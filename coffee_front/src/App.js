@@ -17,24 +17,24 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setArr(data);
       });
   }, []);
 
-  const [matchModal, setMatchModal] = React.useState({
-    isOpen: false,
-    image: "",
-    name: "",
-    position: "",
-    email: "",
-    telegram: "",
-    lifePos: "",
-    teamStatus: "",
-    workPlace: "",
-    projectTime: "",
-    tags: [],
-  });
+  // const [matchModal, setMatchModal] = React.useState({
+  //   isOpen: false,
+  //   image: "",
+  //   name: "",
+  //   position: "",
+  //   email: "",
+  //   telegram: "",
+  //   lifePos: "",
+  //   teamStatus: "",
+  //   workPlace: "",
+  //   projectTime: "",
+  //   tags: [],
+  // });
 
   function findMatch() {
     let name = dataState.name;

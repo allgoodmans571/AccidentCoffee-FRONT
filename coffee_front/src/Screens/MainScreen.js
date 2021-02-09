@@ -34,24 +34,24 @@ function MainScreen() {
         <div>
           <div className="matchProfileBar">
             <div className="matchProfilePos">
-              {/* <button
+              <button
                 className="profileButton"
-                onClick={() => {
-                  hanldeModal(
-                    true,
-                    dataState.linkImage,
-                    dataState.name,
-                    dataState.position,
-                    dataState.email,
-                    dataState.telegram,
-                    dataState.lifePos,
-                    dataState.teamStatus,
-                    dataState.wordPlace,
-                    dataState.projectTime,
-                    dataState.tags
-                  );
-                }}
-              ></button> */}
+                // onClick={() => {
+                //   hanldeModal(
+                //     true,
+                //     dataState.linkImage,
+                //     dataState.name,
+                //     dataState.position,
+                //     dataState.email,
+                //     dataState.telegram,
+                //     dataState.lifePos,
+                //     dataState.teamStatus,
+                //     dataState.wordPlace,
+                //     dataState.projectTime,
+                //     dataState.tags
+                //   );
+                // }}
+              ></button>
             </div>
           </div>
         </div>
@@ -67,34 +67,34 @@ function MainScreen() {
             По интересам:
           </p>
           <div className="tag">
-            <a>cпорт</a>
+            <button>cпорт</button>
           </div>
           <div className="tag">
-            <a>сериалы</a>
+            <button>сериалы</button>
           </div>
           <div className="tag">
-            <a>фильмы</a>
+            <button>фильмы</button>
           </div>
           <div className="tag">
-            <a>готовка</a>
+            <button>готовка</button>
           </div>
           <div className="tag">
-            <a>музыка</a>
+            <button>музыка</button>
           </div>
           <div className="tag">
-            <a>зож</a>
+            <button>зож</button>
           </div>
           <div className="tag">
-            <a>эко</a>
+            <button>эко</button>
           </div>
           <div className="tag">
-            <a>ит</a>
+            <button>ит</button>
           </div>
           <div className="tag">
-            <a>языки</a>
+            <button>языки</button>
           </div>
           <div className="tag">
-            <a>киберспорт</a>
+            <button>киберспорт</button>
           </div>
           <button
             style={{

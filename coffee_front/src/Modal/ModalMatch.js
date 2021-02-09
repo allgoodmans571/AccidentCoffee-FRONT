@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
-import iconExit from "../images/iconExit.svg";
+// import iconExit from "../images/iconExit.svg";
 
 function ModalMatch() {
-  const { findMatch, match, showMatch, dataState } = useContext(Context);
+  const { match, showMatch, dataState } = useContext(Context);
 
   let countID = 0;
   // console.log(modal);
@@ -142,7 +142,7 @@ function ModalMatch() {
                 color: "#ffffff",
                 border: "none",
                 outline: "none",
-              }}  
+              }}
               onClick={() => showMatch()}
             >
               Показать всех

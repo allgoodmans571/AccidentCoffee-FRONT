@@ -1,15 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
   const { setActivePanel, add, send } = useContext(Context);
-  const [render, setRender] = useState(0);
+  // const [render, setRender] = useState(0);
 
-  function ForceUpdate() {
-    return () => setRender((render) => render + 1); // update the state to force render
-  }
+  // function ForceUpdate() {
+  //   return () => setRender((render) => render + 1); // update the state to force render
+  // }
 
   function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
