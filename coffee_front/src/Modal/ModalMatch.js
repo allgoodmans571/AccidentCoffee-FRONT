@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
-// import iconExit from "../images/iconExit.svg";
 
 function ModalMatch() {
   const { match, showMatch, dataState } = useContext(Context);

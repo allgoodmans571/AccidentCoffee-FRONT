@@ -5,6 +5,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 import ScroollbarItem from "../Screens/StartScreenPackage/ScrollbarItem";
 import Context from "../context/context";
+import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
   const { arr, findMatch } = useContext(Context);
@@ -56,6 +57,7 @@ function MainScreen() {
           </div>
         </div>
       </div>
+
       <div className="mainBlock">
         <div></div>
         <div className="tags">
@@ -111,26 +113,30 @@ function MainScreen() {
             Подобрать
           </button>
         </div>
-        <div className="itemsBar">
-          {arr.map((item) => {
-            countID++;
-            return (
-              <ScroollbarItem
-                linkItem={item.linkImage ? item.linkImage : linkImage}
-                nameItem={item.name}
-                positionItem={item.position}
-                telegramItem={item.telegram}
-                lifePosItem={item.lifePos}
-                emailUser={item.email}
-                teamStatusItem={item.teamStatus}
-                workPlaceItem={item.wordPlace}
-                projectTimeItem={item.projectTime}
-                tagsItem={item.tags}
-                key={countID}
-              />
-            );
-          })}
-        </div>
+        {arr.length > 1 ? (
+          <div className="itemsBar">
+            {arr.map((item) => {
+              countID++;
+              return (
+                <ScroollbarItem
+                  linkItem={item.linkImage ? item.linkImage : linkImage}
+                  nameItem={item.name}
+                  positionItem={item.position}
+                  telegramItem={item.telegram}
+                  lifePosItem={item.lifePos}
+                  emailUser={item.email}
+                  teamStatusItem={item.teamStatus}
+                  workPlaceItem={item.wordPlace}
+                  projectTimeItem={item.projectTime}
+                  tagsItem={item.tags}
+                  key={countID}
+                />
+              );
+            })}
+          </div>
+        ) : (
+          <ModalEmptyDB />
+        )}
       </div>
       <ModalItem />
       <ModalMatch />

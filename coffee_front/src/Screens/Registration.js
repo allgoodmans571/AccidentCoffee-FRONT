@@ -4,7 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function Registration() {
-  const { setActivePanel, init } = useContext(Context);
+  const { setActivePanel, init, setUserName} = useContext(Context);
 
   async function handleSubmit() {
     let userName =
@@ -16,6 +16,7 @@ function Registration() {
     let userTelegram = document.querySelector("#telegram").value;
 
     init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
+    setUserName(userName);
   }
 
   return (

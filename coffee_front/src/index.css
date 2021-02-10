@@ -13,6 +13,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 @media (min-width: 500px) and (max-width: 780px) {
   .tags {
     bottom: -3em;
@@ -32,7 +33,6 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(4, 245, 233); */
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 
@@ -55,7 +55,6 @@ code {
   .itemsBar {
     /* background-color: rgb(245, 4, 213); */
     grid-template-columns: 50% 50%;
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 
@@ -78,7 +77,6 @@ code {
   .itemsBar {
     /* background-color: rgb(20, 4, 245); */
     grid-template-columns: 33% 33% 33%;
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 
@@ -101,8 +99,6 @@ code {
   .itemsBar {
     /* background-color: rgb(245, 4, 4); */
     grid-template-columns: 25% 25% 25% 25%;
-    margin-bottom: -2rem;
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 
@@ -125,7 +121,6 @@ code {
   .itemsBar {
     /* background-color: rgb(4, 245, 65); */
     grid-template-columns: 19% 19% 19% 19% 19%;
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 
@@ -147,7 +142,6 @@ code {
     /* background-color: black; */
     z-index: 0;
     grid-template-columns: 15% 15% 15% 15% 15% 15%;
-    /* margin: 0 0 2rem 3rem; */
   }
 }
 

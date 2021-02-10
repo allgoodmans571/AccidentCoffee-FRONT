@@ -10,6 +10,13 @@ import EnterScreen from "./Screens/EnterScreen";
 
 function App() {
   const [arr, setArr] = useState([]);
+  const [userName, setName] = useState('name');
+
+  function setUserName(name) {
+    // console.log(name);
+    setName(userName);
+    // console.log(userName);
+  }
 
   useEffect(() => {
     fetch("http://68.183.12.32:8080/getAllUsers")
@@ -37,6 +44,7 @@ function App() {
   // });
 
   function findMatch() {
+    console.log(userName);
     let name = dataState.name;
     let response = fetch("http://68.183.12.32:8080/getMatch", {
       method: "POST",
@@ -201,6 +209,7 @@ function App() {
         match,
         showMatch,
         findMatch,
+        setUserName,
       }}
     >
       <div className="App">{components[statePage]}</div>

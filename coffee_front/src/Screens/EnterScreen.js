@@ -4,7 +4,9 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init } = useContext(Context);
+  const { setActivePanel, init, add, findMatch, setUserName } = useContext(
+    Context
+  );
 
   async function handleSubmit() {
     let name =
@@ -23,8 +25,21 @@ function EnterScreen() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
-        init(`${data.name}`);
+        init(
+          `${data.name}`,
+          `${data.position}`,
+          `${data.email}`,
+          `${data.telegram}`
+        );
+        add(
+          `${data.lifePos}`,
+          `${data.teamStatus}`,
+          `${data.wordPlace}`,
+          `${data.projectTime}`,
+          data.tags
+        );
+
+        setUserName(data.name);
       });
   }
 
@@ -103,6 +118,7 @@ function EnterScreen() {
                 event.preventDefault();
                 handleSubmit();
                 setActivePanel(4);
+                setTimeout(() => findMatch(), 500);
               }}
             >
               Продолжить
