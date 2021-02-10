@@ -118,9 +118,7 @@ function EnterScreen() {
                 event.preventDefault();
                 handleSubmit();
                 setActivePanel(4);
-                {
-                  arr.length > 1 && findMatch();
-                }
+                arr.length > 1 && findMatch();
               }}
             >
               Продолжить

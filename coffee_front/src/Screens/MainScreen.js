@@ -32,30 +32,6 @@ function MainScreen() {
             alt="logo"
           />
         </div>
-        <div>
-          <div className="matchProfileBar">
-            <div className="matchProfilePos">
-              <button
-                className="profileButton"
-                // onClick={() => {
-                //   hanldeModal(
-                //     true,
-                //     dataState.linkImage,
-                //     dataState.name,
-                //     dataState.position,
-                //     dataState.email,
-                //     dataState.telegram,
-                //     dataState.lifePos,
-                //     dataState.teamStatus,
-                //     dataState.wordPlace,
-                //     dataState.projectTime,
-                //     dataState.tags
-                //   );
-                // }}
-              ></button>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="mainBlock">

@@ -192,9 +192,7 @@ function PersonalData() {
                 event.preventDefault();
                 send();
                 setActivePanel(4);
-                {
-                  arr.length > 1 && findMatch();
-                }
+                arr.length > 1 && findMatch();
               }}
             >
               <strong>Начать общаться</strong>

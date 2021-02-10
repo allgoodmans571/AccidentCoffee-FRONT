@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
@@ -20,48 +20,10 @@ function Registration() {
     setUserName(userName);
   }
 
-  // const [state, setState] = useState();
-  // function constructor(props) {
-  //   state = { file: "", imagePreviewUrl: "" };
-  // }
-
-  // function _handleSubmit(e) {
-  //   e.preventDefault();
-  //   // TODO: do something with -> this.state.file
-  //   console.log("handle uploading-", state.file);
-  // }
-
-  // function _handleImageChange(e) {
-  //   e.preventDefault();
-
-  //   let reader = new FileReader();
-  //   let file = e.target.files[0];
-
-  //   reader.onloadend = () => {
-  //     setState({
-  //       file: file,
-  //       imagePreviewUrl: reader.result,
-  //     });
-  //   };
-
-  //   reader.readAsDataURL(file);
-  // }
-
-  // function render() {
-  //   let { imagePreviewUrl } = state;
-  //   let $imagePreview = null;
-  //   if (imagePreviewUrl) {
-  //     $imagePreview = <img src={imagePreviewUrl} />;
-  //   } else {
-  //     $imagePreview = (
-  //       <div className="previewText">Please select an Image for Preview</div>
-  //     );
-  //   }
-  // }
-
   function handleImage() {
     let test = document.querySelector("#loaderPhoto").value;
-    console.log("test");
+
+    console.log(test);
   }
 
   return (
@@ -105,23 +67,6 @@ function Registration() {
               alignItems: "center",
             }}
           >
-            {/* <div className="previewComponent">
-              <form onSubmit={(e) => _handleSubmit(e)}>
-                <input
-                  className="fileInput"
-                  type="file"
-                  onChange={(e) => _handleImageChange(e)}
-                />
-                <button
-                  className="submitButton"
-                  type="submit"
-                  onClick={(e) => _handleSubmit(e)}
-                >
-                  Upload Image
-                </button>
-              </form>
-              <div className="imgPreview">{imagePreview}</div>
-            </div> */}
             <label
               style={{
                 width: "300px",
@@ -137,24 +82,24 @@ function Registration() {
                   height: "50px",
                   margin: "40% 0",
                 }}
+                alt="Add your"
                 src={cameraImage}
               />
             </label>
             <div className="fields">
-              <form id="photo">
-                <input
-                  style={{
-                    position: "absolute",
-                    opacity: 0,
-                    top: "-100%",
-                  }}
-                  id="loaderPhoto"
-                  type="file"
-                  multiple
-                  accept="image/jpeg,image/png"
-                  name="file"
-                />
-              </form>
+              <input
+                style={{
+                  position: "absolute",
+                  opacity: 0,
+                  top: "-100%",
+                }}
+                id="loaderPhoto"
+                type="file"
+                multiple
+                onChange={handleImage}
+                accept="image/jpeg,image/png"
+                name="file"
+              />
               <label htmlFor="firstName">
                 <input
                   className="input_fields_text"
