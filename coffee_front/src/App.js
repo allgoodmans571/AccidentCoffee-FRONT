@@ -24,7 +24,7 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setArr(data);
       });
   }, []);
@@ -128,7 +128,7 @@ function App() {
   ];
 
   async function send() {
-    console.log(dataState.name);
+    console.log(dataState.wordPlace);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -139,6 +139,7 @@ function App() {
   }
 
   const reducer = (state, action) => {
+    console.log(action.wordPlace);
     switch (action.type) {
       case "init":
         return {
@@ -152,7 +153,7 @@ function App() {
           ...state,
           lifePos: action.lifePos,
           teamStatus: action.teamStatus,
-          workPlace: action.workPlace,
+          wordPlace: action.wordPlace,
           projectTime: action.projectTime,
           tags: action.tags,
         };
@@ -168,19 +169,19 @@ function App() {
     telegram: "",
     lifePos: "",
     teamStatus: "",
-    workPlace: "",
+    wordPlace: "",
     projectTime: "",
     tags: [],
   });
 
   const init = (name, position, email, telegram) =>
     dispatchData({ type: "init", name, position, email, telegram });
-  const add = (lifePos, teamStatus, workPlace, projectTime, tags) =>
+  const add = (lifePos, teamStatus, wordPlace, projectTime, tags) =>
     dispatchData({
       type: "add",
       lifePos,
       teamStatus,
-      workPlace,
+      wordPlace,
       projectTime,
       tags,
     });

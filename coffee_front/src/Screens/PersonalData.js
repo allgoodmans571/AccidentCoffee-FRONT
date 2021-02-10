@@ -5,20 +5,16 @@ import logo from "../images/logo.svg";
 
 function PersonalData() {
   const { setActivePanel, add, send, findMatch, arr } = useContext(Context);
-  // const [render, setRender] = useState(0);
-
-  // function ForceUpdate() {
-  //   return () => setRender((render) => render + 1); // update the state to force render
-  // }
 
   function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
     let userTeamStatus = document.querySelector("#teamStatus").value;
-    let userWordPlace = document.querySelector("#wordPlace").value;
+    let userWordPlace = document.querySelector("#workPlace").value;
     let userProjectTime = document.querySelector("#projectTime").value;
     let userTags = document.querySelector("#tags").value;
     userTags = userTags.split(", ");
 
+    console.log(userWordPlace);
     add(
       `${userLifePos}`,
       `${userTeamStatus}`,
@@ -120,7 +116,7 @@ function PersonalData() {
             <select
               style={{ width: "16rem" }}
               className="input_fields"
-              id="wordPlace"
+              id="workPlace"
               onChange={() => handleSubmitData()}
               required
             >
