@@ -209,9 +209,7 @@ code {
 
 @keyframes moveDown {
   0% {
-    -moz-transform: translateY(-85%);
-    -o-transform: translateY(-85%);
-    -webkit-transform: translateY(-85%);
+    transform: translateY(-85%);
   }
   100% {
     bottom: 0px;
@@ -223,23 +221,105 @@ code {
     top: 0px;
   }
   100% {
-    -moz-transform: translateY(-85%);
-    -o-transform: translateY(-85%);
+    transform: translateY(-85%);
+  }
+}
+@-webkit-keyframes moveDown {
+  0% {
     -webkit-transform: translateY(-85%);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-webkit-keyframes moveUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    -webkit-transform: translateY(-85%);
+  }
+}
+@-ms-keyframes moveDown {
+  0% {
+    -ms-transform: translateY(-85%);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-ms-keyframes moveUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    -ms-transform: translateY(-85%);
+  }
+}
+@-moz-keyframes moveDown {
+  0% {
+    -moz-transform: translateY(-85%);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-moz-keyframes moveUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    -moz-transform: translateY(-85%);
+  }
+}
+@-o-keyframes moveDown {
+  0% {
+    -moz-transform: translateY(-85%);
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@-o-keyframes moveUp {
+  0% {
+    top: 0px;
+  }
+  100% {
+    -o-transform: translateY(-85%);
   }
 }
 
 .scrollBarLine_1 {
   animation: moveDown 160s infinite linear;
+  -webkit-animation: moveDown 160s infinite linear;
+  -o-animation: moveDown 160s infinite linear;
+  -moz-animation: moveDown 160s infinite linear;
+  -ms-animation: moveDown 160s infinite linear;
 }
 .scrollBarLine_2 {
   animation: moveUp 150s infinite linear;
+  -webkit-animation: moveUp 150s infinite linear;
+  -o-animation: moveUp 150s infinite linear;
+  -moz-animation: moveUp 150s infinite linear;
+  -ms-animation: moveUp 150s infinite linear;
 }
 .scrollBarLine_3 {
   animation: moveDown 190s infinite linear;
+  -webkit-animation: moveDown 190s infinite linear;
+  -o-animation: moveDown 190s infinite linear;
+  -moz-animation: moveDown 190s infinite linear;
+  -ms-animation: moveDown 190s infinite linear;
 }
 .scrollBarLine_4 {
   animation: moveUp 210s infinite linear;
+  -webkit-animation: moveUp 210s infinite linear;
+  -o-animation: moveUp 210s infinite linear;
+  -moz-animation: moveUp 210s infinite linear;
+  -ms-animation: moveUp 210s infinite linear;
 }
 
 .btn_open_profile {
