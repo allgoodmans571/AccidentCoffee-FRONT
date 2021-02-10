@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import Context from "../../context/context";
+import icon from "../../images/icon.png";
 
 function ScroollbarItem({
   linkItem,
@@ -23,7 +24,11 @@ function ScroollbarItem({
     <div className="scroollbarItem">
       <button
         className="btn_open_profile"
-        style={{ backgroundImage: `url(${image}` }}
+        style={{
+          backgroundImage: `url(${
+            image != "undefined" ? image : icon
+          })`,
+        }}
         onClick={() =>
           hanldeModal(
             true,

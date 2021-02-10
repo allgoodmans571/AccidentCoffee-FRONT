@@ -36,7 +36,9 @@ function ModalItem() {
                 <div className="profilePhoto">
                   <div
                     style={{
-                      backgroundImage: `url(${modal.image})`,
+                      backgroundImage: `url(${
+                        modal.image != "undefined" ? modal.image : icon
+                      })`,
                       maxWidth: "100%",
                       height: "100%",
                       backgroundSize: "250px auto",

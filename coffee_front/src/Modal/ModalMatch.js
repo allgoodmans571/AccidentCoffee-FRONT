@@ -27,7 +27,7 @@ function ModalMatch() {
                 <img
                   style={{ marginTop: "0rem" }}
                   className="profilePhoto"
-                  src={dataState.image ? dataState.image : icon}
+                  src={dataState.image != "undefined" ? dataState.image : icon }
                   alt="Фото коллеги №2"
                 />
               </div>

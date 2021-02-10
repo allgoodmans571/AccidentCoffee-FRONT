@@ -15,7 +15,7 @@ function Scroollbar() {
           countID++;
           return (
             <ScroollbarItem
-              linkItem={item.image ? item.image : linkImage}
+              linkItem={item.image}
               nameItem={item.name}
               positionItem={item.position}
               emailUser={item.email}
@@ -35,7 +35,7 @@ function Scroollbar() {
           countID++;
           return (
             <ScroollbarItem
-              linkItem={item.image ? item.image : linkImage}
+              linkItem={item.image}
               nameItem={item.name}
               positionItem={item.position}
               emailUser={item.email}
@@ -55,7 +55,7 @@ function Scroollbar() {
           countID++;
           return (
             <ScroollbarItem
-              linkItem={item.image ? item.image : linkImage}
+              linkItem={item.image}
               nameItem={item.name}
               positionItem={item.position}
               emailUser={item.email}
@@ -75,7 +75,7 @@ function Scroollbar() {
           countID++;
           return (
             <ScroollbarItem
-              linkItem={item.image ? item.image : linkImage}
+              linkItem={item.image}
               nameItem={item.name}
               positionItem={item.position}
               emailUser={item.email}
