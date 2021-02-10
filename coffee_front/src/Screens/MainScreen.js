@@ -9,7 +9,7 @@ import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
   const { arr, findMatch } = useContext(Context);
-  let linkImage = "https://institute.asiakz.com/files/default/avatar.png";
+  let linkImage = icon;
   let countID = 0;
 
   return (

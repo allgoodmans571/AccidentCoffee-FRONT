@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
 import iconExit from "../images/iconExit.svg";
+import icon from "../images/icon.png";
 
 function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
@@ -35,11 +36,7 @@ function ModalItem() {
                 />
                 <img
                   className="profilePhoto"
-                  src={
-                    modal.linkImage
-                      ? modal.linkImage
-                      : "https://institute.asiakz.com/files/default/avatar.png"
-                  }
+                  src={modal.linkImage ? modal.linkImage : icon}
                   alt="Фото коллеги №2"
                 />
               </div>
@@ -82,12 +79,7 @@ function ModalItem() {
               </div>
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
-            <div
-              style={{
-                margin: "2.5rem 0 3rem 3.5rem",
-              }}
-              className="personalTags"
-            >
+            <div className="personalTags">
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
                 {modal.tags.map((tag) => {

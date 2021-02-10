@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
+import icon from "../images/icon.png";
 
 function ModalMatch() {
   const { match, showMatch, dataState } = useContext(Context);
@@ -26,11 +27,7 @@ function ModalMatch() {
                 <img
                   style={{ marginTop: "0rem" }}
                   className="profilePhoto"
-                  src={
-                    dataState.linkImage
-                      ? dataState.linkImage
-                      : "https://institute.asiakz.com/files/default/avatar.png"
-                  }
+                  src={dataState.linkImage ? dataState.linkImage : icon}
                   alt="Фото коллеги №2"
                 />
               </div>

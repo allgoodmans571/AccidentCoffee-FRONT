@@ -238,21 +238,11 @@ code {
   grid-template-rows: 100%;
 }
 
-/* .scrollBar {
+.scrollBar {
   position: relative;
   display: flex;
   width: auto;
   height: auto;
-  justify-content: flex-end;
-} */
-
-.scrollBar {
-  position: relative;
-  display: grid;
-  grid-template-columns: 16.5rem 16.5rem 16.5rem 16.5rem;
-  width: auto;
-  height: auto;
-  left: -4rem;
   justify-content: flex-end;
 }
 
@@ -382,7 +372,7 @@ code {
   height: 290px;
   width: 250px;
   background-repeat: no-repeat;
-  background-size: 320px auto;
+  background-size: 260px auto;
   background-position: center;
   box-shadow: inset 0px 0px 100px 0px rgba(141, 141, 141, 0.6);
   text-align: left;
@@ -649,6 +639,7 @@ code {
   margin-left: 2rem;
   border: 2px solid #ccc;
   border-radius: 13rem;
+  width: 250px;
   max-width: 100%;
 }
 

@@ -193,7 +193,7 @@ function PersonalData() {
                 send();
                 setActivePanel(4);
                 {
-                  arr.length > 1 && setTimeout(() => findMatch(), 500);
+                  arr.length > 1 && findMatch();
                 }
               }}
             >
