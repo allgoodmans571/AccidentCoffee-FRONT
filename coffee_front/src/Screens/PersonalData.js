@@ -14,7 +14,6 @@ function PersonalData() {
     let userTags = document.querySelector("#tags").value;
     userTags = userTags.split(", ");
 
-    console.log(userWordPlace);
     add(
       `${userLifePos}`,
       `${userTeamStatus}`,
@@ -77,9 +76,6 @@ function PersonalData() {
               <option value="Прокачиваю осознанность">
                 Прокачиваю осознанность
               </option>
-              {/* <img
-                src="https://d1icd6shlvmxi6.cloudfront.net/gsc/CA794E/3d/db/df/3ddbdfa3fb6c4834b9c82d4e6835cbf7/images/registration/u360.svg?token=a462677d509c493189a2c82a4c5d2f91f8c0490378547d0238713423b74af1e7"
-              ></img> */}
             </select>
           </label>
           <label className="selectInput">

@@ -10,7 +10,7 @@ import EnterScreen from "./Screens/EnterScreen";
 
 function App() {
   const [arr, setArr] = useState([]);
-  const [userName, setName] = useState('name');
+  const [userName, setName] = useState("name");
 
   function setUserName(name) {
     // console.log(name);
@@ -44,7 +44,6 @@ function App() {
   // });
 
   function findMatch() {
-    console.log(userName);
     let name = dataState.name;
     let response = fetch("http://68.183.12.32:8080/getMatch", {
       method: "POST",
@@ -57,8 +56,8 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         init(
+          `${data.image}`,
           `${data.name}`,
           `${data.position}`,
           `${data.email}`,
@@ -128,7 +127,7 @@ function App() {
   ];
 
   async function send() {
-    console.log(dataState.wordPlace);
+    console.log(dataState);
     let response = await fetch("http://68.183.12.32:8080/registration", {
       method: "POST",
       headers: {
@@ -139,10 +138,11 @@ function App() {
   }
 
   const reducer = (state, action) => {
-    console.log(action.wordPlace);
+    // console.log(action.wordPlace);
     switch (action.type) {
       case "init":
         return {
+          image: action.linkImage,
           name: action.name,
           position: action.position,
           email: action.email,
@@ -163,6 +163,7 @@ function App() {
   };
 
   const [dataState, dispatchData] = useReducer(reducer, {
+    image: "",
     name: "",
     position: "",
     email: "",
@@ -174,8 +175,9 @@ function App() {
     tags: [],
   });
 
-  const init = (name, position, email, telegram) =>
-    dispatchData({ type: "init", name, position, email, telegram });
+  const init = (linkImage, name, position, email, telegram) =>
+    dispatchData({ type: "init", linkImage, name, position, email, telegram });
+
   const add = (lifePos, teamStatus, wordPlace, projectTime, tags) =>
     dispatchData({
       type: "add",

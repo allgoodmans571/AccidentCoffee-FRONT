@@ -6,6 +6,7 @@ import cameraImage from "../images/cameraImage.svg";
 
 function Registration() {
   const { setActivePanel, init, setUserName } = useContext(Context);
+  let userPic;
 
   async function handleSubmit() {
     let userName =
@@ -16,14 +17,40 @@ function Registration() {
     let userEmail = document.querySelector("#corpEmail").value;
     let userTelegram = document.querySelector("#telegram").value;
 
-    init(`${userName}`, `${userPosition}`, `${userEmail}`, `${userTelegram}`);
+    init(
+      `${userPic}`,
+      `${userName}`,
+      `${userPosition}`,
+      `${userEmail}`,
+      `${userTelegram}`
+    );
     setUserName(userName);
   }
 
-  function handleImage() {
-    let test = document.querySelector("#loaderPhoto").value;
+  function handleFiles() {
+    var reader = new FileReader(),
+      input = document.getElementById("loaderPhoto").files[0];
 
-    console.log(test);
+    reader.addEventListener(
+      "loadend",
+      function (result) {
+        document.querySelector(
+          ".loadPhoto"
+        ).style.background = `url(${result.target.result})`;
+        document.querySelector(".loadPhoto").style.backgroundSize =
+          "300px auto";
+
+        document.querySelector(".loadPhoto").style.backgroundRepeat =
+          "no-repeat";
+        document.querySelector(".loadPhoto").style.backgroundPosition =
+          "center";
+
+        userPic = result.target.result;
+        console.log(userPic);
+      },
+      false
+    );
+    reader.readAsDataURL(input);
   }
 
   return (
@@ -72,6 +99,7 @@ function Registration() {
                 width: "300px",
                 height: "300px",
                 borderRadius: "10rem",
+                backgroundSize: "cover",
               }}
               htmlFor="loaderPhoto"
               className="loadPhoto"
@@ -82,7 +110,6 @@ function Registration() {
                   height: "50px",
                   margin: "40% 0",
                 }}
-                alt="Add your"
                 src={cameraImage}
               />
             </label>
@@ -96,7 +123,7 @@ function Registration() {
                 id="loaderPhoto"
                 type="file"
                 multiple
-                onChange={handleImage}
+                onChange={handleFiles}
                 accept="image/jpeg,image/png"
                 name="file"
               />

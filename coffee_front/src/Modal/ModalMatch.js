@@ -27,7 +27,7 @@ function ModalMatch() {
                 <img
                   style={{ marginTop: "0rem" }}
                   className="profilePhoto"
-                  src={dataState.linkImage ? dataState.linkImage : icon}
+                  src={dataState.image ? dataState.image : icon}
                   alt="Фото коллеги №2"
                 />
               </div>
@@ -94,7 +94,7 @@ function ModalMatch() {
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Место работы:</strong> <p>{dataState.workPlace}</p>
+                    <strong>Место работы:</strong> <p>{dataState.wordPlace}</p>
                   </li>
                   <br />
                   <li>

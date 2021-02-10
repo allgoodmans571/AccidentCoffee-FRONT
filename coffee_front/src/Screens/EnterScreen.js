@@ -26,6 +26,7 @@ function EnterScreen() {
       })
       .then((data) => {
         init(
+          `${data.image}`,
           `${data.name}`,
           `${data.position}`,
           `${data.email}`,

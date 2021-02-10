@@ -8,7 +8,7 @@ function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
 
   let countID = 0;
-  
+
   return (
     <div>
       {modal.isOpen && (
@@ -29,14 +29,14 @@ function ModalItem() {
                     borderRadius: "0.25rem",
                     color: "#808080",
                     border: "none",
-                    outline: "none",
+                    outline: "none",  
                     backgroundImage: `url(${iconExit})`,
                   }}
                   onClick={() => hanldeModal(false)}
                 />
                 <img
                   className="profilePhoto"
-                  src={modal.linkImage ? modal.linkImage : icon}
+                  src={modal.image ? modal.image : icon}
                   alt="Фото коллеги №2"
                 />
               </div>

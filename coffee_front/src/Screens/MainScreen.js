@@ -95,7 +95,7 @@ function MainScreen() {
               countID++;
               return (
                 <ScroollbarItem
-                  linkItem={item.linkImage ? item.linkImage : linkImage}
+                  linkItem={item.image ? item.image : linkImage}
                   nameItem={item.name}
                   positionItem={item.position}
                   telegramItem={item.telegram}
