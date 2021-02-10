@@ -31,14 +31,14 @@ function StartScreen() {
             alt="logo"
           />
         </div>
-        <p style={{ fontSize: "55px", margin: 0, paddingBottom: "1rem" }}>
+        <p style={{ margin: 0, paddingBottom: "1rem" }}>
           <strong>
             Знакомься. Общайся.
             <br />
             Развивай нетворкинг
           </strong>
         </p>
-        <p style={{ fontSize: "21px", paddingBottom: "2.5rem" }}>
+        <p style={{ paddingBottom: "2.5rem" }}>
           Здесь ты можешь получше узнать компанию через людей, найти эксперта,
           единомышленника, бадди или просто приятно провести время с интересным
           собеседником.

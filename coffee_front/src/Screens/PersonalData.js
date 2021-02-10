@@ -4,7 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
-  const { setActivePanel, add, send, findMatch } = useContext(Context);
+  const { setActivePanel, add, send, findMatch, arr } = useContext(Context);
   // const [render, setRender] = useState(0);
 
   // function ForceUpdate() {
@@ -192,7 +192,9 @@ function PersonalData() {
                 event.preventDefault();
                 send();
                 setActivePanel(4);
-                setTimeout(() => findMatch(), 500);
+                {
+                  arr.length > 1 && setTimeout(() => findMatch(), 500);
+                }
               }}
             >
               <strong>Начать общаться</strong>

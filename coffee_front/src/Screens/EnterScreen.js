@@ -4,7 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, setUserName } = useContext(
+  const { setActivePanel, init, add, findMatch, setUserName, arr } = useContext(
     Context
   );
 
@@ -118,7 +118,9 @@ function EnterScreen() {
                 event.preventDefault();
                 handleSubmit();
                 setActivePanel(4);
-                setTimeout(() => findMatch(), 500);
+                {
+                  arr.length > 1 && setTimeout(() => findMatch(), 500);
+                }
               }}
             >
               Продолжить
