@@ -8,7 +8,7 @@ function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
 
   let countID = 0;
-  // console.log(modal);
+  
   return (
     <div>
       {modal.isOpen && (
@@ -47,7 +47,7 @@ function ModalItem() {
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
                   {modal.position ? modal.position : "position"}
                 </p>
-                {/* <p>Telegramm: {modal.telegram}</p> */}
+                <p>Telegramm: {modal.telegram}</p>
 
                 {/* todo поставить стрелку в угол */}
               </div>

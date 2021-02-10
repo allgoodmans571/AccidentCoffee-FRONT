@@ -59,6 +59,11 @@ function Registration() {
   //   }
   // }
 
+  function handleImage() {
+    let test = document.querySelector("#loaderPhoto").value;
+    console.log("test");
+  }
+
   return (
     <div
       style={{
@@ -139,7 +144,9 @@ function Registration() {
               <form id="photo">
                 <input
                   style={{
-                    display: "none",
+                    position: "absolute",
+                    opacity: 0,
+                    top: "-100%",
                   }}
                   id="loaderPhoto"
                   type="file"
