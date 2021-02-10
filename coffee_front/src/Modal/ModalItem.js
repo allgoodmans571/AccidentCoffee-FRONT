@@ -6,7 +6,6 @@ import icon from "../images/icon.png";
 
 function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
-
   let countID = 0;
 
   return (
@@ -29,16 +28,23 @@ function ModalItem() {
                     borderRadius: "0.25rem",
                     color: "#808080",
                     border: "none",
-                    outline: "none",  
+                    outline: "none",
                     backgroundImage: `url(${iconExit})`,
                   }}
                   onClick={() => hanldeModal(false)}
                 />
-                <img
-                  className="profilePhoto"
-                  src={modal.image ? modal.image : icon}
-                  alt="Фото коллеги №2"
-                />
+                <div className="profilePhoto">
+                  <div
+                    style={{
+                      backgroundImage: `url(${modal.image})`,
+                      maxWidth: "100%",
+                      height: "100%",
+                      backgroundSize: "250px auto",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  />
+                </div>
               </div>
               <div style={{ marginBottom: "6rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
