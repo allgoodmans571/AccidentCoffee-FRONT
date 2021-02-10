@@ -26,6 +26,12 @@ code {
     font-size: 8px;
     padding: 2px 13px 2px 13px;
   }
+  .personalTags {
+    margin: 2rem 0 2rem 3.5rem;
+  }
+  .personalInfo {
+    margin: 0.5rem 0 0.5rem 0;
+  }
   .headerMain {
     width: 90%;
     height: 5rem;
@@ -46,6 +52,12 @@ code {
   .tag button {
     font-size: 10px;
     padding: 2px 13px 5px 13px;
+  }
+  .personalTags {
+    margin: 2rem 0 2rem 3.5rem;
+  }
+  .personalInfo {
+    margin: 0.5rem 0 0.5rem 0;
   }
   .headerMain {
     width: 90%;
@@ -69,6 +81,9 @@ code {
     font-size: 16px;
     padding: 2px 13px 4px 13px;
   }
+  .personalTags {
+    margin: 0rem 0 0rem 3.5rem;
+  }
   .headerMain {
     width: 90%;
     height: 6rem;
@@ -81,15 +96,24 @@ code {
 }
 
 @media (min-width: 1390px) and (max-width: 1790px) {
+  .profile p {
+    font-size: 15px;
+  }
   .tags {
     left: 8%;
   }
   .tag {
     margin: 8px 0 0 0;
   }
+  .personalInfo {
+    margin: 1rem 0 1rem 0;
+  }
   .tag button {
     font-size: 16px;
     padding: 2px 13px 5px 13px;
+  }
+  .personalTags {
+    margin: 1rem 0 1rem 3.5rem;
   }
   .headerMain {
     width: 90%;
@@ -113,6 +137,12 @@ code {
     font-size: 16px;
     padding: 2px 13px 5px 13px;
   }
+  .personalInfo {
+    margin: 2rem 0 2rem 0;
+  }
+  .personalTags {
+    margin: 2rem 0 2rem 3.5rem;
+  }
   .headerMain {
     width: 90%;
     height: 8rem;
@@ -131,6 +161,12 @@ code {
   .tag button {
     font-size: 10px;
     padding: 2px 13px 5px 13px;
+  }
+  .personalInfo {
+    margin: 2rem 0 2rem 0;
+  }
+  .personalTags {
+    margin: 2rem 0 2rem 3.5rem;
   }
   .headerMain {
     width: 90%;
@@ -421,7 +457,6 @@ code {
   border: 2px solid #ccc;
   border-radius: 1rem;
   width: 50rem;
-  height: auto;
   margin: auto;
 }
 
@@ -435,7 +470,7 @@ code {
   width: 80%;
   height: auto;
   text-align: left;
-  margin: 2rem 0 2rem 1rem;
+  margin: 0 1rem;
 }
 
 .personalChoose ol {
@@ -470,7 +505,6 @@ code {
   grid-gap: 4.5rem;
   align-items: center;
   width: 100%;
-  margin: 2rem 0 2rem 0;
   text-align: left;
 }
 

@@ -108,12 +108,7 @@ function ModalMatch() {
               </div>
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
-            <div
-              style={{
-                margin: "2rem 0 2rem 3.5rem",
-              }}
-              className="personalTags"
-            >
+            <div className="personalTags">
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
                 {dataState.tags
@@ -132,7 +127,7 @@ function ModalMatch() {
             <button
               className="startButton"
               style={{
-                margin: "1.5rem 0 2rem 0",
+                margin: "1rem 0 1.2rem 0",
                 width: "250px",
                 fontSize: "20px",
                 height: "50px",
