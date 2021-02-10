@@ -38,7 +38,7 @@ code {
     grid-template-columns: 18% 82%;
   }
   .itemsBar {
-    background-color: rgb(4, 245, 233);
+    /* background-color: rgb(4, 245, 233); */
   }
 }
 
@@ -65,7 +65,7 @@ code {
     grid-template-columns: 18% 82%;
   }
   .itemsBar {
-    background-color: rgb(245, 4, 213);
+    /* background-color: rgb(245, 4, 213); */
     grid-template-columns: 50% 50%;
   }
 }
@@ -90,7 +90,7 @@ code {
     grid-template-columns: 16% 84%;
   }
   .itemsBar {
-    background-color: rgb(20, 4, 245);
+    /* background-color: rgb(20, 4, 245); */
     grid-template-columns: 33% 33% 33%;
   }
 }
@@ -121,7 +121,7 @@ code {
     grid-template-columns: 17% 83%;
   }
   .itemsBar {
-    background-color: rgb(245, 4, 4);
+    /* background-color: rgb(245, 4, 4); */
     grid-template-columns: 25% 25% 25% 25%;
   }
 }
@@ -149,7 +149,7 @@ code {
     grid-template-columns: 17% 83%;
   }
   .itemsBar {
-    background-color: rgb(4, 245, 65);
+    /* background-color: rgb(4, 245, 65); */
     grid-template-columns: 19% 19% 19% 19% 19%;
   }
 }
@@ -175,7 +175,7 @@ code {
     grid-template-columns: 17% 83%;
   }
   .itemsBar {
-    background-color: black;
+    /* background-color: black; */
     z-index: 0;
     grid-template-columns: 15% 15% 15% 15% 15% 15%;
   }
