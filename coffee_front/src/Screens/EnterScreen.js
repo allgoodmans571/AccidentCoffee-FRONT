@@ -4,7 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, arr, dataState } = useContext(
+  const { setActivePanel, init, add, findMatch, arr } = useContext(
     Context
   );
 
@@ -65,8 +65,8 @@ function EnterScreen() {
         console.log(data);
       });
 
-    if (newData) {
-      arr.length > 1 && findMatch();
+    if (newData) {  
+      arr.length > 1 && findMatch(name);
       setActivePanel(4);
     }
   }

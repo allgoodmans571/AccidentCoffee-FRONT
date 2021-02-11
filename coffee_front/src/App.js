@@ -10,13 +10,6 @@ import EnterScreen from "./Screens/EnterScreen";
 
 function App() {
   const [arr, setArr] = useState([]);
-  const [userName, setName] = useState("name");
-
-  function setUserName(name) {
-    console.log(name);
-    setName(name);
-    console.log(userName);
-  }
 
   useEffect(() => {
     fetch("http://68.183.12.32:8080/getAllUsers")
@@ -86,10 +79,10 @@ function App() {
       tags,
     });
 
-  function findMatch(nameUser) {
+  async function findMatch(nameUser) {
     let name = nameUser ? nameUser : dataState.name;
     console.log(name);
-    let response = fetch("http://68.183.12.32:8080/getMatch", {
+    let response = await fetch("http://68.183.12.32:8080/getMatch", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -114,13 +107,8 @@ function App() {
           `${data.projectTime}`,
           data.tags
         );
-        if (data.name === name) {
-          findMatch();
-          return;
-        } else {
-          setTimeout(() => showMatch(), 500);
-        }
       });
+    await showMatch();
   }
 
   const [statePage, setStatePage] = React.useState(0);
@@ -138,7 +126,6 @@ function App() {
     tags: [],
   });
 
-  // TODO передавать объект, избавиться от такой кучи аргументов
   function hanldeModal(
     operUser,
     imageUser,
@@ -260,7 +247,6 @@ function App() {
         match,
         showMatch,
         findMatch,
-        setUserName,
 
         initMatch,
         addMatch,

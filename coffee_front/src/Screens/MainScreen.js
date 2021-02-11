@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ModalItem from "../Modal/ModalItem";
 import ModalMatch from "../Modal/ModalMatch";
 import icon from "../images/icon.png";
@@ -8,9 +8,15 @@ import Context from "../context/context";
 import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
-  const { arr, findMatch, dataState, setActivePanel, init, add } = useContext(
-    Context
-  );
+  const {
+    arr,
+    match,
+    findMatch,
+    dataState,
+    setActivePanel,
+    init,
+    add,
+  } = useContext(Context);
   let countID = 0;
 
   let showingArr = arr;
@@ -18,8 +24,20 @@ function MainScreen() {
   function filtr(value) {
     for (let i = 0; i < showingArr.length; i++) {
       if (showingArr[i].tags + 1 < i) {
-        
       }
+    }
+  }
+
+  function block() {
+    if (match) {
+      document.querySelector("#matchButton").removeAttribute("disabled");
+
+      document.querySelector("#matchButton").style.background =
+        "rgba(0, 0, 0, 0.15)";
+    } else {
+      document
+        .querySelector("#matchButton")
+        .setAttribute("disabled", "disabled");
     }
   }
 
@@ -99,20 +117,23 @@ function MainScreen() {
           <div className="tag">
             <button>киберспорт</button>
           </div>
-          <button
-            style={{
-              margin: "3rem 0 0 0",
-              height: "2.5rem",
-              width: "12rem",
-            }}
-            className="startButton"
-            type="submit"
-            onClick={() => {
-              findMatch();
-            }}
-          >
-            Подобрать
-          </button>
+          {!match && (
+            <button
+              style={{
+                margin: "3rem 0 0 0",
+                height: "2.5rem",
+                width: "12rem",
+              }}
+              className="startButton"
+              id="matchButton"
+              type="submit"
+              onClick={() => {
+                findMatch();
+              }}
+            >
+              Подобрать
+            </button>
+          )}
         </div>
         {showingArr.length > 1 ? (
           <div className="itemsBar">

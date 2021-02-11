@@ -71,7 +71,6 @@ function PersonalData() {
       `${userProjectTime}`,
       userTags
     );
-
     console.log(dataState.name);
   }
 
@@ -386,8 +385,10 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 send();
-                setActivePanel(4);
-                arr.length > 1 && findMatch();
+                if (dataState) {
+                  arr.length > 1 && findMatch();
+                  setActivePanel(4);
+                }
               }}
             >
               <strong>Начать общаться</strong>
