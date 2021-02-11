@@ -280,7 +280,7 @@ code {
 
 @keyframes moveDown {
   0% {
-    transform: translateY(-85%);
+    transform: translate3d(0, -85%, 0);
   }
   100% {
     bottom: 0px;
@@ -292,12 +292,12 @@ code {
     top: 0px;
   }
   100% {
-    transform: translateY(-85%);
+    transform: translate3d(0, -85%, 0);
   }
 }
 @-webkit-keyframes moveDown {
   0% {
-    -webkit-transform: translateY(-85%);
+    -webkit-transform: translate3d(0, -85%, 0);
   }
   100% {
     bottom: 0px;
@@ -309,12 +309,12 @@ code {
     top: 0px;
   }
   100% {
-    -webkit-transform: translateY(-85%);
+    -webkit-transform: translate3d(0, -85%, 0);
   }
 }
 @-ms-keyframes moveDown {
   0% {
-    -ms-transform: translateY(-85%);
+    -ms-transform: translate3d(0, -85%, 0);
   }
   100% {
     bottom: 0px;
@@ -326,12 +326,12 @@ code {
     top: 0px;
   }
   100% {
-    -ms-transform: translateY(-85%);
+    -ms-transform: translate3d(0, -85%, 0);
   }
 }
 @-moz-keyframes moveDown {
   0% {
-    -moz-transform: translateY(-85%);
+    -moz-transform: translate3d(0, -85%, 0);
   }
   100% {
     bottom: 0px;
@@ -343,12 +343,12 @@ code {
     top: 0px;
   }
   100% {
-    -moz-transform: translateY(-85%);
+    -moz-transform: translate3d(0, -85%, 0);
   }
 }
 @-o-keyframes moveDown {
   0% {
-    -moz-transform: translateY(-85%);
+    -moz-transform: translate3d(0, -85%, 0);
   }
   100% {
     bottom: 0px;
@@ -360,11 +360,12 @@ code {
     top: 0px;
   }
   100% {
-    -o-transform: translateY(-85%);
+    -o-transform: translate3d(0, -85%, 0);
   }
 }
 
 .scrollBarLine_1 {
+  transform-style: preserve-3d;
   animation: moveDown 160s infinite linear;
   -webkit-animation: moveDown 160s infinite linear;
   -o-animation: moveDown 160s infinite linear;
@@ -372,6 +373,7 @@ code {
   -ms-animation: moveDown 160s infinite linear;
 }
 .scrollBarLine_2 {
+  transform-style: preserve-3d;
   animation: moveUp 150s infinite linear;
   -webkit-animation: moveUp 150s infinite linear;
   -o-animation: moveUp 150s infinite linear;
@@ -379,6 +381,7 @@ code {
   -ms-animation: moveUp 150s infinite linear;
 }
 .scrollBarLine_3 {
+  transform-style: preserve-3d;
   animation: moveDown 190s infinite linear;
   -webkit-animation: moveDown 190s infinite linear;
   -o-animation: moveDown 190s infinite linear;
@@ -386,6 +389,7 @@ code {
   -ms-animation: moveDown 190s infinite linear;
 }
 .scrollBarLine_4 {
+  transform-style: preserve-3d;
   animation: moveUp 210s infinite linear;
   -webkit-animation: moveUp 210s infinite linear;
   -o-animation: moveUp 210s infinite linear;
