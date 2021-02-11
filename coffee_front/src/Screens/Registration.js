@@ -20,11 +20,11 @@ function Registration() {
     let userTelegram = document.querySelector("#telegram").value;
 
     if (
-      userFirstName.length != 0 &&
-      userLastName.length != 0 &&
-      userPosition.length != 0 &&
-      userEmail.length != 0 &&
-      userTelegram.length != 0
+      userFirstName.length !== 0 &&
+      userLastName.length !== 0 &&
+      userPosition.length !== 0 &&
+      userEmail.length !== 0 &&
+      userTelegram.length !== 0
     ) {
       document.querySelector(".startButton").removeAttribute("disabled");
 
@@ -167,7 +167,7 @@ function Registration() {
                   id="firstName"
                   name="firstName"
                   placeholder="Имя"
-                  // required
+                  required
                 />
               </label>
               <label htmlFor="lastName">
@@ -178,7 +178,7 @@ function Registration() {
                   id="lastName"
                   name="lastName"
                   placeholder="Фамилия"
-                  // required
+                  required
                 />
               </label>
               <label htmlFor="position">
@@ -189,7 +189,7 @@ function Registration() {
                   id="position"
                   name="position"
                   placeholder="Должность"
-                  // required
+                  required
                 />
               </label>
               <label htmlFor="corpEmail">
@@ -200,7 +200,7 @@ function Registration() {
                   id="corpEmail"
                   name="corpEmail"
                   placeholder="Рабочая почта"
-                  // required
+                  required
                 />
               </label>
               <label htmlFor="telegram">
@@ -211,7 +211,7 @@ function Registration() {
                   id="telegram"
                   name="telegram"
                   placeholder="Telegram"
-                  // required
+                  required
                 />
               </label>
             </div>

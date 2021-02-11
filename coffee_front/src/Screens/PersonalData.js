@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
@@ -9,6 +9,43 @@ function PersonalData() {
   );
 
   let userTags = [];
+  let tegsUsed = 0;
+
+  function checkParams() {
+    let userLifePos = document.querySelector("#lifePos").value;
+    let userTeamStatus = document.querySelector("#teamStatus").value;
+    let userWordPlace = document.querySelector("#workPlace").value;
+    let userProjectTime = document.querySelector("#projectTime").value;
+    var inputs = document.querySelectorAll("input[type='checkbox']");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked) {
+        tegsUsed++;
+      }
+    }
+
+    console.log(tegsUsed);
+    if (
+      userLifePos !== "Выбрать" &&
+      userTeamStatus !== "Выбрать" &&
+      userWordPlace !== "Выбрать" &&
+      userProjectTime !== "Выбрать"
+    ) {
+      document.querySelector(".startButton").removeAttribute("disabled");
+
+      document.querySelector(".startButton").style.background =
+        "linear-gradient(to right, #fa76cf, #c571f5)";
+    } else {
+      document
+        .querySelector(".startButton")
+        .setAttribute("disabled", "disabled");
+      document.querySelector(".startButton").style.background =
+        "rgba(0, 0, 0, 0.15)";
+    }
+  }
+
+  useEffect(() => {
+    checkParams();
+  }, []);
 
   function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
@@ -75,7 +112,10 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="lifePos"
-              onChange={() => handleSubmitData()}
+              onChange={() => {
+                checkParams();
+                handleSubmitData();
+              }}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -100,7 +140,10 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="teamStatus"
-              onChange={() => handleSubmitData()}
+              onChange={() => {
+                checkParams();
+                handleSubmitData();
+              }}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -127,7 +170,10 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="workPlace"
-              onChange={() => handleSubmitData()}
+              onChange={() => {
+                checkParams();
+                handleSubmitData();
+              }}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -146,7 +192,10 @@ function PersonalData() {
               style={{ width: "16rem" }}
               className="input_fields"
               id="projectTime"
-              onChange={() => handleSubmitData()}
+              onChange={() => {
+                checkParams();
+                handleSubmitData();
+              }}
               required
             >
               <option defaultValue>Выбрать</option>
@@ -175,7 +224,10 @@ function PersonalData() {
             >
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="sport"
@@ -186,7 +238,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="serials"
@@ -197,7 +252,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="films"
@@ -208,7 +266,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="cook"
@@ -219,7 +280,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="music"
@@ -230,7 +294,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="zoj"
@@ -241,7 +308,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="eco"
@@ -252,7 +322,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="IT"
@@ -263,7 +336,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="languages"
@@ -274,7 +350,10 @@ function PersonalData() {
               </label>
               <label className="lable_checkbox">
                 <input
-                  onChange={() => handleSubmitData()}
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
                   className="input_checkbox"
                   name="prefer"
                   id="cybersport"
