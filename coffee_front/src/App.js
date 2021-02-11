@@ -160,7 +160,12 @@ function App() {
     <Registration />,
     <PersonalData />,
     <MainScreen />,
+    // <Loader />,
   ];
+
+  // function loadingScreen(value) {
+  //   return(<Loader />);
+  // }
 
   async function send() {
     console.log(dataState);

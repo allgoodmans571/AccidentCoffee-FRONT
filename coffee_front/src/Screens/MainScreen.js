@@ -22,23 +22,21 @@ function MainScreen() {
   let showingArr = arr;
 
   function filtr(value) {
+    let newArr = [];
+    console.log(value);
+    console.log(showingArr);
     for (let i = 0; i < showingArr.length; i++) {
-      if (showingArr[i].tags + 1 < i) {
+      for (let j = 0; j < showingArr[i].tags.length; j++) {
+        console.log(showingArr[i].tags[j]);
+        if (showingArr[i].tags[j] !== value) {
+          newArr.join(showingArr[i]);
+          console.log(showingArr[i]);
+        }
       }
     }
-  }
-
-  function block() {
-    if (match) {
-      document.querySelector("#matchButton").removeAttribute("disabled");
-
-      document.querySelector("#matchButton").style.background =
-        "rgba(0, 0, 0, 0.15)";
-    } else {
-      document
-        .querySelector("#matchButton")
-        .setAttribute("disabled", "disabled");
-    }
+    console.log(newArr);
+    showingArr = newArr;
+    console.log(showingArr);
   }
 
   return (
@@ -88,7 +86,7 @@ function MainScreen() {
             По интересам:
           </p>
           <div className="tag">
-            <button>cпорт</button>
+            <button onClick={() => filtr("cпорт")}>cпорт</button>
           </div>
           <div className="tag">
             <button>сериалы</button>

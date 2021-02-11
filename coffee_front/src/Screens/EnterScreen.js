@@ -4,9 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, arr } = useContext(
-    Context
-  );
+  const { setActivePanel, init, add, findMatch, arr } = useContext(Context);
 
   function checkParams() {
     let userFirstName = document.querySelector("#firstName").value;
@@ -65,7 +63,7 @@ function EnterScreen() {
         console.log(data);
       });
 
-    if (newData) {  
+    if (newData) {
       arr.length > 1 && findMatch(name);
       setActivePanel(4);
     }
@@ -127,20 +125,27 @@ function EnterScreen() {
           </label>
 
           <div
-            className="selectInput"
             style={{
               marginTop: "3rem",
-              gridTemplateColumns: "43% 50%",
+              gridTemplateColumns: "40% 40%",
             }}
           >
             <button
               className="req_Back_Button"
               type="submit"
+              style={{
+                width: "13rem",
+                marginRight: "1rem",
+              }}
               onClick={() => setActivePanel(0)}
             >
               <strong>Назад</strong>
             </button>
             <button
+              style={{
+                width: "13rem",
+                marginLeft: "1rem",
+              }}
               className="startButton"
               type="submit"
               form="survey-form"

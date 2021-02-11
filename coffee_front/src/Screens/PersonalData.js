@@ -385,10 +385,12 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 send();
-                if (dataState) {
-                  arr.length > 1 && findMatch();
-                  setActivePanel(4);
-                }
+                setTimeout(() => {
+                  if (dataState) {
+                    arr.length > 1 && findMatch();
+                    setActivePanel(4);
+                  }
+                }, 2000);
               }}
             >
               <strong>Начать общаться</strong>
