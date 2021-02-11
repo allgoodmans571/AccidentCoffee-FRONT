@@ -46,6 +46,7 @@ function StartScreen() {
         <div
           style={{
             display: "flex",
+            marginBottom: '10'
           }}
         >
           <button
@@ -57,7 +58,7 @@ function StartScreen() {
           </button>
           <button
             style={{
-              marginLeft: "3rem",
+              marginLeft: "1rem",
             }}
             className="startButton"
             type="submit"
