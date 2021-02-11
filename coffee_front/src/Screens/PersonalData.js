@@ -28,7 +28,8 @@ function PersonalData() {
       userLifePos !== "Выбрать" &&
       userTeamStatus !== "Выбрать" &&
       userWordPlace !== "Выбрать" &&
-      userProjectTime !== "Выбрать"
+      userProjectTime !== "Выбрать" &&
+      tegsUsed > 0
     ) {
       document.querySelector(".startButton").removeAttribute("disabled");
 

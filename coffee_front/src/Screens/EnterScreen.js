@@ -1,12 +1,36 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, arr } = useContext(Context);
+  const { setActivePanel, init, add, findMatch, arr, dataState } = useContext(
+    Context
+  );
+
+  function checkParams() {
+    let userFirstName = document.querySelector("#firstName").value;
+    let userLastName = document.querySelector("#lastName").value;
+
+    if (userFirstName.length !== 0 && userLastName.length !== 0) {
+      document.querySelector(".startButton").removeAttribute("disabled");
+      document.querySelector(".startButton").style.background =
+        "linear-gradient(to right, #fa76cf, #c571f5)";
+    } else {
+      document
+        .querySelector(".startButton")
+        .setAttribute("disabled", "disabled");
+      document.querySelector(".startButton").style.background =
+        "rgba(0, 0, 0, 0.15)";
+    }
+  }
+
+  useEffect(() => {
+    checkParams();
+  }, []);
 
   async function handleSubmit() {
+    let newData;
     let name =
       document.querySelector("#firstName").value +
       " " +
@@ -23,6 +47,7 @@ function EnterScreen() {
         return response.json();
       })
       .then((data) => {
+        newData = data;
         init(
           `${data.image}`,
           `${name}`,
@@ -39,7 +64,11 @@ function EnterScreen() {
         );
         console.log(data);
       });
-    arr.length > 1 && findMatch(name);
+
+    if (newData) {
+      arr.length > 1 && findMatch();
+      setActivePanel(4);
+    }
   }
 
   return (
@@ -76,6 +105,7 @@ function EnterScreen() {
           <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>Вход</h1>
           <label htmlFor="firstName">
             <input
+              onChange={checkParams}
               className="input_fields_text"
               type="text"
               id="firstName"
@@ -86,6 +116,7 @@ function EnterScreen() {
           </label>
           <label htmlFor="lastName">
             <input
+              onChange={checkParams}
               className="input_fields_text"
               type="text"
               id="lastName"
@@ -116,27 +147,11 @@ function EnterScreen() {
               onClick={(event) => {
                 event.preventDefault();
                 handleSubmit();
-                setActivePanel(4);
               }}
             >
               Продолжить
             </button>
           </div>
-
-          {/* <div style={{ marginTop: "3rem" }}>
-            <button
-              className="startButton"
-              type="submit"
-              form="survey-form"
-              onClick={(event) => {
-                event.preventDefault();
-                handleSubmit();
-                setActivePanel(4);
-              }}
-            >
-              <strong>Войти</strong>
-            </button>
-          </div> */}
         </div>
       </form>
     </div>

@@ -8,8 +8,20 @@ import Context from "../context/context";
 import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
-  const { arr, findMatch, dataState, setActivePanel } = useContext(Context);
+  const { arr, findMatch, dataState, setActivePanel, init, add } = useContext(
+    Context
+  );
   let countID = 0;
+
+  let showingArr = arr;
+
+  function filtr(value) {
+    for (let i = 0; i < showingArr.length; i++) {
+      if (showingArr[i].tags + 1 < i) {
+        
+      }
+    }
+  }
 
   return (
     <div>
@@ -37,7 +49,11 @@ function MainScreen() {
             width: "12rem",
           }}
           className="startButton"
-          onClick={() => setActivePanel(0)}
+          onClick={() => {
+            init("", "", "", "", "");
+            add("", "", "", "", []);
+            setActivePanel(0);
+          }}
         >
           В главное меню
         </button>
@@ -98,9 +114,9 @@ function MainScreen() {
             Подобрать
           </button>
         </div>
-        {arr.length > 1 ? (
+        {showingArr.length > 1 ? (
           <div className="itemsBar">
-            {arr.map((item) => {
+            {showingArr.map((item) => {
               countID++;
               if (item.name !== dataState.name) {
                 return (

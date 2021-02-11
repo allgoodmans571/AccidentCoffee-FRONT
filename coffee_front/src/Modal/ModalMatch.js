@@ -6,6 +6,20 @@ import icon from "../images/icon.png";
 function ModalMatch() {
   const { match, showMatch, dataStateMatch } = useContext(Context);
 
+  function getTelegramName() {
+    var name = dataStateMatch.telegram.split("@");
+    console.log(name);
+    if (name.length > 1) {
+      window.open(`https://t.me/${name[1]}`);
+    } else {
+      window.open(`https://t.me/${name[0]}`);
+    }
+  }
+
+  function getEmail() {
+    window.open(`mailto:${dataStateMatch.email}`);
+  }
+
   let countID = 0;
   return (
     <div>
@@ -52,8 +66,6 @@ function ModalMatch() {
                     ? dataStateMatch.position
                     : "position"}
                 </p>
-                {/* <p>Telegramm: {dataState.telegram}</p> */}
-
                 <button
                   className="startButton"
                   style={{
@@ -66,7 +78,7 @@ function ModalMatch() {
                     border: "none",
                     outline: "none",
                   }}
-                  // onClick={() => showMatch()}
+                  onClick={getTelegramName}
                 >
                   Написать в телеграм
                 </button>
@@ -83,7 +95,7 @@ function ModalMatch() {
                     border: "none",
                     outline: "none",
                   }}
-                  // onClick={() => showMatch()}
+                  onClick={getEmail}
                 >
                   Написать на почту
                 </button>

@@ -8,6 +8,16 @@ function ModalItem() {
   const { hanldeModal, modal } = useContext(Context);
   let countID = 0;
 
+  function getTelegramName() {
+    var name = modal.telegram.split("@");
+    console.log(name);
+    if (name.length > 1) {
+      window.open(`https://t.me/${name[1]}`);
+    } else {
+      window.open(`https://t.me/${name[0]}`);
+    }
+  }
+
   return (
     <div>
       {modal.isOpen && (
@@ -55,7 +65,22 @@ function ModalItem() {
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
                   {modal.position ? modal.position : "position"}
                 </p>
-                <p>Telegramm: {modal.telegram}</p>
+                <button
+                  className="startButton"
+                  style={{
+                    width: "150px",
+                    fontSize: "12px",
+                    height: "30px",
+                    box: "border-box",
+                    borderRadius: "6rem",
+                    color: "#ffffff",
+                    border: "none",
+                    outline: "none",
+                  }}
+                  onClick={getTelegramName}
+                >
+                  Написать в телеграм
+                </button>
 
                 {/* todo поставить стрелку в угол */}
               </div>
