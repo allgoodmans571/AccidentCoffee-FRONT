@@ -1,12 +1,47 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Context from "../context/context";
 import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 import cameraImage from "../images/cameraImage.svg";
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
+></script>;
 
 function Registration() {
   const { setActivePanel, init } = useContext(Context);
   let userPic;
+
+  function checkParams() {
+    let userFirstName = document.querySelector("#firstName").value;
+    let userLastName = document.querySelector("#lastName").value;
+    let userPosition = document.querySelector("#position").value;
+    let userEmail = document.querySelector("#corpEmail").value;
+    let userTelegram = document.querySelector("#telegram").value;
+
+    if (
+      userFirstName.length != 0 &&
+      userLastName.length != 0 &&
+      userPosition.length != 0 &&
+      userEmail.length != 0 &&
+      userTelegram.length != 0
+    ) {
+      document.querySelector(".startButton").removeAttribute("disabled");
+
+      document.querySelector(".startButton").style.background =
+        "linear-gradient(to right, #fa76cf, #c571f5)";
+    } else {
+      document
+        .querySelector(".startButton")
+        .setAttribute("disabled", "disabled");
+      document.querySelector(".startButton").style.background =
+        "rgba(0, 0, 0, 0.15)";
+    }
+  }
+
+  useEffect(() => {
+    checkParams();
+  }, []);
 
   async function handleSubmit() {
     let userName =
@@ -51,7 +86,6 @@ function Registration() {
     );
     reader.readAsDataURL(input);
   }
-
   return (
     <div
       className="reqPanel"
@@ -83,9 +117,7 @@ function Registration() {
               alt="logo"
             />
           </div>
-          <h1 style={{ fontSize: "35px", marginBottom: "3rem" }}>
-            Регистрация
-          </h1>
+          <h1 style={{ marginBottom: "3rem" }}>Регистрация</h1>
           <div
             style={{
               display: "grid",
@@ -129,6 +161,7 @@ function Registration() {
               />
               <label htmlFor="firstName">
                 <input
+                  onChange={checkParams}
                   className="input_fields_text"
                   type="text"
                   id="firstName"
@@ -139,6 +172,7 @@ function Registration() {
               </label>
               <label htmlFor="lastName">
                 <input
+                  onChange={checkParams}
                   className="input_fields_text"
                   type="text"
                   id="lastName"
@@ -149,6 +183,7 @@ function Registration() {
               </label>
               <label htmlFor="position">
                 <input
+                  onChange={checkParams}
                   className="input_fields_text"
                   type="text"
                   id="position"
@@ -159,6 +194,7 @@ function Registration() {
               </label>
               <label htmlFor="corpEmail">
                 <input
+                  onChange={checkParams}
                   className="input_fields_text"
                   type="email"
                   id="corpEmail"
@@ -169,8 +205,9 @@ function Registration() {
               </label>
               <label htmlFor="telegram">
                 <input
+                  onChange={checkParams}
                   className="input_fields_text"
-                  type="test"
+                  type="text"
                   id="telegram"
                   name="telegram"
                   placeholder="Telegram"

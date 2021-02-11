@@ -119,6 +119,9 @@ code {
   .dataForm h1 {
     font-size: 35px;
   }
+  #reqForm h1 {
+    font-size: 35px;
+  }
   .reqPanel {
     /* background-color: red; */
     margin-top: 2rem;
@@ -165,6 +168,9 @@ code {
 
 @media (min-width: 1800px) and (max-width: 2220px) {
   .dataForm h1 {
+    font-size: 50px;
+  }
+  #reqForm h1 {
     font-size: 50px;
   }
   .reqPanel {
@@ -441,7 +447,6 @@ code {
 .startButton {
   background: linear-gradient(to right, #fa76cf, #c571f5);
   background-color: #ec808d;
-  animation: hoverButton 500ms;
   animation-fill-mode: forwards;
   color: #ffffff;
   grid-row: auto;
@@ -455,7 +460,6 @@ code {
 
 .startButton:hover {
   background: linear-gradient(to right, #c571f5, #fa76cf);
-  animation: buttonHover 500ms;
   animation-fill-mode: forwards;
 }
 

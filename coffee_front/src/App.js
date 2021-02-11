@@ -88,10 +88,6 @@ function App() {
 
   function findMatch(nameUser) {
     let name = nameUser ? nameUser : dataState.name;
-    // if (!name) {
-    //   findMatch();
-    //   return;
-    // }
     console.log(name);
     let response = fetch("http://68.183.12.32:8080/getMatch", {
       method: "POST",
