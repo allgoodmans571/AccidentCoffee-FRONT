@@ -13,9 +13,9 @@ function App() {
   const [userName, setName] = useState("name");
 
   function setUserName(name) {
-    // console.log(name);
-    setName(userName);
-    // console.log(userName);
+    console.log(name);
+    setName(name);
+    console.log(userName);
   }
 
   useEffect(() => {
@@ -29,22 +29,70 @@ function App() {
       });
   }, []);
 
-  // const [matchModal, setMatchModal] = React.useState({
-  //   isOpen: false,
-  //   image: "",
-  //   name: "",
-  //   position: "",
-  //   email: "",
-  //   telegram: "",
-  //   lifePos: "",
-  //   teamStatus: "",
-  //   workPlace: "",
-  //   projectTime: "",
-  //   tags: [],
-  // });
+  const reducerMatch = (stateMatch, actionMatch) => {
+    switch (actionMatch.type) {
+      case "initMatch":
+        return {
+          image: actionMatch.linkImage,
+          name: actionMatch.name,
+          position: actionMatch.position,
+          email: actionMatch.email,
+          telegram: actionMatch.telegram,
+        };
+      case "addMatch":
+        return {
+          ...stateMatch,
+          lifePos: actionMatch.lifePos,
+          teamStatus: actionMatch.teamStatus,
+          wordPlace: actionMatch.wordPlace,
+          projectTime: actionMatch.projectTime,
+          tags: actionMatch.tags,
+        };
+      default:
+        return stateMatch;
+    }
+  };
 
-  function findMatch() {
-    let name = dataState.name;
+  const [dataStateMatch, dispatchDataMatch] = useReducer(reducerMatch, {
+    image: "",
+    name: "",
+    position: "",
+    email: "",
+    telegram: "",
+    lifePos: "",
+    teamStatus: "",
+    wordPlace: "",
+    projectTime: "",
+    tags: [],
+  });
+
+  const initMatch = (linkImage, name, position, email, telegram) =>
+    dispatchDataMatch({
+      type: "initMatch",
+      linkImage,
+      name,
+      position,
+      email,
+      telegram,
+    });
+
+  const addMatch = (lifePos, teamStatus, wordPlace, projectTime, tags) =>
+    dispatchDataMatch({
+      type: "addMatch",
+      lifePos,
+      teamStatus,
+      wordPlace,
+      projectTime,
+      tags,
+    });
+
+  function findMatch(nameUser) {
+    let name = nameUser ? nameUser : dataState.name;
+    // if (!name) {
+    //   findMatch();
+    //   return;
+    // }
+    console.log(name);
     let response = fetch("http://68.183.12.32:8080/getMatch", {
       method: "POST",
       headers: {
@@ -56,22 +104,27 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        init(
+        initMatch(
           `${data.image}`,
           `${data.name}`,
           `${data.position}`,
           `${data.email}`,
           `${data.telegram}`
         );
-        add(
+        addMatch(
           `${data.lifePos}`,
           `${data.teamStatus}`,
           `${data.wordPlace}`,
           `${data.projectTime}`,
           data.tags
         );
+        if (data.name === name) {
+          findMatch();
+          return;
+        } else {
+          setTimeout(() => showMatch(), 500);
+        }
       });
-    setTimeout(() => showMatch(), 500);
   }
 
   const [statePage, setStatePage] = React.useState(0);
@@ -138,7 +191,6 @@ function App() {
   }
 
   const reducer = (state, action) => {
-    // console.log(action.wordPlace);
     switch (action.type) {
       case "init":
         return {
@@ -213,6 +265,10 @@ function App() {
         showMatch,
         findMatch,
         setUserName,
+
+        initMatch,
+        addMatch,
+        dataStateMatch,
       }}
     >
       <div className="App">{components[statePage]}</div>

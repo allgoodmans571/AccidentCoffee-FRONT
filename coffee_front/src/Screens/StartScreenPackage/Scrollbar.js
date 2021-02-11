@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import ScroollbarItem from "./ScrollbarItem";
 import Context from "../../context/context";
-import icon from "../../images/icon.png";
 
 function Scroollbar() {
   const { arr } = useContext(Context);
-  let linkImage = icon;
 
   let countID = 0;
   return (

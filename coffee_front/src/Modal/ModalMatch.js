@@ -4,10 +4,9 @@ import Context from "../context/context";
 import icon from "../images/icon.png";
 
 function ModalMatch() {
-  const { match, showMatch, dataState } = useContext(Context);
+  const { match, showMatch, dataStateMatch } = useContext(Context);
 
   let countID = 0;
-  // console.log(modal);
   return (
     <div>
       {match && (
@@ -23,20 +22,35 @@ function ModalMatch() {
             </h1>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalInfo">
-              <div>
-                <img
-                  style={{ marginTop: "0rem" }}
-                  className="profilePhoto"
-                  src={dataState.image != "undefined" ? dataState.image : icon }
-                  alt="Фото коллеги №2"
+              <div
+                style={{
+                  marginTop: "0rem",
+                }}
+                className="profilePhoto"
+              >
+                <div
+                  style={{
+                    backgroundImage: `url(${
+                      dataStateMatch.image != "undefined"
+                        ? dataStateMatch.image
+                        : icon
+                    })`,
+                    maxWidth: "100%",
+                    height: "100%",
+                    backgroundSize: "250px auto",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
                 />
               </div>
               <div style={{ marginBottom: "6rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
-                  {dataState.name ? dataState.name : "name"}
+                  {dataStateMatch.name ? dataStateMatch.name : "name"}
                 </p>
                 <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
-                  {dataState.position ? dataState.position : "position"}
+                  {dataStateMatch.position
+                    ? dataStateMatch.position
+                    : "position"}
                 </p>
                 {/* <p>Telegramm: {dataState.telegram}</p> */}
 
@@ -82,24 +96,25 @@ function ModalMatch() {
                 <ol>
                   <li>
                     <strong>Жизненная позиция:</strong>{" "}
-                    <p>{dataState.lifePos}</p>
+                    <p>{dataStateMatch.lifePos}</p>
                   </li>
                   <br />
                   <li>
                     <strong>Командный статус:</strong>{" "}
-                    <p>{dataState.teamStatus}</p>
+                    <p>{dataStateMatch.teamStatus}</p>
                   </li>
                 </ol>
               </div>
               <div className="personalChoose">
                 <ol>
                   <li>
-                    <strong>Место работы:</strong> <p>{dataState.wordPlace}</p>
+                    <strong>Место работы:</strong>{" "}
+                    <p>{dataStateMatch.wordPlace}</p>
                   </li>
                   <br />
                   <li>
                     <strong>В отношениях с проектом:</strong>{" "}
-                    <p>{dataState.projectTime}</p>
+                    <p>{dataStateMatch.projectTime}</p>
                   </li>
                 </ol>
               </div>
@@ -108,8 +123,8 @@ function ModalMatch() {
             <div className="personalTags">
               <p style={{ fontWeight: "bold", fontSize: "17px" }}>
                 Интересы:
-                {dataState.tags
-                  ? dataState.tags.map((tag) => {
+                {dataStateMatch.tags
+                  ? dataStateMatch.tags.map((tag) => {
                       countID++;
                       return (
                         <strong style={{ fontWeight: "normal" }} key={countID}>

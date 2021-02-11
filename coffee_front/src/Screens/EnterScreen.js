@@ -4,9 +4,7 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, setUserName, arr } = useContext(
-    Context
-  );
+  const { setActivePanel, init, add, findMatch, arr } = useContext(Context);
 
   async function handleSubmit() {
     let name =
@@ -27,7 +25,7 @@ function EnterScreen() {
       .then((data) => {
         init(
           `${data.image}`,
-          `${data.name}`,
+          `${name}`,
           `${data.position}`,
           `${data.email}`,
           `${data.telegram}`
@@ -39,9 +37,9 @@ function EnterScreen() {
           `${data.projectTime}`,
           data.tags
         );
-
-        setUserName(data.name);
+        console.log(data);
       });
+    arr.length > 1 && findMatch(name);
   }
 
   return (
@@ -119,7 +117,6 @@ function EnterScreen() {
                 event.preventDefault();
                 handleSubmit();
                 setActivePanel(4);
-                arr.length > 1 && findMatch();
               }}
             >
               Продолжить

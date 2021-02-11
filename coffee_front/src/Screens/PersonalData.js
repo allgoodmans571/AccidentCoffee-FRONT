@@ -4,7 +4,9 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
-  const { setActivePanel, add, send, findMatch, arr } = useContext(Context);
+  const { setActivePanel, add, send, findMatch, arr, dataState } = useContext(
+    Context
+  );
 
   function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
@@ -21,6 +23,9 @@ function PersonalData() {
       `${userProjectTime}`,
       userTags
     );
+
+    console.log(dataState.name);
+    arr.length > 1 && findMatch();
   }
 
   return (
@@ -184,7 +189,6 @@ function PersonalData() {
                 event.preventDefault();
                 send();
                 setActivePanel(4);
-                arr.length > 1 && findMatch();
               }}
             >
               <strong>Начать общаться</strong>

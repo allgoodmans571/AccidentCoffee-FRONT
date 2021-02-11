@@ -5,7 +5,7 @@ import logo from "../images/logo.svg";
 import cameraImage from "../images/cameraImage.svg";
 
 function Registration() {
-  const { setActivePanel, init, setUserName } = useContext(Context);
+  const { setActivePanel, init } = useContext(Context);
   let userPic;
 
   async function handleSubmit() {
@@ -24,7 +24,6 @@ function Registration() {
       `${userEmail}`,
       `${userTelegram}`
     );
-    setUserName(userName);
   }
 
   function handleFiles() {
@@ -46,7 +45,7 @@ function Registration() {
           "center";
 
         userPic = result.target.result;
-        console.log(userPic);
+        // console.log(userPic);
       },
       false
     );

@@ -8,7 +8,7 @@ import Context from "../context/context";
 import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
-  const { arr, findMatch } = useContext(Context);
+  const { arr, findMatch, dataState } = useContext(Context);
   let linkImage = icon;
   let countID = 0;
 
@@ -93,21 +93,23 @@ function MainScreen() {
           <div className="itemsBar">
             {arr.map((item) => {
               countID++;
-              return (
-                <ScroollbarItem
-                  linkItem={item.image ? item.image : linkImage}
-                  nameItem={item.name}
-                  positionItem={item.position}
-                  telegramItem={item.telegram}
-                  lifePosItem={item.lifePos}
-                  emailUser={item.email}
-                  teamStatusItem={item.teamStatus}
-                  workPlaceItem={item.wordPlace}
-                  projectTimeItem={item.projectTime}
-                  tagsItem={item.tags}
-                  key={countID}
-                />
-              );
+              if (item.name != dataState.name) {
+                return (
+                  <ScroollbarItem
+                    linkItem={item.image}
+                    nameItem={item.name}
+                    positionItem={item.position}
+                    emailUser={item.email}
+                    telegramItem={item.telegram}
+                    lifePosItem={item.lifePos}
+                    teamStatusItem={item.teamStatus}
+                    workPlaceItem={item.wordPlace}
+                    projectTimeItem={item.projectTime}
+                    tagsItem={item.tags}
+                    key={countID}
+                  />
+                );
+              }
             })}
           </div>
         ) : (
