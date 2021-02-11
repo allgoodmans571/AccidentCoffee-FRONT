@@ -18,31 +18,7 @@ function MainScreen() {
     add,
   } = useContext(Context);
 
-  // const [showingArr, setShowingArr] = userState([])
-
   let countID = 0;
-  let showingArr = arr;
-
-  // function filtr(value) {
-  //   var newArr = [];
-  //   console.log(value);
-  //   console.log(showingArr);
-  //   for (let i = 0; i < showingArr.length; i++) {
-  //     for (let j = 0; j < showingArr[i].tags.length; j++) {
-  //       console.log(showingArr[i].tags[j]);
-  //       if (showingArr[i].tags[j].includes(value)) {
-  //         // newArr.(showingArr[i]);
-  //         newArr.push(showingArr[i]);
-  //         newArr.join(showingArr[i]);
-  //         console.log(showingArr[i]);
-  //       }
-  //     }
-  //   }
-  //   console.log(newArr);
-  //   showingArr.length = 0;
-  //   showingArr.push.apply(showingArr, newArr);
-  //   console.log(showingArr);
-  // }
 
   return (
     <div>
@@ -64,6 +40,24 @@ function MainScreen() {
             alt="logo"
           />
         </div>
+        {!match && (
+          <button
+            style={{
+              position: "fixed",
+              margin: "0 0 0 20%",
+              height: "2.5rem",
+              width: "12rem",
+            }}
+            className="startButton"
+            id="matchButton"
+            type="submit"
+            onClick={() => {
+              findMatch();
+            }}
+          >
+            Подобрать
+          </button>
+        )}
         <button
           style={{
             marginRight: "2rem",
@@ -81,67 +75,9 @@ function MainScreen() {
       </div>
 
       <div className="mainBlock">
-        <div></div>
-        <div className="tags">
-          <p
-            style={{
-              fontSize: "17px",
-            }}
-          >
-            По интересам:
-          </p>
-          <div className="tag">
-            <button >cпорт</button> 
-            {/* onClick={() => filtr("cпорт")} */}
-          </div>
-          <div className="tag">
-            <button>сериалы</button>
-          </div>
-          <div className="tag">
-            <button>фильмы</button>
-          </div>
-          <div className="tag">
-            <button>готовка</button>
-          </div>
-          <div className="tag">
-            <button>музыка</button>
-          </div>
-          <div className="tag">
-            <button>зож</button>
-          </div>
-          <div className="tag">
-            <button>эко</button>
-          </div>
-          <div className="tag">
-            <button>ит</button>
-          </div>
-          <div className="tag">
-            <button>языки</button>
-          </div>
-          <div className="tag">
-            <button>киберспорт</button>
-          </div>
-          {!match && (
-            <button
-              style={{
-                margin: "3rem 0 0 0",
-                height: "2.5rem",
-                width: "12rem",
-              }}
-              className="startButton"
-              id="matchButton"
-              type="submit"
-              onClick={() => {
-                findMatch();
-              }}
-            >
-              Подобрать
-            </button>
-          )}
-        </div>
-        {showingArr.length > 1 ? (
+        {arr.length > 1 ? (
           <div className="itemsBar">
-            {showingArr.map((item) => {
+            {arr.map((item) => {
               countID++;
               if (item.name !== dataState.name) {
                 return (

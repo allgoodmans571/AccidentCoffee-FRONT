@@ -133,17 +133,7 @@ function ModalMatch() {
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalTags">
-              <p
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "auto auto auto auto auto 20%",
-                  gridGap: "0.5rem",
-                  textAlign: "center",
-                  maxWidth: "40rem",
-                  fontWeight: "bold",
-                  fontSize: "17px",
-                }}
-              >
+              <p>
                 Интересы:
                 {dataStateMatch.tags
                   ? dataStateMatch.tags.map((tag) => {

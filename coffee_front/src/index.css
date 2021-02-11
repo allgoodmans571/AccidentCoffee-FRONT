@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-@media (min-width: 350px) and (max-width: 420px) {
+@media (min-width: 150px) and (max-width: 420px) {
   .imageList {
     justify-self: center;
     /* position: relative; */
@@ -46,7 +46,6 @@ code {
     border-radius: 1rem;
     padding: 20px;
     margin: auto;
-    /* height: 50%; */
     z-index: 1;
     max-width: 20rem;
   }
@@ -69,11 +68,42 @@ code {
   .itemInfo {
     margin: 10rem 0 0rem 0;
   }
+  .profile {
+    width: 22.5rem;
+    height: auto;
+  }
+  .personalChoose {
+    width: 100%;
+  }
+  .personalChoose ol li {
+    font-size: 15px;
+  }
+  .personalInfo {
+    grid-template-columns: 43% 1%;
+    grid-gap: 3rem;
+  }
+  .personalInfo p {
+    font-size: 17px;
+  }
+  .profilePhoto {
+    height: 160px;
+  }
+  .profilePhoto div {
+    background-size: 160px auto;
+  }
 
-
-
-
-  
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
+  }
+  .personalTags strong {
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
+  }
+  .exitButton {
+    margin: 0 20rem;
+  }
 }
 
 @media (min-width: 500px) and (max-width: 780px) {
@@ -129,8 +159,10 @@ code {
   .personalTags {
     margin: 2rem 0 2rem 3.5rem;
   }
+
   .personalInfo {
     margin: 0.5rem 0 0.5rem 0;
+    grid-gap: 5rem;
   }
   .headerMain {
     width: 90%;
@@ -139,6 +171,35 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(4, 245, 233); */
+  }
+  .profile {
+    width: 50rem;
+  }
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+  .profilePhoto div {
+    background-size: 250px auto;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto 20%;
+    grid-gap: 0.5rem;
+  }
+
+  .personalTags strong {
+    font-size: 12px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
   }
 }
 
@@ -208,6 +269,37 @@ code {
     /* background-color: rgb(245, 4, 213); */
     grid-template-columns: 50% 50%;
   }
+  .profile {
+    width: 50rem;
+  }
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+    grid-gap: 5rem;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+
+  .profilePhoto div {
+    background-size: 250px auto;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto 20%;
+    grid-gap: 0.5rem;
+  }
+
+  .personalTags strong {
+    font-size: 18px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
+  }
 }
 
 @media (min-width: 1105px) and (max-width: 1390px) {
@@ -271,6 +363,37 @@ code {
   .itemsBar {
     /* background-color: rgb(20, 4, 245); */
     grid-template-columns: 33% 33% 33%;
+  }
+  .profile {
+    width: 50rem;
+  }
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+    grid-gap: 5rem;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+
+  .profilePhoto div {
+    background-size: 250px auto;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto 20%;
+    grid-gap: 0.5rem;
+  }
+
+  .personalTags strong {
+    font-size: 18px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
   }
 }
 
@@ -352,6 +475,36 @@ code {
     /* background-color: rgb(245, 4, 4); */
     grid-template-columns: 25% 25% 25% 25%;
   }
+  .profile {
+    width: 50rem;
+  }
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+    grid-gap: 5rem;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+
+  .profilePhoto div {
+    background-size: 250px auto;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto 20%;
+    grid-gap: 0.5rem;
+  }
+  .personalTags strong {
+    font-size: 18px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
+  }
 }
 
 @media (min-width: 1800px) and (max-width: 2220px) {
@@ -429,7 +582,37 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(4, 245, 65); */
-    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%;
+  }
+  .profile {
+    width: 50rem;
+  }
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+    grid-gap: 5rem;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+  .profilePhoto div {
+    background-size: 250px auto;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 0.5rem;
+  }
+
+  .personalTags strong {
+    font-size: 18px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
   }
 }
 
@@ -462,7 +645,6 @@ code {
   }
 
   .reqPanel {
-    /* background-color: black; */
     margin-top: 7rem;
   }
   .tags {
@@ -474,6 +656,7 @@ code {
   }
   .personalInfo {
     margin: 2rem 0 2rem 0;
+    grid-gap: 4rem;
   }
   .personalTags {
     margin: 2rem 0 2rem 3.5rem;
@@ -501,8 +684,47 @@ code {
   .itemsBar {
     /* background-color: black; */
     z-index: 0;
-    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
   }
+
+  .profile {
+    width: 50rem;
+  }
+
+  .personalChoose {
+    margin: 0 1rem;
+    width: 80%;
+  }
+
+  .personalInfo {
+    grid-template-columns: 30% 40%;
+    grid-gap: 5rem;
+  }
+  .profilePhoto {
+    height: 250px;
+  }
+  .personalTags p {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 0.5rem;
+  }
+  .personalTags strong {
+    font-size: 18px;
+    padding: 2px 13px 5px 13px;
+  }
+  .exitButton {
+    margin: 0 46rem;
+  }
+}
+
+.exitButton {
+  width: 30px;
+  height: 30px;
+  box: border-box;
+  border-radius: 0.25rem;
+  color: #808080;
+  border: none;
+  outline: none;
 }
 
 .scrollBar {
@@ -691,17 +913,6 @@ code {
   animation-fill-mode: forwards;
 }
 
-/* .matchButton {
-  animation: anim-animate-click-one 2s ease-out forwards;
-} */
-/* 
-.matchButton::after {
-  box-shadow: inset 0 0 0 35px rgba(111,148,182,0);
-}
-.matchButton.mybutton--click::after {
-  animation: anim-animate-click-one 2s ease-out forwards;
-} */
-
 @keyframes anim-animate-click-one {
   0% {
     opacity: 1;
@@ -741,8 +952,6 @@ code {
 
 .req_Back_Button {
   background-color: #ffffff;
-  /* animation: reqHoverButton 500ms;
-  animation-fill-mode: forwards; */
   color: #fa76cf;
   grid-row: auto;
   font-size: 18px;
@@ -756,11 +965,6 @@ code {
 .req_Back_Button:hover {
   border: 2px solid#c571f5;
   color: #c571f5;
-  /* animation: reqButtonHover 500ms;
-  animation-fill-mode: forwards; */
-}
-
-.content {
 }
 
 .description {
@@ -858,29 +1062,15 @@ code {
   grid-gap: 2rem;
 }
 
-/* input[type="checkbox"],
-input[type="radio"] {
-  position: absolute;
-  visibility: hidden;
-} */
-
 .tagLabel {
   font-size: 14px;
   margin-bottom: 0.3rem;
   padding: 2px 0 5px 0;
   background-color: #fa71cd;
-  /* width: auto; */
   color: white;
   border-radius: 2em;
-  /* /* border: 0 solid #ccc; */
 }
 
-#tagWrapper {
-  /* width: 100px;
-  height: 100px;
-  background-color: #fa71cd;
-  text-align: center; */
-}
 .input_checkbox {
   background-color: #fa71cd;
   display: inline-flex;
@@ -897,27 +1087,6 @@ input[type="radio"] {
 .input_checkbox {
   margin-right: 0.625em;
 }
-/* .input_checkbox + label::before {
-  border-radius: 6em;
-  content: "";
-  display: inline-block;
-  width: 100%;
-  height: 2rem;
-  flex-shrink: 0;
-  flex-grow: 0;
-  /* border: 1px solid #adb5bd; */
-/* }  */
-/* .input_checkbox:checked + label::before {
-  background-color: #ff3abd;
-}
-.custom-checkbox:focus + label::before {
-  background-color: #ff3abd;
-}
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-/* .custom-checkbox:focus:not(:checked) + label::before { */
-/* background-color: #ff19b3; */
-/* } */
-
 .lable_checkbox {
   padding: 0.5em 0 0 0.5em;
 }
@@ -927,7 +1096,6 @@ input[type="radio"] {
   background: white;
   border: 2px solid #ccc;
   border-radius: 1rem;
-  width: 50rem;
   margin: auto;
 }
 
@@ -938,10 +1106,8 @@ input[type="radio"] {
 }
 
 .personalChoose {
-  width: 80%;
   height: auto;
   text-align: left;
-  margin: 0 1rem;
 }
 
 .personalChoose ol {
@@ -950,16 +1116,19 @@ input[type="radio"] {
 }
 
 .personalTags {
-  font-size: 20px;
+  margin: 0 1rem 1rem;
   text-align: left;
+}
+
+.personalTags p {
+  text-align: center;
+  font-weight: bold;
 }
 
 .personalTags strong {
   background-color: #fa71cd;
   color: white;
-  font-size: 18px;
   margin: 0 0 0 1rem;
-  padding: 2px 13px 5px 13px;
   border-radius: 2em;
 }
 .personalTags strong:hover {
@@ -972,8 +1141,6 @@ input[type="radio"] {
 
 .personalInfo {
   display: grid;
-  grid-template-columns: 30% 40%;
-  grid-gap: 4.5rem;
   align-items: center;
   width: 100%;
   text-align: left;
@@ -985,7 +1152,6 @@ input[type="radio"] {
 
 .profilePhoto {
   width: 100%;
-  height: 250px;
   margin-top: -2rem;
   margin-left: 2rem;
   border: 2px solid #ccc;
@@ -1026,10 +1192,9 @@ input[type="radio"] {
 }
 
 .mainBlock {
-  width: 95%;
+  width: 100%;
+  margin: auto;
   display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 100%;
   position: absolute;
   top: 7rem;
 }
@@ -1054,8 +1219,7 @@ input[type="radio"] {
 .itemsBar {
   z-index: 0;
   display: grid;
-  /* grid-template-columns: 16.5rem 16.5rem 16.5rem 16.5rem 16.5rem; */
-  margin: 0 0 2rem 3rem;
+  margin: auto;
 }
 
 .fileInput {

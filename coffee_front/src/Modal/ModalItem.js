@@ -29,16 +29,8 @@ function ModalItem() {
           <div className="profile">
             <div className="personalInfo">
               <div>
-                <button
+                <button className="exitButton"
                   style={{
-                    margin: "0 46rem",
-                    width: "30px",
-                    height: "30px",
-                    box: "border-box",
-                    borderRadius: "0.25rem",
-                    color: "#808080",
-                    border: "none",
-                    outline: "none",
                     backgroundImage: `url(${iconExit})`,
                   }}
                   onClick={() => hanldeModal(false)}
@@ -51,14 +43,13 @@ function ModalItem() {
                       })`,
                       maxWidth: "100%",
                       height: "100%",
-                      backgroundSize: "250px auto",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
                     }}
                   />
                 </div>
               </div>
-              <div style={{ marginBottom: "6rem" }}>
+              <div style={{ marginBottom: "3rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
                   {modal.name ? modal.name : "name"}
                 </p>
@@ -68,7 +59,7 @@ function ModalItem() {
                 <button
                   className="startButton"
                   style={{
-                    width: "150px",
+                    width: "135px",
                     fontSize: "12px",
                     height: "30px",
                     box: "border-box",
@@ -113,17 +104,7 @@ function ModalItem() {
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalTags">
-              <p
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "auto auto auto auto auto 20%",
-                  gridGap: "0.5rem",
-                  textAlign: "center",
-                  maxWidth: "40rem",
-                  fontWeight: "bold",
-                  fontSize: "17px",
-                }}
-              >
+              <p>
                 Интересы:
                 {modal.tags.map((tag) => {
                   countID++;
