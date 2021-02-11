@@ -8,7 +8,7 @@ import Context from "../context/context";
 import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
-  const { arr, findMatch, dataState } = useContext(Context);
+  const { arr, findMatch, dataState, setActivePanel } = useContext(Context);
   let linkImage = icon;
   let countID = 0;
 
@@ -32,6 +32,16 @@ function MainScreen() {
             alt="logo"
           />
         </div>
+        <button
+          style={{
+            marginRight: "2rem",
+            width: "12rem",
+          }}
+          className="startButton"
+          onClick={() => setActivePanel(0)}
+        >
+          В главное меню
+        </button>
       </div>
 
       <div className="mainBlock">
