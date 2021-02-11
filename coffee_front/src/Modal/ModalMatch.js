@@ -31,7 +31,7 @@ function ModalMatch() {
                 <div
                   style={{
                     backgroundImage: `url(${
-                      dataStateMatch.image != "undefined"
+                      dataStateMatch.image !== "undefined"
                         ? dataStateMatch.image
                         : icon
                     })`,

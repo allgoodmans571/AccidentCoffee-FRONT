@@ -9,7 +9,6 @@ import ModalEmptyDB from "../Modal/ModalEmtyDB";
 
 function MainScreen() {
   const { arr, findMatch, dataState, setActivePanel } = useContext(Context);
-  let linkImage = icon;
   let countID = 0;
 
   return (
@@ -103,7 +102,7 @@ function MainScreen() {
           <div className="itemsBar">
             {arr.map((item) => {
               countID++;
-              if (item.name != dataState.name) {
+              if (item.name !== dataState.name) {
                 return (
                   <ScroollbarItem
                     linkItem={item.image}

@@ -25,9 +25,7 @@ function ScroollbarItem({
       <button
         className="btn_open_profile"
         style={{
-          backgroundImage: `url(${
-            image != "undefined" ? image : icon
-          })`,
+          backgroundImage: `url(${image !== "undefined" ? image : icon})`,
         }}
         onClick={() =>
           hanldeModal(

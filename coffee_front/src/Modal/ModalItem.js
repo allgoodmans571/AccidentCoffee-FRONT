@@ -37,7 +37,7 @@ function ModalItem() {
                   <div
                     style={{
                       backgroundImage: `url(${
-                        modal.image != "undefined" ? modal.image : icon
+                        modal.image !== "undefined" ? modal.image : icon
                       })`,
                       maxWidth: "100%",
                       height: "100%",
@@ -88,7 +88,17 @@ function ModalItem() {
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalTags">
-              <p style={{ fontWeight: "bold", fontSize: "17px" }}>
+              <p
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "auto auto auto auto auto 20%",
+                  gridGap: "0.5rem",
+                  textAlign: "center",
+                  maxWidth: "40rem",
+                  fontWeight: "bold",
+                  fontSize: "17px",
+                }}
+              >
                 Интересы:
                 {modal.tags.map((tag) => {
                   countID++;

@@ -54,8 +54,8 @@ function Registration() {
 
   return (
     <div
+      className="reqPanel"
       style={{
-        marginTop: "6rem",
         display: "flex",
         justifyContent: "center",
       }}
@@ -83,7 +83,7 @@ function Registration() {
               alt="logo"
             />
           </div>
-          <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>
+          <h1 style={{ fontSize: "35px", marginBottom: "3rem" }}>
             Регистрация
           </h1>
           <div
@@ -110,6 +110,7 @@ function Registration() {
                   margin: "40% 0",
                 }}
                 src={cameraImage}
+                alt="место для фото"
               />
             </label>
             <div className="fields">

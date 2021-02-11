@@ -8,13 +8,23 @@ function PersonalData() {
     Context
   );
 
+  let userTags = [];
+
   function handleSubmitData() {
     let userLifePos = document.querySelector("#lifePos").value;
     let userTeamStatus = document.querySelector("#teamStatus").value;
     let userWordPlace = document.querySelector("#workPlace").value;
     let userProjectTime = document.querySelector("#projectTime").value;
-    let userTags = document.querySelector("#tags").value;
-    userTags = userTags.split(", ");
+
+    var inputs = document.querySelectorAll("input[type='checkbox']");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked) {
+        userTags.push(inputs[i].value);
+        console.log(inputs[i].value);
+      }
+    }
+
+    console.log(userTags);
 
     add(
       `${userLifePos}`,
@@ -25,7 +35,6 @@ function PersonalData() {
     );
 
     console.log(dataState.name);
-    arr.length > 1 && findMatch();
   }
 
   return (
@@ -154,18 +163,127 @@ function PersonalData() {
             htmlFor="telegram"
           >
             <p>
-              <strong>Введи теги, через запятую</strong>
+              <strong>Выберите теги</strong>
             </p>
-            <input
-              style={{ width: "23rem" }}
-              className="input_fields_text"
-              type="test"
-              id="tags"
-              name="tags"
-              placeholder="Теги"
-              onChange={() => handleSubmitData()}
-              required
-            />
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "35% 30% 30%",
+                textAlign: "left",
+              }}
+              className="tegsLabel"
+            >
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="sport"
+                  value="спорт"
+                  type="checkbox"
+                />
+                спорт
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="serials"
+                  value="сериалы"
+                  type="checkbox"
+                />
+                сериалы
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="films"
+                  value="фильмы"
+                  type="checkbox"
+                />
+                фильмы
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cook"
+                  value="готовка"
+                  type="checkbox"
+                />
+                готовка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="music"
+                  value="музыка"
+                  type="checkbox"
+                />
+                музыка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="zoj"
+                  value="зож"
+                  type="checkbox"
+                />
+                зож
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="eco"
+                  value="эко"
+                  type="checkbox"
+                />
+                эко
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="IT"
+                  value="ит"
+                  type="checkbox"
+                />
+                ит
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="languages"
+                  value="языки"
+                  type="checkbox"
+                />
+                языки
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => handleSubmitData()}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="киберспорт"
+                  type="checkbox"
+                />
+                киберспорт
+              </label>
+            </div>
           </label>
           <div
             className="selectInput"
@@ -189,6 +307,7 @@ function PersonalData() {
                 event.preventDefault();
                 send();
                 setActivePanel(4);
+                arr.length > 1 && findMatch();
               }}
             >
               <strong>Начать общаться</strong>
