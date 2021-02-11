@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import ModalItem from "../Modal/ModalItem";
 import ModalMatch from "../Modal/ModalMatch";
 import icon from "../images/icon.png";
@@ -17,27 +17,32 @@ function MainScreen() {
     init,
     add,
   } = useContext(Context);
-  let countID = 0;
 
+  // const [showingArr, setShowingArr] = userState([])
+
+  let countID = 0;
   let showingArr = arr;
 
-  function filtr(value) {
-    let newArr = [];
-    console.log(value);
-    console.log(showingArr);
-    for (let i = 0; i < showingArr.length; i++) {
-      for (let j = 0; j < showingArr[i].tags.length; j++) {
-        console.log(showingArr[i].tags[j]);
-        if (showingArr[i].tags[j] !== value) {
-          newArr.join(showingArr[i]);
-          console.log(showingArr[i]);
-        }
-      }
-    }
-    console.log(newArr);
-    showingArr = newArr;
-    console.log(showingArr);
-  }
+  // function filtr(value) {
+  //   var newArr = [];
+  //   console.log(value);
+  //   console.log(showingArr);
+  //   for (let i = 0; i < showingArr.length; i++) {
+  //     for (let j = 0; j < showingArr[i].tags.length; j++) {
+  //       console.log(showingArr[i].tags[j]);
+  //       if (showingArr[i].tags[j].includes(value)) {
+  //         // newArr.(showingArr[i]);
+  //         newArr.push(showingArr[i]);
+  //         newArr.join(showingArr[i]);
+  //         console.log(showingArr[i]);
+  //       }
+  //     }
+  //   }
+  //   console.log(newArr);
+  //   showingArr.length = 0;
+  //   showingArr.push.apply(showingArr, newArr);
+  //   console.log(showingArr);
+  // }
 
   return (
     <div>
@@ -86,7 +91,8 @@ function MainScreen() {
             По интересам:
           </p>
           <div className="tag">
-            <button onClick={() => filtr("cпорт")}>cпорт</button>
+            <button >cпорт</button> 
+            {/* onClick={() => filtr("cпорт")} */}
           </div>
           <div className="tag">
             <button>сериалы</button>
