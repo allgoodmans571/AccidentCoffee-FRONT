@@ -28,7 +28,8 @@ code {
     /* grid-gap: 1rem; */
   }
   .navButton1 {
-    margin-left: 3rem;
+    margin-left: 5rem;
+    justify-self: center;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
     font-size: 14px;
@@ -39,7 +40,8 @@ code {
   }
 
   .navButton {
-    margin-left: 4rem;
+    margin-left: 3rem;
+    justify-self: center;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
     font-size: 12px;
