@@ -25,28 +25,28 @@ code {
   .navButtons {
     display: flex;
     flex-direction: row;
-    grid-gap: 1rem;
+    /* grid-gap: 1rem; */
   }
   .navButton1 {
-    margin-left: 5rem;
+    margin-left: 3rem;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
     font-size: 14px;
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 5rem;
+    max-width: 7rem;
   }
 
   .navButton {
-    margin-left: 1rem;
+    margin-left: 4rem;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
-    font-size: 14px;
+    font-size: 12px;
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 5rem;
+    max-width: 7rem;
   }
 
   #emailButton {
