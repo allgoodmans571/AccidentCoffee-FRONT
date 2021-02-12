@@ -34,7 +34,7 @@ function EnterScreen() {
       " " +
       document.querySelector("#lastName").value;
 
-    let response = await fetch("http://68.183.12.32:8080/getMatch", {
+    let response = await fetch("http://217.73.59.92:8080/getMatch", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -47,7 +47,7 @@ function EnterScreen() {
       .then((data) => {
         newData = data;
         init(
-          `${data.image}`,
+          `${data.image && data.image}`,
           `${name}`,
           `${data.position}`,
           `${data.email}`,

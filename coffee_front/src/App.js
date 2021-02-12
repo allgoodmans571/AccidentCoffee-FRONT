@@ -12,7 +12,7 @@ function App() {
   const [arr, setArr] = useState([]);
 
   useEffect(() => {
-    fetch("http://68.183.12.32:8080/getAllUsers")
+    fetch("http://217.73.59.92:8080/getAllUsers")
       .then((response) => {
         return response.json();
       })
@@ -82,7 +82,7 @@ function App() {
   async function findMatch(nameUser) {
     let name = nameUser ? nameUser : dataState.name;
     console.log(name);
-    let response = await fetch("http://68.183.12.32:8080/getMatch", {
+    let response = await fetch("http://217.73.59.92:8080/getMatch", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -169,7 +169,7 @@ function App() {
 
   async function send() {
     console.log(dataState);
-    let response = await fetch("http://68.183.12.32:8080/registration", {
+    let response = await fetch("http://217.73.59.92:8080/registration", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
