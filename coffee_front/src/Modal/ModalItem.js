@@ -51,10 +51,10 @@ function ModalItem() {
                 </div>
               </div>
               <div style={{ marginBottom: "3rem" }}>
-                <p style={{ fontSize: "22px", fontWeight: "bold" }}>
+                <p style={{ fontSize: "20px", fontWeight: "bold" }}>
                   {modal.name ? modal.name : "name"}
                 </p>
-                <p style={{ fontSize: "20px", marginTop: "-1rem" }}>
+                <p style={{ fontSize: "16px", marginTop: "-1rem" }}>
                   {modal.position ? modal.position : "position"}
                 </p>
                 <button
@@ -73,8 +73,6 @@ function ModalItem() {
                 >
                   Написать в телеграм
                 </button>
-
-                {/* todo поставить стрелку в угол */}
               </div>
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />

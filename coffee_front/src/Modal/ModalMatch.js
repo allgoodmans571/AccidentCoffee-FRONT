@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import "./ModalItem.css";
 import Context from "../context/context";
 import icon from "../images/icon.png";
+import iconExit from "../images/iconExit.svg";
 
 function ModalMatch() {
   const { match, showMatch, dataStateMatch } = useContext(Context);
@@ -27,23 +28,24 @@ function ModalMatch() {
         <div className="modal">
           <button className="backgroundButton" onClick={() => showMatch()} />
           <div className="profile">
+            <button
+              className="exitButton"
+              style={{
+                backgroundImage: `url(${iconExit})`,
+              }}
+              onClick={() => showMatch(false)}
+            />
             <h1
               style={{
                 color: "#fa71cd",
-                fontSize: "15px",
               }}
             >
               <strong>It is a MATCH!</strong>
-              <br /> Лови профиль, с которым у тебя совпали интересы и взгляды
+              {/* <p style={{fontSize:'20px'}}>Лови профиль, с которым у тебя совпали интересы и взгляды</p> */}
             </h1>
-            <hr noshade="noshade" width="90%" color="#e4e4e4" />
+            {/* <hr noshade="noshade" width="90%" color="#e4e4e4" /> */}
             <div className="personalInfo">
-              <div
-                style={{
-                  marginTop: "0rem",
-                }}
-                className="profilePhoto"
-              >
+              <div className="profilePhoto">
                 <div
                   style={{
                     backgroundImage: `url(${
@@ -53,13 +55,12 @@ function ModalMatch() {
                     })`,
                     maxWidth: "100%",
                     height: "100%",
-                    backgroundSize: "250px auto",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
                 />
               </div>
-              <div style={{ marginBottom: "6rem" }}>
+              <div style={{ marginBottom: "3rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
                   {dataStateMatch.name ? dataStateMatch.name : "name"}
                 </p>
@@ -68,39 +69,41 @@ function ModalMatch() {
                     ? dataStateMatch.position
                     : "position"}
                 </p>
-                <button
-                  className="startButton"
-                  style={{
-                    width: "150px",
-                    fontSize: "12px",
-                    height: "30px",
-                    box: "border-box",
-                    borderRadius: "6rem",
-                    color: "#ffffff",
-                    border: "none",
-                    outline: "none",
-                  }}
-                  onClick={getTelegramName}
-                >
-                  Написать в телеграм
-                </button>
-                <button
-                  className="startButton"
-                  style={{
-                    marginLeft: "1rem",
-                    fontSize: "12px",
-                    width: "150px",
-                    height: "30px",
-                    box: "border-box",
-                    borderRadius: "6rem",
-                    color: "#ffffff",
-                    border: "none",
-                    outline: "none",
-                  }}
-                  onClick={getEmail}
-                >
-                  Написать на почту
-                </button>
+                <div className="matchBtnBlock">
+                  <button
+                    className="matchButton"
+                    style={{
+                      width: "125px",
+                      fontSize: "10px",
+                      height: "30px",
+                      box: "border-box",
+                      borderRadius: "6rem",
+                      color: "#ffffff",
+                      border: "none",
+                      outline: "none",
+                    }}
+                    onClick={getTelegramName}
+                  >
+                    Написать в телеграм
+                  </button>
+                  <button
+                    className="matchButton"
+                    style={{
+                      marginLeft: "1rem",
+                      fontSize: "10px",
+                      width: "125px",
+                      height: "30px",
+                      box: "border-box",
+                      borderRadius: "6rem",
+                      color: "#ffffff",
+                      border: "none",
+                      outline: "none",
+                    }}
+                    onClick={getEmail}
+                  >
+                    Написать на почту
+                  </button>
+                </div>
                 {/* todo поставить стрелку в угол */}
               </div>
             </div>
@@ -157,7 +160,7 @@ function ModalMatch() {
                   : ""}
               </p>
             </div>
-            <hr noshade="noshade" width="90%" color="#e4e4e4" />
+            {/* <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <button
               className="startButton"
               style={{
@@ -174,7 +177,7 @@ function ModalMatch() {
               onClick={() => showMatch()}
             >
               Показать всех
-            </button>
+            </button> */}
           </div>
         </div>
       )}

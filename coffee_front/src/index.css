@@ -15,11 +15,41 @@ code {
 }
 
 @media (min-width: 150px) and (max-width: 420px) {
-  .inputReq {
+  .matchBtnBlock {
+
+  }
+  .matchButton {
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    background-color: #ec808d;
+    animation-fill-mode: forwards;
+    color: #ffffff;
+    font-size: 18px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    width: 16rem;
+    margin: auto;
+  }
+  .selectInput {
+    color: #555555;
+    align-items: center;
+  }
+  .selectInput p {
+    font-size: 15px;
+    /* margin-right: 9rem; */
+  }
+  .tegsLabel {
+    margin-left: 10rem;
     display: flex;
     flex-direction: column;
+    /* grid-template-columns: 100%; */
+    text-align: left;
+    font-size: 15px;
+  }
+  .inputReq {
+    display: flex;
+    flex-direction: column-reverse;
     max-width: 25rem;
-    margin: auto;
+    margin: 2rem auto;
     align-items: center;
   }
   #reqForm {
@@ -94,14 +124,18 @@ code {
     margin: 10rem 0 0rem 0;
   }
   .profile {
-    width: 22.5rem;
+    width: 23rem;
     height: auto;
+  }
+
+  .profile h1 {
+    font-size: 20px;
   }
   .personalChoose {
     width: 100%;
   }
   .personalChoose ol li {
-    font-size: 15px;
+    font-size: 12px;
   }
   .personalInfo {
     grid-template-columns: 43% 1%;
@@ -119,19 +153,32 @@ code {
 
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     grid-gap: 0.1rem;
   }
   .personalTags strong {
     font-size: 12px;
-    padding: 2px 13px 3px 13px;
+    padding: 2px 3px 3px 3px;
   }
   .exitButton {
-    margin: 0 20rem;
+    margin: -3rem 20rem;
   }
 }
 
 @media (min-width: 500px) and (max-width: 780px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
   .inputReq {
     display: grid;
     grid-template-columns: 40% 75%;
@@ -242,6 +289,19 @@ code {
 }
 
 @media (min-width: 760px) and (max-width: 1100px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
   .inputReq {
     display: grid;
     grid-template-columns: 40% 75%;
@@ -352,6 +412,19 @@ code {
 }
 
 @media (min-width: 1105px) and (max-width: 1390px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
   .inputReq {
     display: grid;
 
@@ -458,6 +531,19 @@ code {
 }
 
 @media (min-width: 1390px) and (max-width: 1790px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
   .inputReq {
     display: grid;
 
@@ -498,6 +584,9 @@ code {
 
   .dataForm h1 {
     font-size: 35px;
+  }
+  #dataForm label p {
+    text-align: right;
   }
   #reqForm h1 {
     font-size: 35px;
@@ -580,6 +669,20 @@ code {
 }
 
 @media (min-width: 1800px) and (max-width: 2220px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
+
   .inputReq {
     display: grid;
 
@@ -621,6 +724,9 @@ code {
 
   .dataForm h1 {
     font-size: 50px;
+  }
+  #dataForm label p {
+    text-align: right;
   }
   #reqForm h1 {
     font-size: 50px;
@@ -700,6 +806,20 @@ code {
 }
 
 @media (min-width: 2225px) {
+  .tegsLabel {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    text-align: left;
+    font-size: 15px;
+  }
+  .selectInput {
+    color: #555555;
+    display: grid;
+    grid-template-columns: 45% 100%;
+    grid-template-rows: 100%;
+    grid-gap: 2rem;
+  }
+
   .inputReq {
     display: grid;
     grid-template-columns: 40% 75%;
@@ -913,13 +1033,6 @@ code {
   }
 }
 
-.tegsLabel {
-  display: grid;
-  grid-template-columns: 35% 30% 30%;
-  text-align: left;
-  font-size: 15px;
-}
-
 .scrollBarLine_1 {
   animation: moveDown 160s infinite linear;
   -webkit-animation: moveDown 160s infinite linear;
@@ -1058,7 +1171,7 @@ code {
   border-radius: 6em;
   width: 16rem;
   height: 3.5rem;
-  margin: auto;
+  margin: 2rem auto;
 }
 
 .req_Back_Button:hover {
@@ -1136,13 +1249,9 @@ code {
 
 #dataForm {
   background-color: rgb(255, 255, 255);
-  text-align: center;
+  /* text-align: center; */
   width: 35rem;
   height: auto;
-}
-
-#dataForm label p {
-  text-align: right;
 }
 
 #list {
@@ -1151,14 +1260,6 @@ code {
   display: grid;
   grid-template-columns: 40% 40% 40%;
   width: 80%;
-}
-
-.selectInput {
-  color: #555555;
-  display: grid;
-  grid-template-columns: 45% 100%;
-  grid-template-rows: 100%;
-  grid-gap: 2rem;
 }
 
 .tagLabel {

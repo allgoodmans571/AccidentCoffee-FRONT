@@ -101,9 +101,7 @@ function PersonalData() {
               alt="logo"
             />
           </div>
-          <h1 style={{ fontSize: "50px", marginBottom: "3rem" }}>
-            Расскажи о себе
-          </h1>
+          <h1 style={{ marginBottom: "3rem" }}>Расскажи о себе</h1>
           <label className="selectInput">
             <p>
               <strong>Жизненная позиция</strong>
@@ -119,7 +117,7 @@ function PersonalData() {
               required
             >
               <option defaultValue>Выбрать</option>
-              <option value="Беру максимум от возможности">
+              <option value="Беру максимум от возможностей">
                 Беру максимум от возможностей
               </option>
               <option value="Всегда в движении">Всегда в движении</option>
@@ -179,8 +177,8 @@ function PersonalData() {
               <option defaultValue>Выбрать</option>
               <option value="Офис">Офис</option>
               <option value="Дом">Дом</option>
-              <option value="И тут и там">И дома, и в офисе</option>
-              <option value="Коворкинг">Внешний коворкинг</option>
+              <option value="И дома, и в офисе">И дома, и в офисе</option>
+              <option value="Внешний коворкинг">Внешний коворкинг</option>
               <option value="Кафе">Кафе</option>
             </select>
           </label>
@@ -203,7 +201,9 @@ function PersonalData() {
               <option value="1-3 месяца">1-3 месяца</option>
               <option value="3-6 месяца">3-6 месяца</option>
               <option value="Скоро год">Скоро год</option>
-              <option value="На днях">Только что познакомились</option>
+              <option value="Только что познакомились">
+                Только что познакомились
+              </option>
             </select>
           </label>
           <label
@@ -539,13 +539,7 @@ function PersonalData() {
               </label>
             </div>
           </label>
-          <div
-            className="selectInput"
-            style={{
-              marginTop: "3rem",
-              gridTemplateColumns: "43% 50%",
-            }}
-          >
+          <div className="inputReq">
             <button
               className="req_Back_Button"
               type="submit"
