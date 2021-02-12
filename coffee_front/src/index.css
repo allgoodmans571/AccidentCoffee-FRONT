@@ -15,8 +15,45 @@ code {
 }
 
 @media (min-width: 150px) and (max-width: 420px) {
-  .matchBtnBlock {
+  .headerMain {
+    width: 90%;
+    height: 5rem;
+    background-color: white;
+    grid-template-columns: 18% 82%;
+  }
 
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 5rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 5rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 5rem;
+  }
+
+  #emailButton {
+    margin-top: 0.2rem;
+  }
+  .matchBtnBlock {
+    margin-top: -0.5rem;
   }
   .matchButton {
     background: linear-gradient(to right, #fa76cf, #c571f5);
@@ -26,8 +63,8 @@ code {
     font-size: 18px;
     border: 0px solid #ccc;
     border-radius: 6em;
-    width: 16rem;
-    margin: auto;
+    width: 10rem;
+    /* margin: auto; */
   }
   .selectInput {
     color: #555555;
@@ -124,7 +161,7 @@ code {
     margin: 10rem 0 0rem 0;
   }
   .profile {
-    width: 23rem;
+    width: 22rem;
     height: auto;
   }
 
@@ -172,6 +209,33 @@ code {
     text-align: left;
     font-size: 15px;
   }
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 65rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
   .selectInput {
     color: #555555;
     display: grid;
@@ -294,6 +358,36 @@ code {
     grid-template-columns: 35% 30% 30%;
     text-align: left;
     font-size: 15px;
+  }
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 25rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  #emailButton {
+    margin-left: 0.2rem;
   }
   .selectInput {
     color: #555555;
@@ -418,6 +512,36 @@ code {
     text-align: left;
     font-size: 15px;
   }
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 40rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  #emailButton {
+    margin-left: 0.2rem;
+  }
   .selectInput {
     color: #555555;
     display: grid;
@@ -536,6 +660,36 @@ code {
     grid-template-columns: 35% 30% 30%;
     text-align: left;
     font-size: 15px;
+  }
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 50rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  #emailButton {
+    margin-left: 0.2rem;
   }
   .selectInput {
     color: #555555;
@@ -675,6 +829,37 @@ code {
     text-align: left;
     font-size: 15px;
   }
+
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 65rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 14rem;
+  }
+
+  #emailButton {
+    margin-left: 0.2rem;
+  }
   .selectInput {
     color: #555555;
     display: grid;
@@ -812,6 +997,37 @@ code {
     text-align: left;
     font-size: 15px;
   }
+
+  .navButtons {
+    display: flex;
+    flex-direction: row;
+    grid-gap: 1rem;
+  }
+  .navButton1 {
+    margin-left: 65rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 5rem;
+  }
+
+  .navButton {
+    margin-left: 1rem;
+    background: linear-gradient(to right, #fa76cf, #c571f5);
+    color: #ffffff;
+    font-size: 14px;
+    border: 0px solid #ccc;
+    border-radius: 6em;
+    height: 2.5rem;
+    max-width: 5rem;
+  }
+
+  #emailButton {
+    margin-left: 0.2rem;
+  }
   .selectInput {
     color: #555555;
     display: grid;
@@ -901,6 +1117,9 @@ code {
 
   .profile {
     width: 50rem;
+  }
+  .profile h1 {
+    font-size: 10px;
   }
 
   .personalChoose {
@@ -1336,7 +1555,7 @@ code {
 }
 
 .personalData ol li {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .personalInfo {

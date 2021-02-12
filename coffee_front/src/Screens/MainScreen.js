@@ -40,39 +40,29 @@ function MainScreen() {
             alt="logo"
           />
         </div>
-        {arr.length > 1 && !match &&(
+        <div className="navButtons">
+          {arr.length > 1 && !match && (
+            <button
+              className="navButton1"
+              type="submit"
+              onClick={() => {
+                findMatch();
+              }}
+            >
+              Подобрать
+            </button>
+          )}
           <button
-            style={{
-              position: "fixed",
-              // top: '',
-              margin: "0 0 0 20rem",
-              height: "2.5rem",
-              width: "12rem",
-            }}
-            className="startButton"
-            id="matchButton"
-            type="submit"
+            className="navButton"
             onClick={() => {
-              findMatch();
+              init("", "", "", "", "");
+              add("", "", "", "", []);
+              setActivePanel(0);
             }}
           >
-            Подобрать
+            В главное меню
           </button>
-        )}
-        <button
-          style={{
-            marginRight: "2rem",
-            width: "12rem",
-          }}
-          className="startButton"
-          onClick={() => {
-            init("", "", "", "", "");
-            add("", "", "", "", []);
-            setActivePanel(0);
-          }}
-        >
-          В главное меню
-        </button>
+        </div>
       </div>
 
       <div className="mainBlock">

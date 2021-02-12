@@ -44,7 +44,7 @@ function Registration() {
   }, []);
 
   async function handleSubmit() {
-    let userName =
+    let userName =  
       document.querySelector("#firstName").value +
       " " +
       document.querySelector("#lastName").value;

@@ -60,7 +60,7 @@ function ModalMatch() {
                   }}
                 />
               </div>
-              <div style={{ marginBottom: "3rem" }}>
+              <div style={{ marginBottom: "2rem" }}>
                 <p style={{ fontSize: "22px", fontWeight: "bold" }}>
                   {dataStateMatch.name ? dataStateMatch.name : "name"}
                 </p>
@@ -71,7 +71,7 @@ function ModalMatch() {
                 </p>
                 <div className="matchBtnBlock">
                   <button
-                    className="matchButton"
+                    className="startButton"
                     style={{
                       width: "125px",
                       fontSize: "10px",
@@ -87,9 +87,9 @@ function ModalMatch() {
                     Написать в телеграм
                   </button>
                   <button
-                    className="matchButton"
+                    className="startButton"
+                    id="emailButton"
                     style={{
-                      marginLeft: "1rem",
                       fontSize: "10px",
                       width: "125px",
                       height: "30px",
@@ -107,7 +107,6 @@ function ModalMatch() {
                 {/* todo поставить стрелку в угол */}
               </div>
             </div>
-            <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalData">
               <div className="personalChoose">
                 <ol>
