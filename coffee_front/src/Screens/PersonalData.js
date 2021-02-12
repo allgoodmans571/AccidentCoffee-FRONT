@@ -77,7 +77,7 @@ function PersonalData() {
   return (
     <div
       style={{
-        marginTop: "6rem",
+        marginTop: "1rem",
         display: "flex",
         justifyContent: "center",
       }}
@@ -120,7 +120,7 @@ function PersonalData() {
             >
               <option defaultValue>Выбрать</option>
               <option value="Беру максимум от возможности">
-                Беру максимум от возможности
+                Беру максимум от возможностей
               </option>
               <option value="Всегда в движении">Всегда в движении</option>
               <option value="Верю в карму">Верю в карму</option>
@@ -150,11 +150,11 @@ function PersonalData() {
               <option value="Мотиватор - вдохновляю и поддерживаю">
                 Мотиватор - вдохновляю и поддерживаю
               </option>
-              <option value="Критик, а вернее улучшатель">
-                Критик, а вернее улучшатель
+              <option value="Критик - а вернее, улучшатель">
+                Критик - а вернее, улучшатель
               </option>
-              <option value="Исследователь - знаю где и как реализовать идею">
-                Исследователь - знаю где и как реализовать идею
+              <option value="Исследователь - знаю где и как реализовать любую идею">
+                Исследователь - знаю где и как реализовать любую идею
               </option>
               <option value="Генератор - придумываю идеи 24/7">
                 Генератор - придумываю идеи 24/7
@@ -179,8 +179,8 @@ function PersonalData() {
               <option defaultValue>Выбрать</option>
               <option value="Офис">Офис</option>
               <option value="Дом">Дом</option>
-              <option value="И тут и там">И тут и там</option>
-              <option value="Коворкинг">Коворкинг</option>
+              <option value="И тут и там">И дома, и в офисе</option>
+              <option value="Коворкинг">Внешний коворкинг</option>
               <option value="Кафе">Кафе</option>
             </select>
           </label>
@@ -203,7 +203,7 @@ function PersonalData() {
               <option value="1-3 месяца">1-3 месяца</option>
               <option value="3-6 месяца">3-6 месяца</option>
               <option value="Скоро год">Скоро год</option>
-              <option value="На днях">На днях</option>
+              <option value="На днях">Только что познакомились</option>
             </select>
           </label>
           <label
@@ -212,16 +212,9 @@ function PersonalData() {
             htmlFor="telegram"
           >
             <p>
-              <strong>Выберите теги</strong>
+              <strong>Интересы (Отметь сколько хочешь тегов)</strong>
             </p>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "35% 30% 30%",
-                textAlign: "left",
-              }}
-              className="tegsLabel"
-            >
+            <div className="tegsLabel">
               <label className="lable_checkbox">
                 <input
                   onChange={() => {
@@ -231,10 +224,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="sport"
-                  value="спорт"
+                  value="Авторское кино"
                   type="checkbox"
                 />
-                спорт
+                Авторское кино
               </label>
               <label className="lable_checkbox">
                 <input
@@ -245,10 +238,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="serials"
-                  value="сериалы"
+                  value="Документальное кино"
                   type="checkbox"
                 />
-                сериалы
+                Документальное кино
               </label>
               <label className="lable_checkbox">
                 <input
@@ -259,10 +252,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="films"
-                  value="фильмы"
+                  value="Драмы"
                   type="checkbox"
                 />
-                фильмы
+                Драмы
               </label>
               <label className="lable_checkbox">
                 <input
@@ -273,10 +266,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="cook"
-                  value="готовка"
+                  value="Комедии"
                   type="checkbox"
                 />
-                готовка
+                Комедии
               </label>
               <label className="lable_checkbox">
                 <input
@@ -287,10 +280,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="music"
-                  value="музыка"
+                  value="Сериалы"
                   type="checkbox"
                 />
-                музыка
+                Сериалы
               </label>
               <label className="lable_checkbox">
                 <input
@@ -301,24 +294,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="zoj"
-                  value="зож"
+                  value="Бизнес литература"
                   type="checkbox"
                 />
-                зож
-              </label>
-              <label className="lable_checkbox">
-                <input
-                  onChange={() => {
-                    checkParams();
-                    handleSubmitData();
-                  }}
-                  className="input_checkbox"
-                  name="prefer"
-                  id="eco"
-                  value="эко"
-                  type="checkbox"
-                />
-                эко
+                Бизнес литература
               </label>
               <label className="lable_checkbox">
                 <input
@@ -329,10 +308,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="IT"
-                  value="ит"
+                  value="Художественная литература"
                   type="checkbox"
                 />
-                ит
+                Художественная литература
               </label>
               <label className="lable_checkbox">
                 <input
@@ -343,10 +322,10 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="languages"
-                  value="языки"
+                  value="Индивидуальный спорт"
                   type="checkbox"
                 />
-                языки
+                Индивидуальный спорт
               </label>
               <label className="lable_checkbox">
                 <input
@@ -357,10 +336,206 @@ function PersonalData() {
                   className="input_checkbox"
                   name="prefer"
                   id="cybersport"
-                  value="киберспорт"
+                  value="Командный спорт"
                   type="checkbox"
                 />
-                киберспорт
+                Командный спорт
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Киберспорт"
+                  type="checkbox"
+                />
+                Киберспорт
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Инди-музыка"
+                  type="checkbox"
+                />
+                Инди-музыка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Поп-музыка"
+                  type="checkbox"
+                />
+                Поп-музыка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Тяжелая музыка"
+                  type="checkbox"
+                />
+                Тяжелая музыка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Электронная музыка"
+                  type="checkbox"
+                />
+                Электронная музыка
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Походный туризм"
+                  type="checkbox"
+                />
+                Походный туризм
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Автомобильный туризм"
+                  type="checkbox"
+                />
+                Автомобильный туризм
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Экстремальный туризм"
+                  type="checkbox"
+                />
+                Экстремальный туризм
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Архитектура"
+                  type="checkbox"
+                />
+                Архитектура
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Животные"
+                  type="checkbox"
+                />
+                Животные
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Инностранные языки"
+                  type="checkbox"
+                />
+                Инностранные языки
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Кухни мира"
+                  type="checkbox"
+                />
+                Кухни мира
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Экология"
+                  type="checkbox"
+                />
+                Экология
+              </label>
+              <label className="lable_checkbox">
+                <input
+                  onChange={() => {
+                    checkParams();
+                    handleSubmitData();
+                  }}
+                  className="input_checkbox"
+                  name="prefer"
+                  id="cybersport"
+                  value="Работа 24/7"
+                  type="checkbox"
+                />
+                Работа 24/7
               </label>
             </div>
           </label>

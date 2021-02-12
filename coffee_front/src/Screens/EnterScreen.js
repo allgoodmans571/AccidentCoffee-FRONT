@@ -78,7 +78,7 @@ function EnterScreen() {
       }}
     >
       <form id="survey-form">
-        <div id="reqForm">
+        <div>
           <div>
             <img
               style={{
@@ -124,18 +124,12 @@ function EnterScreen() {
             />
           </label>
 
-          <div
-            style={{
-              marginTop: "3rem",
-              gridTemplateColumns: "40% 40%",
-            }}
-          >
+          <div className="buttons_Enter">
             <button
               className="req_Back_Button"
               type="submit"
               style={{
                 width: "13rem",
-                marginRight: "1rem",
               }}
               onClick={() => setActivePanel(0)}
             >
@@ -144,9 +138,9 @@ function EnterScreen() {
             <button
               style={{
                 width: "13rem",
-                marginLeft: "1rem",
               }}
               className="startButton"
+              id="idStartBtn"
               type="submit"
               form="survey-form"
               onClick={(event) => {

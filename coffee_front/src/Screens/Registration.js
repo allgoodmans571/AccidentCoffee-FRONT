@@ -118,13 +118,7 @@ function Registration() {
             />
           </div>
           <h1 style={{ marginBottom: "3rem" }}>Регистрация</h1>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "40% 75%",
-              alignItems: "center",
-            }}
-          >
+          <div className="inputReq">
             <label
               style={{
                 width: "300px",
@@ -188,7 +182,7 @@ function Registration() {
                   type="text"
                   id="position"
                   name="position"
-                  placeholder="Должность"
+                  placeholder="Позиция"
                   required
                 />
               </label>

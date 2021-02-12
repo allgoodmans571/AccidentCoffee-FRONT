@@ -15,6 +15,31 @@ code {
 }
 
 @media (min-width: 150px) and (max-width: 420px) {
+  .inputReq {
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    margin: auto;
+    align-items: center;
+  }
+  #reqForm {
+    width: 24rem;
+  }
+  .fields {
+    width: 20rem;
+    margin-top: 2rem;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-items: center;
+    align-items: center;
+  }
+  .buttons_Enter button {
+    margin-bottom: 1rem;
+  }
+
   .imageList {
     justify-self: center;
     /* position: relative; */
@@ -107,6 +132,20 @@ code {
 }
 
 @media (min-width: 500px) and (max-width: 780px) {
+  .inputReq {
+    display: grid;
+    grid-template-columns: 40% 75%;
+    max-width: 40rem;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+  #reqForm {
+    width: 40rem;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -190,13 +229,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto 20%;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
-
   .personalTags strong {
     font-size: 12px;
-    padding: 2px 13px 5px 13px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -204,6 +242,18 @@ code {
 }
 
 @media (min-width: 760px) and (max-width: 1100px) {
+  .inputReq {
+    display: grid;
+    grid-template-columns: 40% 75%;
+
+    max-width: 40rem;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -289,13 +339,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto 20%;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
-
   .personalTags strong {
-    font-size: 18px;
-    padding: 2px 13px 5px 13px;
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -303,6 +352,18 @@ code {
 }
 
 @media (min-width: 1105px) and (max-width: 1390px) {
+  .inputReq {
+    display: grid;
+
+    max-width: 40rem;
+    grid-template-columns: 40% 75%;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -384,13 +445,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto 20%;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
-
   .personalTags strong {
-    font-size: 18px;
-    padding: 2px 13px 5px 13px;
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -398,6 +458,18 @@ code {
 }
 
 @media (min-width: 1390px) and (max-width: 1790px) {
+  .inputReq {
+    display: grid;
+
+    max-width: 40rem;
+    grid-template-columns: 40% 75%;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -495,12 +567,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto 20%;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
   .personalTags strong {
-    font-size: 18px;
-    padding: 2px 13px 5px 13px;
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -508,6 +580,18 @@ code {
 }
 
 @media (min-width: 1800px) and (max-width: 2220px) {
+  .inputReq {
+    display: grid;
+    
+    max-width: 40rem;
+    grid-template-columns: 40% 75%;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -603,13 +687,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
-
   .personalTags strong {
-    font-size: 18px;
-    padding: 2px 13px 5px 13px;
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -617,6 +700,16 @@ code {
 }
 
 @media (min-width: 2225px) {
+  .inputReq {
+    display: grid;
+    grid-template-columns: 40% 75%;
+    align-items: center;
+  }
+  .buttons_Enter {
+    margin-top: 3rem;
+    grid-template-columns: 40% 40%;
+  }
+
   .conteainer {
     display: grid;
     grid-template-columns: 51% 49%;
@@ -643,7 +736,6 @@ code {
     width: 250px;
     background-size: 260px auto;
   }
-
   .reqPanel {
     margin-top: 7rem;
   }
@@ -705,12 +797,12 @@ code {
   }
   .personalTags p {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 0.5rem;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.1rem;
   }
   .personalTags strong {
-    font-size: 18px;
-    padding: 2px 13px 5px 13px;
+    font-size: 12px;
+    padding: 2px 13px 3px 13px;
   }
   .exitButton {
     margin: 0 46rem;
@@ -819,6 +911,13 @@ code {
   100% {
     -o-transform: translateY(-800px);
   }
+}
+
+.tegsLabel {
+  display: grid;
+  grid-template-columns: 35% 30% 30%;
+  text-align: left;
+  font-size: 15px;
 }
 
 .scrollBarLine_1 {
@@ -985,7 +1084,6 @@ code {
 #reqForm {
   background-color: rgb(255, 255, 255);
   text-align: center;
-  width: 40rem;
   height: auto;
 }
 
@@ -1008,6 +1106,7 @@ code {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   font-size: 18px;
+  /* display: flex; */
   width: 70%;
   padding: 15px;
   margin-bottom: 1.5rem;
@@ -1057,7 +1156,7 @@ code {
 .selectInput {
   color: #555555;
   display: grid;
-  grid-template-columns: 45% 70%;
+  grid-template-columns: 45% 100%;
   grid-template-rows: 100%;
   grid-gap: 2rem;
 }

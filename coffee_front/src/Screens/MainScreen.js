@@ -40,7 +40,7 @@ function MainScreen() {
             alt="logo"
           />
         </div>
-        {!match && (
+        {arr.length > 1 && !match &&(
           <button
             style={{
               position: "fixed",

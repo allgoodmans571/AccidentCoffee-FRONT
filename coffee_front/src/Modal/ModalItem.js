@@ -29,7 +29,8 @@ function ModalItem() {
           <div className="profile">
             <div className="personalInfo">
               <div>
-                <button className="exitButton"
+                <button
+                  className="exitButton"
                   style={{
                     backgroundImage: `url(${iconExit})`,
                   }}
@@ -104,8 +105,10 @@ function ModalItem() {
             </div>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalTags">
-              <p>
+              <h4 style={{ marginTop: "-0.2rem",marginBottom: "-0.5rem", textAlign: "center" }}>
                 Интересы:
+              </h4>
+              <p>
                 {modal.tags.map((tag) => {
                   countID++;
                   return (
