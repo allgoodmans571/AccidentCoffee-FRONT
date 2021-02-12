@@ -30,10 +30,11 @@ function ModalMatch() {
             <h1
               style={{
                 color: "#fa71cd",
+                fontSize: "15px",
               }}
             >
-              <strong>It is a MATCH!</strong><br/> Лови профиль, с которым у тебя совпали интересы и
-              взгляды
+              <strong>It is a MATCH!</strong>
+              <br /> Лови профиль, с которым у тебя совпали интересы и взгляды
             </h1>
             <hr noshade="noshade" width="90%" color="#e4e4e4" />
             <div className="personalInfo">

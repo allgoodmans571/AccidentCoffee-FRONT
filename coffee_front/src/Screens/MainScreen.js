@@ -44,7 +44,8 @@ function MainScreen() {
           <button
             style={{
               position: "fixed",
-              margin: "0 0 0 20%",
+              // top: '',
+              margin: "0 0 0 20rem",
               height: "2.5rem",
               width: "12rem",
             }}

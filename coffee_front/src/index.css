@@ -582,7 +582,7 @@ code {
 @media (min-width: 1800px) and (max-width: 2220px) {
   .inputReq {
     display: grid;
-    
+
     max-width: 40rem;
     grid-template-columns: 40% 75%;
     align-items: center;
@@ -666,7 +666,7 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(4, 245, 65); */
-    grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
   .profile {
     width: 50rem;
@@ -776,7 +776,7 @@ code {
   .itemsBar {
     /* background-color: black; */
     z-index: 0;
-    grid-template-columns: 14.5% 14.5% 14.5% 14.5% 14.5% 14.5% 14.5%;
+    grid-template-columns: 25% 25% 25% 25%;
   }
 
   .profile {
