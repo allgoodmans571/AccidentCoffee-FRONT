@@ -54,7 +54,6 @@ function EnterScreen() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         newData = data;
         if (data) {
           init(
@@ -80,8 +79,6 @@ function EnterScreen() {
         }, 500)
         arr.length > 1 && findMatch(name);
       }
-    console.log(dataState);
-    console.log(dataStateMatch);
   }
 
   return (

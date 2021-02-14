@@ -29,7 +29,6 @@ function PersonalData() {
       }
     }
 
-    console.log(tegsUsed);
     if (
       userLifePos !== "Выбрать" &&
       userTeamStatus !== "Выбрать" &&
@@ -68,8 +67,6 @@ function PersonalData() {
       }
     }
 
-    console.log(userTags);
-
     add(
       `${userLifePos}`,
       `${userTeamStatus}`,
@@ -77,7 +74,6 @@ function PersonalData() {
       `${userProjectTime}`,
       userTags
     );
-    console.log(dataState.name);
   }
 
   return (
@@ -213,7 +209,6 @@ function PersonalData() {
             </select>
           </label>
           <label
-            // style={{ width: "auto" }}
             className="selectInput"
             htmlFor="telegram"
           >

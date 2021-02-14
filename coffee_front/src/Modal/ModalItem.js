@@ -10,7 +10,6 @@ function ModalItem() {
 
   function getTelegramName() {
     var name = modal.telegram.split("@");
-    console.log(name);
     if (name.length > 1) {
       window.open(`https://t.me/${name[1]}`);
     } else {

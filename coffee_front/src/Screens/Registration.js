@@ -48,6 +48,7 @@ function Registration() {
       document.querySelector("#firstName").value +
       " " +
       document.querySelector("#lastName").value;
+
     let userPosition = document.querySelector("#position").value;
     let userEmail = document.querySelector("#corpEmail").value;
     let userTelegram = document.querySelector("#telegram").value;
@@ -218,7 +219,6 @@ function Registration() {
               onClick={(event) => {
                 event.preventDefault();
                 handleSubmit();
-                // setData(data);
                 setActivePanel(3);
               }}
             >

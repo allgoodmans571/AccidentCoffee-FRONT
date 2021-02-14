@@ -38,12 +38,10 @@ function Profile() {
         </div>
       </div>
       <div className="personalData">
-        {/* <h1 style={{ marginTop: '3rem'}}>Личный профиль</h1> */}
         <div className="personalTags">
           <p style={{ color: "#56c1ff" }}>
             {info.tags.map((tag) => {
               return (
-                //TODO кошмар переделать
                 <strong key={tag}> &nbsp; &nbsp; {tag} &nbsp; &nbsp;</strong>
               );
             })}
@@ -76,7 +74,6 @@ function Profile() {
             border: "2px solid #ccc",
             borderRadius: "0.25rem",
           }}
-          onClick={() => console.log("sss")}
         >
           Найти коллегу
         </button>

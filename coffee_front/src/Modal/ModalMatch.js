@@ -9,7 +9,6 @@ function ModalMatch() {
 
   function getTelegramName() {
     var name = dataStateMatch.telegram.split("@");
-    console.log(name);
     if (name.length > 1) {
       window.open(`https://t.me/${name[1]}`);
     } else {
@@ -168,24 +167,6 @@ function ModalMatch() {
                   : ""}
               </p>
             </div>
-            {/* <hr noshade="noshade" width="90%" color="#e4e4e4" />
-            <button
-              className="startButton"
-              style={{
-                margin: "1rem 0 1.2rem 0",
-                width: "250px",
-                fontSize: "20px",
-                height: "50px",
-                box: "border-box",
-                borderRadius: "6rem",
-                color: "#ffffff",
-                border: "none",
-                outline: "none",
-              }}
-              onClick={() => showMatch()}
-            >
-              Показать всех
-            </button> */}
           </div>
         </div>
       )}

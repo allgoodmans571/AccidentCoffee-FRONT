@@ -22,7 +22,6 @@ function App() {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setArr(data);
       });
   }
@@ -86,7 +85,6 @@ function App() {
 
   async function findMatch(userName) {
     let name = userName;
-    console.log(name);
     let response = await fetch("https://tinderteam.ru/api/getMatch", {
       method: "POST",
       headers: {
@@ -113,9 +111,6 @@ function App() {
           data.tags
         );
       });
-    console.log(name);
-
-    console.log(dataStateMatch);
     await showMatch();
   }
 
@@ -168,15 +163,11 @@ function App() {
     <Registration />,
     <PersonalData />,
     <MainScreen />,
-    // <Loader />,
   ];
 
-  // function loadingScreen(value) {
-  //   return(<Loader />);
-  // }
+
 
   async function send() {
-    console.log(dataState);
     let response = await fetch("https://tinderteam.ru/api/registration", {
       method: "POST",
       headers: {

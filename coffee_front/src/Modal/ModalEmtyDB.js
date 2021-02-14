@@ -11,7 +11,6 @@ function ModalEmptyDB() {
           <button
             className="backgroundButton"
             onClick={() => {
-              console.log(isEmpty);
               setIsEmpty(!isEmpty);
             }}
           />
