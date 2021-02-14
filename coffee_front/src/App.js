@@ -10,6 +10,7 @@ import EnterScreen from "./Screens/EnterScreen";
 
 function App() {
   const [arr, setArr] = useState([]);
+  let userName;
 
   useEffect(() => {
     updateBase();
@@ -83,8 +84,8 @@ function App() {
       tags,
     });
 
-  async function findMatch(nameUser) {
-    let name = nameUser ? nameUser : dataState.name;
+  async function findMatch() {
+    let name = dataState.name;
     console.log(name);
     let response = await fetch("https://tinderteam.ru/api/getMatch", {
       method: "POST",

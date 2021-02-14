@@ -30,7 +30,6 @@ function EnterScreen() {
   }, []);
 
   async function handleSubmit() {
-    let newData;
     let name =
       document.querySelector("#firstName").value +
       " " +
@@ -64,11 +63,16 @@ function EnterScreen() {
             data.tags
           );
         }
-        if (data) {
-          arr.length > 1 && findMatch(name);
-          setActivePanel(4);
-          updateBase();
-        }
+        setTimeout(() => {
+          if (data) {
+            setActivePanel(4);
+            arr.length > 1 && findMatch();
+            updateBase();
+            // arr.length > 1 && findMatch(name);
+            // setActivePanel(4);
+            // updateBase();
+          }
+        }, 2000);
       });
   }
 
