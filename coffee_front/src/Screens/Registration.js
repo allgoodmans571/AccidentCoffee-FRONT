@@ -96,7 +96,7 @@ function Registration() {
     >
       <form id="survey-form">
         <div id="reqForm">
-          <div>
+          <div className="logoReqForm">
             <img
               style={{
                 height: "36px",
@@ -210,7 +210,7 @@ function Registration() {
               </label>
             </div>
           </div>
-          <div style={{ marginTop: "3rem" }}>
+          <div style={{ marginTop: "3rem", marginBottom: "2rem" }}>
             <button
               className="startButton"
               type="submit"

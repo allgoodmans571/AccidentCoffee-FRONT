@@ -213,7 +213,7 @@ function PersonalData() {
             </select>
           </label>
           <label
-            style={{ width: "auto" }}
+            // style={{ width: "auto" }}
             className="selectInput"
             htmlFor="telegram"
           >
