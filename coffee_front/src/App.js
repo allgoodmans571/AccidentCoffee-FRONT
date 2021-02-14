@@ -113,6 +113,7 @@ function App() {
           data.tags
         );
       });
+    console.log(name);
     await showMatch();
   }
 

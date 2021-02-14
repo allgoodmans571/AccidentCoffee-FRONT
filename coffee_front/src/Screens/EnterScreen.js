@@ -72,7 +72,7 @@ function EnterScreen() {
             // setActivePanel(4);
             // updateBase();
           }
-        }, 2000);
+        }, 1000);
       });
   }
 
