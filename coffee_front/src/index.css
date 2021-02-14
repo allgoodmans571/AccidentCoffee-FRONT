@@ -36,11 +36,11 @@ code {
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 7rem;
+    /* max-width: 9rem; */
   }
 
   .navButton {
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
     justify-self: center;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
@@ -48,7 +48,7 @@ code {
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 7rem;
+    /* max-width: 5rem; */
   }
 
   #emailButton {
@@ -112,7 +112,11 @@ code {
   .imageList {
     justify-self: center;
     /* position: relative; */
-    rotate: 25deg;
+    transform: rotate(25deg);
+    -webkit-transform: rotate(25deg);
+    -moz-transform: rotate(25deg);
+    -ms-transform: rotate(25deg);
+    -o-transform: rotate(25deg);
     margin: -2rem 0 0 -14rem;
   }
   .conteainer {
@@ -282,7 +286,7 @@ code {
     background-size: 260px auto;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 10rem 0 0rem 0;
   }
 
   .tags {
@@ -433,7 +437,7 @@ code {
     background-size: 260px auto;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 10rem 0 0rem 0;
   }
 
   .tags {
@@ -586,7 +590,7 @@ code {
     background-size: 260px auto;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 10rem 0 0rem 0;
   }
 
   .tags {
@@ -735,7 +739,7 @@ code {
     background-size: 260px auto;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 10rem 0 0rem 0;
   }
 
   .dataForm h1 {
@@ -906,7 +910,7 @@ code {
     background-size: 260px auto;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 10rem 0 0rem 0;
   }
 
   .dataForm h1 {
@@ -1065,7 +1069,7 @@ code {
     justify-content: flex-end;
   }
   .itemInfo {
-    margin: 13rem 0 19rem 0;
+    margin: 0rem 0 0rem 0;
   }
 
   .btn_open_profile {

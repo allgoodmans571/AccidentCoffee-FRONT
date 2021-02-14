@@ -60,7 +60,7 @@ function MainScreen() {
               setActivePanel(0);
             }}
           >
-            В главное меню
+            На стартовую страницу
           </button>
         </div>
       </div>

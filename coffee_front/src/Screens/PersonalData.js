@@ -4,9 +4,15 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function PersonalData() {
-  const { setActivePanel, add, send, findMatch, arr, dataState } = useContext(
-    Context
-  );
+  const {
+    setActivePanel,
+    add,
+    send,
+    findMatch,
+    arr,
+    dataState,
+    updateBase,
+  } = useContext(Context);
 
   let userTags = [];
   let tegsUsed = 0;
@@ -558,6 +564,7 @@ function PersonalData() {
                   if (dataState) {
                     arr.length > 1 && findMatch();
                     setActivePanel(4);
+                    updateBase();
                   }
                 }, 2000);
               }}

@@ -4,7 +4,9 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, arr } = useContext(Context);
+  const { setActivePanel, init, add, findMatch, arr, updateBase } = useContext(
+    Context
+  );
 
   function checkParams() {
     let userFirstName = document.querySelector("#firstName").value;
@@ -34,7 +36,7 @@ function EnterScreen() {
       " " +
       document.querySelector("#lastName").value;
 
-    let response = await fetch("http://217.73.59.92:8080/getMatch", {
+    let response = await fetch("https://tinderteam.ru/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -45,28 +47,29 @@ function EnterScreen() {
         return response.json();
       })
       .then((data) => {
-        newData = data;
-        init(
-          `${data.image && data.image}`,
-          `${name}`,
-          `${data.position}`,
-          `${data.email}`,
-          `${data.telegram}`
-        );
-        add(
-          `${data.lifePos}`,
-          `${data.teamStatus}`,
-          `${data.wordPlace}`,
-          `${data.projectTime}`,
-          data.tags
-        );
         console.log(data);
+        if (data) {
+          init(
+            `${data.image && data.image}`,
+            `${data.name}`,
+            `${data.position}`,
+            `${data.email}`,
+            `${data.telegram}`
+          );
+          add(
+            `${data.lifePos}`,
+            `${data.teamStatus}`,
+            `${data.wordPlace}`,
+            `${data.projectTime}`,
+            data.tags
+          );
+        }
+        if (data) {
+          arr.length > 1 && findMatch(name);
+          setActivePanel(4);
+          updateBase();
+        }
       });
-
-    if (newData) {
-      arr.length > 1 && findMatch(name);
-      setActivePanel(4);
-    }
   }
 
   return (
