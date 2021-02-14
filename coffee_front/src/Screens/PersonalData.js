@@ -561,11 +561,11 @@ function PersonalData() {
                 event.preventDefault();
                 send();
                 if (dataState) {
-                  arr.length > 1 && findMatch(dataState.name);
                   setTimeout(() => {
                     setActivePanel(4);
                     updateBase();
                   }, 500);
+                  arr.length > 1 && findMatch(dataState.name);
                 }
               }}
             >

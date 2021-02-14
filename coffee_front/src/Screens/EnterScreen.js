@@ -79,9 +79,6 @@ function EnterScreen() {
           updateBase();
         }, 500)
         arr.length > 1 && findMatch(name);
-        // arr.length > 1 && findMatch(name);
-        // setActivePanel(4);
-        // updateBase();
       }
     console.log(dataState);
     console.log(dataStateMatch);
