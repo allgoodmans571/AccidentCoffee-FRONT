@@ -4,9 +4,16 @@ import icon from "../images/icon.png";
 import logo from "../images/logo.svg";
 
 function EnterScreen() {
-  const { setActivePanel, init, add, findMatch, arr, updateBase } = useContext(
-    Context
-  );
+  const {
+    setActivePanel,
+    init,
+    add,
+    findMatch,
+    arr,
+    updateBase,
+    dataState,
+    dataStateMatch,
+  } = useContext(Context);
 
   function checkParams() {
     let userFirstName = document.querySelector("#firstName").value;
@@ -30,6 +37,7 @@ function EnterScreen() {
   }, []);
 
   async function handleSubmit() {
+    let newData;
     let name =
       document.querySelector("#firstName").value +
       " " +
@@ -47,6 +55,7 @@ function EnterScreen() {
       })
       .then((data) => {
         console.log(data);
+        newData = data;
         if (data) {
           init(
             `${data.image && data.image}`,
@@ -63,17 +72,19 @@ function EnterScreen() {
             data.tags
           );
         }
-        setTimeout(() => {
-          if (data) {
-            setActivePanel(4);
-            arr.length > 1 && findMatch();
-            updateBase();
-            // arr.length > 1 && findMatch(name);
-            // setActivePanel(4);
-            // updateBase();
-          }
-        }, 1000);
       });
+      if (newData) {
+        setTimeout(() => {
+          setActivePanel(4);
+          updateBase();
+        }, 500)
+        arr.length > 1 && findMatch(name);
+        // arr.length > 1 && findMatch(name);
+        // setActivePanel(4);
+        // updateBase();
+      }
+    console.log(dataState);
+    console.log(dataStateMatch);
   }
 
   return (

@@ -560,13 +560,13 @@ function PersonalData() {
               onClick={(event) => {
                 event.preventDefault();
                 send();
-                setTimeout(() => {
-                  if (dataState) {
-                    arr.length > 1 && findMatch();
+                if (dataState) {
+                  arr.length > 1 && findMatch(dataState.name);
+                  setTimeout(() => {
                     setActivePanel(4);
                     updateBase();
-                  }
-                }, 2000);
+                  }, 500);
+                }
               }}
             >
               <strong>Начать общаться</strong>

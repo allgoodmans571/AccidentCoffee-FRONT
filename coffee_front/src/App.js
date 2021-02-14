@@ -84,8 +84,8 @@ function App() {
       tags,
     });
 
-  async function findMatch() {
-    let name = dataState.name;
+  async function findMatch(userName) {
+    let name = userName;
     console.log(name);
     let response = await fetch("https://tinderteam.ru/api/getMatch", {
       method: "POST",
@@ -114,6 +114,8 @@ function App() {
         );
       });
     console.log(name);
+
+    console.log(dataStateMatch);
     await showMatch();
   }
 

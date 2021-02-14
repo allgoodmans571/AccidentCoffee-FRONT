@@ -46,7 +46,7 @@ function MainScreen() {
               className="navButton1"
               type="submit"
               onClick={() => {
-                findMatch();
+                findMatch(dataState.name);
               }}
             >
               Подобрать
