@@ -21,14 +21,14 @@ code {
     background-color: white;
     grid-template-columns: 18% 82%;
   }
-
+  .scroollbarItem {
+    margin: 0 0 0 -2.4rem;
+  }
   .navButtons {
-    display: flex;
-    flex-direction: row;
-    /* grid-gap: 1rem; */
+    margin-left: 2rem;
   }
   .navButton1 {
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
     justify-self: center;
     background: linear-gradient(to right, #fa76cf, #c571f5);
     color: #ffffff;
@@ -499,7 +499,7 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(245, 4, 213); */
-    grid-template-columns: 50% 50%;
+    z-index: 0;
   }
   .profile {
     width: 50rem;
@@ -651,7 +651,8 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(20, 4, 245); */
-    grid-template-columns: 33% 33% 33%;
+    z-index: 0;
+    grid-template-columns: 50% 50%;
   }
   .profile {
     width: 50rem;
@@ -823,7 +824,8 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(245, 4, 4); */
-    grid-template-columns: 25% 25% 25% 25%;
+    z-index: 0;
+    grid-template-columns: 33% 33% 33%;
   }
   .profile {
     width: 50rem;
@@ -996,6 +998,7 @@ code {
   }
   .itemsBar {
     /* background-color: rgb(4, 245, 65); */
+    z-index: 0;
     grid-template-columns: 25% 25% 25% 25%;
   }
   .profile {
@@ -1050,7 +1053,7 @@ code {
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 5rem;
+    max-width: 14rem;
   }
 
   .navButton {
@@ -1061,7 +1064,7 @@ code {
     border: 0px solid #ccc;
     border-radius: 6em;
     height: 2.5rem;
-    max-width: 5rem;
+    max-width: 14rem;
   }
 
   #emailButton {
@@ -1154,6 +1157,7 @@ code {
     /* background-color: black; */
     z-index: 0;
     grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 100%;
   }
 
   .profile {
@@ -1205,10 +1209,6 @@ code {
 .scrollBar {
   width: auto;
   height: auto;
-}
-
-.scroollbarItem {
-  margin: -1rem -1rem 0 0;
 }
 
 @keyframes moveDown {
@@ -1656,7 +1656,7 @@ code {
 .mainBlock {
   width: 100%;
   margin: auto;
-  display: grid;
+  /* display: grid; */
   position: absolute;
   top: 7rem;
 }
@@ -1681,6 +1681,7 @@ code {
 .itemsBar {
   z-index: 0;
   display: grid;
+  max-width: 60%;
   margin: auto;
 }
 

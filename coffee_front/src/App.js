@@ -261,7 +261,7 @@ function App() {
         addMatch,
         dataStateMatch,
 
-        updateBase
+        updateBase,
       }}
     >
       <div className="App">{components[statePage]}</div>
